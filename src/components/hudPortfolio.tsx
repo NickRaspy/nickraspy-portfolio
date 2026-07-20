@@ -1,21 +1,13 @@
 "use client";
 
-import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
+import { useEffect, useMemo, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
+import type { PortfolioView } from "@/src/content/types";
 import "./hudPortfolio.css";
 
 type Tab = "about" | "log" | "projects" | "contact";
-type Project = { id: string; name: string; description: string; tags: string[] };
+type Project = PortfolioView["projects"][number];
 type WindowKey = "about" | "log" | "projects-category" | "projects-list" | "projects-detail" | "contact";
 type Point = { x: number; y: number };
-
-const projects: Record<string, Project[]> = {
-  web: [
-    { id: "WA-01", name: "Project Alpha", description: "Real-time neural observability interface for dense, high-stakes data.", tags: ["React", "WebGL"] },
-    { id: "WA-02", name: "Neural Bridge", description: "Encrypted control layer for mapping complex human signals into digital workflows.", tags: ["TypeScript", "D3.js"] },
-  ],
-  mobile: [{ id: "MA-01", name: "Quantum UX", description: "Context-aware mobile product that adapts its interface to intent and environment.", tags: ["React Native", "Rust"] }],
-  systems: [{ id: "SA-01", name: "Core Sentinel", description: "Low-level monitoring console with live threat scoring and automated response flows.", tags: ["Go", "eBPF"] }],
-};
 
 function SpaceBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -159,7 +151,7 @@ function Panel({ title, id, children, onPointerDown, offset, className = "" }: {
   </section>;
 }
 
-export default function HudPortfolio() {
+export default function HudPortfolio({ data }: { data: PortfolioView }) {
   const [tab, setTab] = useState<Tab>("about");
   const [category, setCategory] = useState<string | null>(null);
   const [selected, setSelected] = useState<Project | null>(null);
@@ -167,6 +159,11 @@ export default function HudPortfolio() {
   const [offsets, setOffsets] = useState<Partial<Record<WindowKey, Point>>>({});
   const stageRef = useRef<HTMLDivElement>(null);
   const drag = useRef<{ key: WindowKey; x: number; y: number; ox: number; oy: number; minX: number; maxX: number; minY: number; maxY: number } | null>(null);
+  const projects = useMemo(() => data.projects.reduce<Record<string, Project[]>>((groups, project) => {
+    (groups[project.categoryId] ??= []).push(project);
+    return groups;
+  }, {}), [data.projects]);
+  const technologyTags = useMemo(() => [...new Set(data.projects.flatMap((project) => project.tags))].slice(0, 3), [data.projects]);
 
   const dragStart = (key: WindowKey) => (event: ReactPointerEvent<HTMLDivElement>) => {
     if (window.innerWidth < 768 || (event.target as HTMLElement).closest("button,input,textarea")) return;
@@ -217,15 +214,15 @@ export default function HudPortfolio() {
     <div className="reticle reticle-a" aria-hidden="true" /><div className="reticle reticle-b" aria-hidden="true" />
     <div ref={stageRef} className="hud-stage"><div className="hud-anchor">
       {tab === "about" && <Panel title="SYS_PROFILE" id="001" onPointerDown={dragStart("about")} offset={offsets.about ?? { x: 0, y: 0 }}>
-        <div className="profile"><div className="avatar"><Glyph type="about" /></div><div><small>DESIGNATION</small><h3>Senior Full-stack Developer</h3></div></div>
-        <p>Specializing in high-performance holographic interfaces and secure data processing architectures. Operational efficiency at 98.7%.</p>
-        <div className="stats"><div><small>STATUS</small><strong>ONLINE</strong></div><div><small>CLEARANCE</small><strong>LEVEL_5</strong></div></div>
+        <div className="profile"><div className="avatar"><Glyph type="about" /></div><div><small>DESIGNATION</small><h3>{data.profile.role}</h3></div></div>
+        <p>{data.profile.summary}</p>
+        <div className="stats"><div><small>STATUS</small><strong>{data.profile.status}</strong></div><div><small>CLEARANCE</small><strong>{data.profile.clearance}</strong></div></div>
       </Panel>}
-      {tab === "log" && <Panel title="CHRONO_CORE" id="002" onPointerDown={dragStart("log")} offset={offsets.log ?? { x: 0, y: 0 }} className="log-panel"><div className="log-grid"><div><label>TECH_SPECS</label>{[["CORE_ARCH",95],["NEURAL_NET",82],["HOLO_UI",99]].map(([name,value]) => <div className="meter" key={name}><div><span>{name}</span><b>{value}%</b></div><i><em style={{ width: `${value}%` }} /></i></div>)}<div className="tags"><span>REACT_19</span><span>WEBGL</span><span>NEXT_16</span></div></div><div className="timeline"><label>SYSTEM_LOG</label><div><time>2021—CUR</time><b>LEAD_ARCHITECT</b></div><div><time>2018—2021</time><b>FRONTEND_ENG</b></div></div></div></Panel>}
+      {tab === "log" && <Panel title="CHRONO_CORE" id="002" onPointerDown={dragStart("log")} offset={offsets.log ?? { x: 0, y: 0 }} className="log-panel"><div className="log-grid"><div><label>TECH_SPECS</label>{data.skills.map((skill) => <div className="meter" key={skill.id}><div><span>{skill.name}</span><b>{skill.level}%</b></div><i><em style={{ width: `${skill.level}%` }} /></i></div>)}<div className="tags">{technologyTags.map((tag) => <span key={tag}>{tag}</span>)}</div></div><div className="timeline"><label>SYSTEM_LOG</label>{data.experience.map((item) => <div key={item.id}><time>{item.range}</time><b>{item.role}</b></div>)}</div></div></Panel>}
       {tab === "projects" && <div className="project-grid">
-        <Panel title="DATABANK_DIR" id="003" onPointerDown={dragStart("projects-category")} offset={offsets["projects-category"] ?? { x: 0, y: 0 }}><label>SELECT_SECTOR</label>{[["web","CAT_WEB_CORE"],["mobile","CAT_MOBILE_UX"],["systems","CAT_SYS_MODS"]].map(([key,name]) => <button className={`sector ${category === key ? "active" : ""}`} key={key} onClick={() => { setCategory(key); setSelected(null); }}><span>{name}</span><Glyph type="arrow" /></button>)}</Panel>
-        {category && <Panel title={category.toUpperCase()} id="003-L" onPointerDown={dragStart("projects-list")} offset={offsets["projects-list"] ?? { x: 0, y: 0 }} className="list-panel"><button className="mobile-back" aria-label="Back to sectors" onClick={() => setCategory(null)}><Glyph type="back" /></button>{projects[category].map(project => <button className={`project-row ${selected?.id === project.id ? "active" : ""}`} key={project.id} onClick={() => setSelected(project)}><small>{project.id}</small><span>{project.name}</span><Glyph type="arrow" /></button>)}</Panel>}
-        {selected && <Panel title="FILE_METADATA" id="003-D" onPointerDown={dragStart("projects-detail")} offset={offsets["projects-detail"] ?? { x: 0, y: 0 }} className="detail-panel"><button className="mobile-back" aria-label="Back to projects" onClick={() => setSelected(null)}><Glyph type="back" /></button><div className="project-visual"><Glyph type="projects" /><span>{selected.id}</span></div><h3>{selected.name}</h3><p>{selected.description}</p><div className="tags">{selected.tags.map(tag => <span key={tag}>{tag}</span>)}</div><button className="hud-action">INITIATE_SYNC_LINK</button></Panel>}
+        <Panel title="DATABANK_DIR" id="003" onPointerDown={dragStart("projects-category")} offset={offsets["projects-category"] ?? { x: 0, y: 0 }}><label>SELECT_SECTOR</label>{data.categories.map((item) => <button className={`sector ${category === item.id ? "active" : ""}`} key={item.id} onClick={() => { setCategory(item.id); setSelected(null); }}><span>{item.code}</span><Glyph type="arrow" /></button>)}</Panel>
+        {category && <Panel title={category.toUpperCase()} id="003-L" onPointerDown={dragStart("projects-list")} offset={offsets["projects-list"] ?? { x: 0, y: 0 }} className="list-panel"><button className="mobile-back" aria-label="Back to sectors" onClick={() => setCategory(null)}><Glyph type="back" /></button>{(projects[category] ?? []).map(project => <button className={`project-row ${selected?.id === project.id ? "active" : ""}`} key={project.id} onClick={() => setSelected(project)}><small>{project.code}</small><span>{project.name}</span><Glyph type="arrow" /></button>)}</Panel>}
+        {selected && <Panel title="FILE_METADATA" id="003-D" onPointerDown={dragStart("projects-detail")} offset={offsets["projects-detail"] ?? { x: 0, y: 0 }} className="detail-panel"><button className="mobile-back" aria-label="Back to projects" onClick={() => setSelected(null)}><Glyph type="back" /></button><div className="project-visual"><Glyph type="projects" /><span>{selected.code}</span></div><h3>{selected.name}</h3><p>{selected.description}</p><div className="tags">{selected.tags.map(tag => <span key={tag}>{tag}</span>)}</div>{selected.liveUrl ? <a className="hud-action" href={selected.liveUrl} target="_blank" rel="noreferrer">INITIATE_SYNC_LINK</a> : <button className="hud-action" disabled>LINK_NOT_AVAILABLE</button>}</Panel>}
       </div>}
       {tab === "contact" && <Panel title="COMMLINK" id="004" onPointerDown={dragStart("contact")} offset={offsets.contact ?? { x: 0, y: 0 }} className="contact-panel">{sent ? <div className="success"><Glyph type="contact"/><b>TRANSFER_COMPLETE</b><p>Signal received. Response window: 24–48 hours.</p><button onClick={() => setSent(false)}>NEW_TRANSMISSION</button></div> : <form onSubmit={event => { event.preventDefault(); setSent(true); }}><label>IDENTIFIER<input required autoComplete="name" placeholder="Enter name" /></label><label>FREQUENCY_ROUTE<input required type="email" autoComplete="email" placeholder="Enter email" /></label><label>DATA_PAYLOAD<textarea required placeholder="Transmit message…" /></label><button className="hud-action">INITIATE_TRANSFER</button></form>}</Panel>}
     </div></div>

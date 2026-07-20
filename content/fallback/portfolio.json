@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "defaultLocale": "en",
+  "locales": ["en", "ru"],
+  "profile": {
+    "id": "nickraspy", "status": "ONLINE", "clearance": "LEVEL_5",
+    "translations": {
+      "en": { "role": "Senior Full-stack Developer", "summary": "Specializing in high-performance holographic interfaces and secure data processing architectures." },
+      "ru": { "role": "Senior Full-stack разработчик", "summary": "Специализируюсь на производительных интерфейсах и безопасных архитектурах обработки данных." }
+    }
+  },
+  "skills": [
+    { "id": "core_arch", "name": "CORE_ARCH", "level": 95, "sortOrder": 10 },
+    { "id": "neural_net", "name": "NEURAL_NET", "level": 82, "sortOrder": 20 },
+    { "id": "holo_ui", "name": "HOLO_UI", "level": 99, "sortOrder": 30 }
+  ],
+  "experience": [
+    { "id": "lead", "start": "2021", "end": "CUR", "sortOrder": 10, "translations": { "en": { "role": "LEAD_ARCHITECT", "company": "INDEPENDENT", "summary": "Architecture and product engineering." }, "ru": { "role": "ВЕДУЩИЙ_АРХИТЕКТОР", "company": "НЕЗАВИСИМО", "summary": "Архитектура и продуктовая разработка." } } },
+    { "id": "frontend", "start": "2018", "end": "2021", "sortOrder": 20, "translations": { "en": { "role": "FRONTEND_ENG", "company": "SYSTEMS", "summary": "Interface engineering." }, "ru": { "role": "FRONTEND_ИНЖЕНЕР", "company": "SYSTEMS", "summary": "Разработка интерфейсов." } } }
+  ],
+  "categories": [
+    { "id": "web", "code": "CAT_WEB_CORE", "sortOrder": 10, "translations": { "en": { "name": "Web Core", "description": "Web applications" }, "ru": { "name": "Веб", "description": "Веб-приложения" } } },
+    { "id": "mobile", "code": "CAT_MOBILE_UX", "sortOrder": 20, "translations": { "en": { "name": "Mobile UX", "description": "Mobile products" }, "ru": { "name": "Мобильные", "description": "Мобильные продукты" } } },
+    { "id": "systems", "code": "CAT_SYS_MODS", "sortOrder": 30, "translations": { "en": { "name": "Systems", "description": "System software" }, "ru": { "name": "Системы", "description": "Системное ПО" } } }
+  ],
+  "projects": [
+    { "id": "wa-01", "categoryId": "web", "status": "published", "year": 2026, "sortOrder": 10, "liveUrl": "", "repositoryUrl": "", "technologies": ["React", "WebGL"], "translations": { "en": { "name": "Project Alpha", "description": "Real-time neural observability interface for dense, high-stakes data." }, "ru": { "name": "Проект Альфа", "description": "Интерфейс наблюдаемости в реальном времени для насыщенных критичных данных." } } },
+    { "id": "wa-02", "categoryId": "web", "status": "published", "year": 2025, "sortOrder": 20, "liveUrl": "", "repositoryUrl": "", "technologies": ["TypeScript", "D3.js"], "translations": { "en": { "name": "Neural Bridge", "description": "Encrypted control layer for mapping human signals into digital workflows." }, "ru": { "name": "Нейронный мост", "description": "Защищённый слой управления цифровыми процессами." } } },
+    { "id": "ma-01", "categoryId": "mobile", "status": "published", "year": 2025, "sortOrder": 10, "liveUrl": "", "repositoryUrl": "", "technologies": ["React Native", "Rust"], "translations": { "en": { "name": "Quantum UX", "description": "Context-aware mobile product that adapts its interface to intent and environment." }, "ru": { "name": "Квантовый UX", "description": "Мобильный продукт, адаптирующий интерфейс к намерению и окружению." } } },
+    { "id": "sa-01", "categoryId": "systems", "status": "published", "year": 2024, "sortOrder": 10, "liveUrl": "", "repositoryUrl": "", "technologies": ["Go", "eBPF"], "translations": { "en": { "name": "Core Sentinel", "description": "Low-level monitoring console with live threat scoring and automated response flows." }, "ru": { "name": "Страж ядра", "description": "Низкоуровневая консоль мониторинга и автоматического реагирования." } } }
+  ],
+  "contacts": [
+    { "id": "email", "type": "email", "label": "Email", "value": "hello@example.com", "url": "mailto:hello@example.com", "sortOrder": 10, "visible": true }
+  ]
+}

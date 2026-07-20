@@ -13,6 +13,9 @@
 # testing
 /coverage
 /.playwright-cli/
+/outputs/portfolio-data/qa/
+/outputs/portfolio-data/build/node_modules/
+/outputs/portfolio-data/*.inspect.ndjson
 
 # local IDE
 /.idea/
