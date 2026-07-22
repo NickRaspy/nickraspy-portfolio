@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aetheris Portfolio
 
-## Getting Started
+Next.js 16 portfolio with a WebGL HUD, versioned PostgreSQL content, an Excel import pipeline, and a protected publishing console.
 
-First, run the development server:
+## Local development
 
-```bash
+```powershell
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The public portfolio is available at `http://localhost:3000`. The content console is available at `http://localhost:3000/admin`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Without `DATABASE_URL`, the public page reads `content/fallback/portfolio.json` and the console stays in read-only validation mode.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+For local admin UI development only:
 
-## Learn More
+```powershell
+$env:ADMIN_DEV_BYPASS="true"
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+The bypass is ignored when `NODE_ENV=production`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Content workflow
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The editable workbook is [outputs/portfolio-data/portfolio.xlsx](outputs/portfolio-data/portfolio.xlsx).
 
-## Deploy on Vercel
+```powershell
+# Validate the workbook without changing production.
+npm run content:validate
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Create/update the PostgreSQL content tables.
+npm run content:migrate
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Validate, publish a version, save latest.json, and revalidate the site.
+npm run content:sync
+
+# Inspect and restore published versions.
+npm run content:history
+npm run content:rollback -- <version-id>
+```
+
+The CLI accepts a custom workbook path:
+
+```powershell
+npm run content:validate -- D:\content\portfolio.xlsx
+npm run content:sync -- D:\content\portfolio.xlsx
+```
+
+## PostgreSQL
+
+The data model stores immutable JSONB snapshots in `portfolio_content_versions` and atomically points `portfolio_content_state` at the active version. The equivalent migration is in `database/001_content_versions.sql`; `content:migrate` applies it idempotently.
+
+Copy `.env.example` to `.env.local` and set:
+
+- `DATABASE_URL` — PostgreSQL connection string;
+- `REVALIDATE_URL` — production `/api/revalidate` URL;
+- `REVALIDATE_SECRET` — shared secret used after CLI publication.
+
+## Admin authentication
+
+Create a GitHub OAuth application and use this callback:
+
+```text
+https://your-domain.example/api/auth/github/callback
+```
+
+Configure `GITHUB_CLIENT_ID`, `GITHUB_CLIENT_SECRET`, `ADMIN_GITHUB_ID`, `AUTH_ORIGIN`, and a random `AUTH_SECRET` of at least 32 characters in Vercel.
+
+- `ADMIN_GITHUB_ID` is the immutable numeric GitHub account ID. Multiple allowed IDs can be separated by commas. NickRaspy is `90720459`.
+- `AUTH_ORIGIN` is the exact public origin for this deployment, for example `https://portfolio-data.example.vercel.app`, without a path or trailing slash. Its `/api/auth/github/callback` URL must match the callback configured in the GitHub OAuth app.
+- OAuth state, PKCE verifier, and the signed admin session are stored only in `HttpOnly`, `Secure`, host-only cookies in production.
+
+## Verification
+
+```powershell
+npm run lint
+npm run build
+npm audit
+```

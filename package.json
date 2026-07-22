@@ -6,12 +6,20 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "content:validate": "tsx scripts/content.ts validate",
+    "content:migrate": "tsx scripts/content.ts migrate",
+    "content:sync": "tsx scripts/content.ts sync",
+    "content:history": "tsx scripts/content.ts history",
+    "content:rollback": "tsx scripts/content.ts rollback"
   },
   "dependencies": {
-    "next": "16.1.0",
+    "ajv": "^8.20.0",
+    "next": "^16.2.10",
+    "postgres": "^3.4.9",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "read-excel-file": "^9.3.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
@@ -19,8 +27,13 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.1.0",
+    "eslint-config-next": "^16.2.10",
     "tailwindcss": "^4",
+    "tsx": "^4.23.1",
     "typescript": "^5"
+  },
+  "overrides": {
+    "postcss": "8.5.10",
+    "sharp": "0.35.3"
   }
 }
