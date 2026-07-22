@@ -113,3 +113,9 @@ export async function rollbackContent(versionId: string): Promise<void> {
   const result = await db`update portfolio_content_state set active_version_id = ${versionId} where singleton = true and exists (select 1 from portfolio_content_versions where id = ${versionId})`;
   if (result.count !== 1) throw new Error(`Content version ${versionId} was not found.`);
 }
+
+export async function closeContentDatabase(): Promise<void> {
+  const current = client;
+  client = undefined;
+  if (current) await current.end({ timeout: 5 });
+}

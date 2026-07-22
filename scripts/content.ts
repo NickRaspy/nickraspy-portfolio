@@ -2,7 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { loadEnvConfig } from "@next/env";
 import { importPortfolioWorkbook } from "../src/content/importer";
-import { listContentVersions, migrateContentDatabase, publishContent, rollbackContent } from "../src/content/repository";
+import { closeContentDatabase, listContentVersions, migrateContentDatabase, publishContent, rollbackContent } from "../src/content/repository";
 
 loadEnvConfig(process.cwd());
 
@@ -21,16 +21,24 @@ async function loadWorkbook() {
   return result;
 }
 
-async function revalidateSite() {
+async function revalidateSite(): Promise<void> {
   if (!process.env.REVALIDATE_URL || !process.env.REVALIDATE_SECRET) {
     console.log("Revalidation skipped: REVALIDATE_URL/REVALIDATE_SECRET are not configured.");
     return;
   }
-  const response = await fetch(process.env.REVALIDATE_URL, {
-    method: "POST",
-    headers: { authorization: `Bearer ${process.env.REVALIDATE_SECRET}` },
-  });
-  if (!response.ok) throw new Error(`Revalidation failed: ${response.status} ${await response.text()}`);
+  try {
+    const response = await fetch(process.env.REVALIDATE_URL, {
+      method: "POST",
+      headers: { authorization: `Bearer ${process.env.REVALIDATE_SECRET}` },
+      signal: AbortSignal.timeout(10_000),
+    });
+    if (!response.ok) throw new Error(`${response.status} ${await response.text()}`);
+    console.log("Site cache revalidated.");
+  } catch (error) {
+    const reason = error instanceof Error ? error.message : String(error);
+    console.warn(`Content was saved, but site revalidation failed: ${reason}`);
+    console.warn("Retry revalidation after checking REVALIDATE_URL, or publish once from the admin console.");
+  }
 }
 
 async function main() {
@@ -45,8 +53,8 @@ async function main() {
     const id = await publishContent(result.content!, result.checksum!, path.basename(workbookPath), "local-cli");
     await fs.mkdir(path.resolve("outputs/portfolio-data"), { recursive: true });
     await fs.writeFile(path.resolve("outputs/portfolio-data/latest.json"), JSON.stringify(result.content, null, 2) + "\n", "utf8");
-    await revalidateSite();
     console.log(`Published content version ${id}.`);
+    await revalidateSite();
   } else if (command === "history") {
     console.table(await listContentVersions(50));
   } else if (command === "rollback") {
@@ -60,7 +68,16 @@ async function main() {
   }
 }
 
-main().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
-});
+main()
+  .catch((error) => {
+    console.error(error);
+    process.exitCode = 1;
+  })
+  .finally(async () => {
+    try {
+      await closeContentDatabase();
+    } catch (error) {
+      console.error("Failed to close the database connection.", error);
+      process.exitCode = 1;
+    }
+  });

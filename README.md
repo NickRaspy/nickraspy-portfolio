@@ -66,7 +66,11 @@ Create a GitHub OAuth application and use this callback:
 https://your-domain.example/api/auth/github/callback
 ```
 
-Configure `GITHUB_CLIENT_ID`, `GITHUB_CLIENT_SECRET`, `ADMIN_GITHUB_LOGIN`, and a random `AUTH_SECRET` of at least 32 characters in Vercel. Multiple allowed GitHub logins can be separated by commas.
+Configure `GITHUB_CLIENT_ID`, `GITHUB_CLIENT_SECRET`, `ADMIN_GITHUB_ID`, `AUTH_ORIGIN`, and a random `AUTH_SECRET` of at least 32 characters in Vercel.
+
+- `ADMIN_GITHUB_ID` is the immutable numeric GitHub account ID. Multiple allowed IDs can be separated by commas. NickRaspy is `90720459`.
+- `AUTH_ORIGIN` is the exact public origin for this deployment, for example `https://portfolio-data.example.vercel.app`, without a path or trailing slash. Its `/api/auth/github/callback` URL must match the callback configured in the GitHub OAuth app.
+- OAuth state, PKCE verifier, and the signed admin session are stored only in `HttpOnly`, `Secure`, host-only cookies in production.
 
 ## Verification
 

@@ -5,6 +5,7 @@ import type { ContentVersion } from "@/src/content/repository";
 import type { ImportResult, PortfolioContent } from "@/src/content/types";
 
 type ValidatedImport = ImportResult & { content: PortfolioContent; checksum: string; sourceFilename: string };
+const maxWorkbookBytes = 4 * 1024 * 1024;
 
 function Icon({ name }: { name: "upload" | "check" | "history" | "database" | "logout" | "file" }) {
   const paths = {
@@ -34,6 +35,12 @@ export default function AdminWorkbench({ sessionLogin, databaseReady, devBypass,
 
   async function validate(file?: File) {
     if (!file) return;
+    if (file.size > maxWorkbookBytes) {
+      setResult(null);
+      setIssues([]);
+      setMessage("Файл должен быть не больше 4 МБ.");
+      return;
+    }
     setPending(true);
     setMessage(null);
     setResult(null);
@@ -127,7 +134,7 @@ export default function AdminWorkbench({ sessionLogin, databaseReady, devBypass,
           <input ref={inputRef} type="file" accept=".xlsx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" onChange={(event) => void validate(event.target.files?.[0])} />
           <span className="admin-upload-icon"><Icon name="upload" /></span>
           <h2>{pending ? "Проверяю структуру…" : "Перетащи portfolio.xlsx"}</h2>
-          <p>или выбери файл вручную · максимум 5 МБ</p>
+          <p>или выбери файл вручную · максимум 4 МБ</p>
           <button type="button" disabled={pending} onClick={() => inputRef.current?.click()}>{pending ? "VALIDATING…" : "SELECT_WORKBOOK"}</button>
         </div>
 

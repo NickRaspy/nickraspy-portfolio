@@ -11,7 +11,7 @@ export async function POST(request: Request) {
   const file = form.get("file");
   if (!(file instanceof File)) return Response.json({ error: "Excel file is required." }, { status: 400 });
   if (!file.name.toLowerCase().endsWith(".xlsx")) return Response.json({ error: "Only .xlsx files are supported." }, { status: 415 });
-  if (file.size > 5 * 1024 * 1024) return Response.json({ error: "The workbook must be smaller than 5 MB." }, { status: 413 });
+  if (file.size > 4 * 1024 * 1024) return Response.json({ error: "The workbook must be 4 MB or smaller." }, { status: 413 });
 
   try {
     const result = await importPortfolioWorkbook(await file.arrayBuffer());

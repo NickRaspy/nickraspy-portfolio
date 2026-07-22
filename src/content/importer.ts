@@ -46,6 +46,39 @@ function addIssue(issues: ImportIssue[], sheet: string, row: number | undefined,
   issues.push({ severity: "error", sheet, row, field, message });
 }
 
+function isSafeExternalUrl(value: string, allowedProtocols: ReadonlySet<string>): boolean {
+  if (!value) return true;
+  try {
+    const url = new URL(value);
+    if (!allowedProtocols.has(url.protocol)) return false;
+    if ((url.protocol === "http:" || url.protocol === "https:") && (!url.hostname || url.username || url.password)) return false;
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function validateExternalUrls(content: PortfolioContent): ImportIssue[] {
+  const issues: ImportIssue[] = [];
+  const webProtocols = new Set(["http:", "https:"]);
+  const contactProtocols = new Set(["http:", "https:", "mailto:", "tel:"]);
+
+  content.projects.forEach((project, index) => {
+    if (!isSafeExternalUrl(project.liveUrl ?? "", webProtocols)) {
+      addIssue(issues, "links", undefined, `/projects/${index}/liveUrl`, "Only absolute http:// or https:// links are allowed.");
+    }
+    if (!isSafeExternalUrl(project.repositoryUrl ?? "", webProtocols)) {
+      addIssue(issues, "links", undefined, `/projects/${index}/repositoryUrl`, "Only absolute http:// or https:// links are allowed.");
+    }
+  });
+  content.contacts.forEach((contact, index) => {
+    if (!isSafeExternalUrl(contact.url, contactProtocols)) {
+      addIssue(issues, "links", undefined, `/contacts/${index}/url`, "Only http://, https://, mailto:, or tel: links are allowed.");
+    }
+  });
+  return issues;
+}
+
 function ensureUnique(rows: RowRecord[], sheet: string, field: string, issues: ImportIssue[]) {
   const seen = new Map<string, number>();
   rows.forEach((row) => {
@@ -164,6 +197,8 @@ export async function importPortfolioWorkbook(input: Buffer | ArrayBuffer): Prom
     }
   }
 
+  issues.push(...validateExternalUrls(content));
+
   const summary = {
     locales: content.locales.length,
     categories: content.categories.length,
@@ -176,6 +211,13 @@ export async function importPortfolioWorkbook(input: Buffer | ArrayBuffer): Prom
   if (issues.some((issue) => issue.severity === "error")) return { issues, summary };
   const checksum = createHash("sha256").update(JSON.stringify(content)).digest("hex");
   return { content, checksum, issues, summary };
+}
+
+export function validatePortfolioContentForPublish(value: unknown): { valid: boolean; issues: ImportIssue[] } {
+  const schemaValidation = validatePortfolioContent(value);
+  if (!schemaValidation.valid) return schemaValidation;
+  const issues = validateExternalUrls(value as PortfolioContent);
+  return { valid: issues.length === 0, issues };
 }
 
 export function validatePortfolioContent(value: unknown): { valid: boolean; issues: ImportIssue[] } {

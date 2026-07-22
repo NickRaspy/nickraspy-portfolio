@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 import { revalidateTag } from "next/cache";
 import { authorizeAdminMutation } from "@/src/auth/request";
-import { validatePortfolioContent } from "@/src/content/importer";
+import { validatePortfolioContentForPublish } from "@/src/content/importer";
 import { hasDatabase, migrateContentDatabase, publishContent } from "@/src/content/repository";
 import type { PortfolioContent } from "@/src/content/types";
 
@@ -13,7 +13,7 @@ export async function POST(request: Request) {
   if ("error" in authorization) return authorization.error;
   if (!hasDatabase()) return Response.json({ error: "DATABASE_URL is not configured." }, { status: 503 });
   const body = await request.json() as { content?: PortfolioContent; sourceFilename?: string };
-  const validation = validatePortfolioContent(body.content);
+  const validation = validatePortfolioContentForPublish(body.content);
   if (!validation.valid || !body.content) return Response.json({ error: "Content validation failed.", issues: validation.issues }, { status: 422 });
 
   const checksum = createHash("sha256").update(JSON.stringify(body.content)).digest("hex");
