@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 
+import { deliverContact } from "@/src/contact/delivery";
+
 const DEVELOPMENT_SECRET_KEY = "1x0000000000000000000000000000000AA";
 const MAX_BODY_BYTES = 16_384;
 
@@ -48,19 +50,6 @@ function validEmail(value: string) {
   return value.length <= 254 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 }
 
-function escapeHtml(value: string) {
-  return value.replace(/[&<>"']/g, (character) => {
-    const entities: Record<string, string> = {
-      "&": "&amp;",
-      "<": "&lt;",
-      ">": "&gt;",
-      '"': "&quot;",
-      "'": "&#039;",
-    };
-    return entities[character];
-  });
-}
-
 function remoteAddress(request: Request) {
   return (
     request.headers.get("cf-connecting-ip") ??
@@ -97,50 +86,6 @@ async function validateTurnstile(token: string, request: Request) {
     return { configured: true, valid: result.success === true && validAction };
   } catch {
     return { configured: true, valid: false };
-  }
-}
-
-async function sendEmail(name: string, email: string, message: string) {
-  const apiKey = process.env.RESEND_API_KEY;
-  const from = process.env.CONTACT_FROM_EMAIL;
-  const to = process.env.CONTACT_TO_EMAIL;
-  if (!apiKey || !from || !to) return { configured: false, sent: false };
-
-  try {
-    const response = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from,
-        to: [to],
-        reply_to: email,
-        subject: `Portfolio contact: ${name}`,
-        text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
-        html: [
-          `<p><strong>Name:</strong> ${escapeHtml(name)}</p>`,
-          `<p><strong>Email:</strong> ${escapeHtml(email)}</p>`,
-          "<p><strong>Message:</strong></p>",
-          `<p>${escapeHtml(message).replace(/\n/g, "<br>")}</p>`,
-        ].join(""),
-      }),
-      signal: AbortSignal.timeout(8_000),
-    });
-
-    if (!response.ok) {
-      console.error("Contact email delivery failed.", {
-        status: response.status,
-        requestId: response.headers.get("x-request-id"),
-      });
-      return { configured: true, sent: false };
-    }
-
-    return { configured: true, sent: true };
-  } catch {
-    console.error("Contact email delivery failed due to a network error.");
-    return { configured: true, sent: false };
   }
 }
 
@@ -189,9 +134,9 @@ export async function POST(request: Request) {
   if (!verification.configured) return json({ ok: false, code: "SERVICE_NOT_CONFIGURED" }, 503);
   if (!verification.valid) return json({ ok: false, code: "VERIFICATION_FAILED" }, 400);
 
-  const delivery = await sendEmail(name, email, message);
+  const delivery = await deliverContact({ name, email, message });
   if (!delivery.configured) return json({ ok: false, code: "SERVICE_NOT_CONFIGURED" }, 503);
-  if (!delivery.sent) return json({ ok: false, code: "DELIVERY_FAILED" }, 502);
+  if (!delivery.delivered) return json({ ok: false, code: "DELIVERY_FAILED" }, 502);
 
   return json({ ok: true }, 200);
 }

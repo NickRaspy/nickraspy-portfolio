@@ -11,7 +11,9 @@
     "content:migrate": "tsx scripts/content.ts migrate",
     "content:sync": "tsx scripts/content.ts sync",
     "content:history": "tsx scripts/content.ts history",
-    "content:rollback": "tsx scripts/content.ts rollback"
+    "content:rollback": "tsx scripts/content.ts rollback",
+    "telegram:chats": "node --env-file=.env.local scripts/telegram-chats.mjs",
+    "test": "tsx --test src/contact/delivery.test.ts"
   },
   "dependencies": {
     "ajv": "^8.20.0",

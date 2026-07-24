@@ -74,17 +74,26 @@ Configure `GITHUB_CLIENT_ID`, `GITHUB_CLIENT_SECRET`, `ADMIN_GITHUB_ID`, `AUTH_O
 
 ## Contact form
 
-The public contact form validates input on the server, uses a hidden honeypot field, and verifies a single-use Cloudflare Turnstile token before delivering the message through Resend.
+The public contact form validates input on the server, uses a hidden honeypot field, and verifies a single-use Cloudflare Turnstile token. It sends a Telegram notification first and falls back to Resend if Telegram is unavailable.
 
 Configure these variables in both Vercel Preview and Production:
 
 - `NEXT_PUBLIC_TURNSTILE_SITE_KEY` — the public site key of a Turnstile Managed widget;
 - `TURNSTILE_SECRET_KEY` — the matching private Turnstile secret;
-- `RESEND_API_KEY` — a Resend API key with sending access;
-- `CONTACT_FROM_EMAIL` — a sender on a domain verified in Resend, for example `Portfolio <contact@example.com>`;
-- `CONTACT_TO_EMAIL` — the private inbox that receives portfolio messages.
+- `TELEGRAM_BOT_TOKEN` — the private token issued by BotFather;
+- `TELEGRAM_CHAT_ID` — the Telegram chat that receives notifications;
+- `RESEND_API_KEY` — a Resend API key with sending access for fallback delivery;
+- `CONTACT_FROM_EMAIL` — the fallback sender, which must be accepted by Resend;
+- `CONTACT_TO_EMAIL` — the private fallback inbox.
 
-Local development uses Cloudflare's official always-pass test keys when the two Turnstile variables are absent. Email delivery still requires the three Resend variables. Production fails closed if any required variable is missing.
+To find your private chat ID without sharing the bot token:
+
+1. Put `TELEGRAM_BOT_TOKEN` in `.env.local`.
+2. Open the bot in Telegram, press **Start**, and send it any message.
+3. Run `npm run telegram:chats`.
+4. Copy the displayed `chatId` into `TELEGRAM_CHAT_ID` in `.env.local`.
+
+Local development uses Cloudflare's official always-pass test keys when the two Turnstile variables are absent. Telegram and Resend are independent delivery channels: at least one must be fully configured, and Resend is used only if Telegram does not deliver. Production fails closed when no configured channel can deliver the message.
 
 ## Verification
 
