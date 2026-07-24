@@ -9,7 +9,8 @@ const contentSecurityPolicy = [
   "img-src 'self' data: blob:",
   "font-src 'self' data:",
   "style-src 'self' 'unsafe-inline'",
-  `script-src 'self' 'unsafe-inline'${process.env.NODE_ENV === "development" ? " 'unsafe-eval'" : ""}`,
+  `script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com${process.env.NODE_ENV === "development" ? " 'unsafe-eval'" : ""}`,
+  "frame-src https://challenges.cloudflare.com",
   `connect-src 'self'${process.env.NODE_ENV === "development" ? " ws: wss:" : ""}`,
 ].join("; ");
 

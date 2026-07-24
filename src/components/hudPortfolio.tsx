@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type FormEvent, type PointerEvent as ReactPointerEvent } from "react";
 import type { PortfolioView } from "@/src/content/types";
+import TurnstileWidget from "./turnstileWidget";
 import "./hudPortfolio.css";
 
 type Tab = "about" | "log" | "projects" | "contact";
@@ -156,6 +157,10 @@ export default function HudPortfolio({ data }: { data: PortfolioView }) {
   const [category, setCategory] = useState<string | null>(null);
   const [selected, setSelected] = useState<Project | null>(null);
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [formError, setFormError] = useState("");
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const [turnstileReset, setTurnstileReset] = useState(0);
   const [offsets, setOffsets] = useState<Partial<Record<WindowKey, Point>>>({});
   const stageRef = useRef<HTMLDivElement>(null);
   const drag = useRef<{ key: WindowKey; x: number; y: number; ox: number; oy: number; minX: number; maxX: number; minY: number; maxY: number } | null>(null);
@@ -164,6 +169,56 @@ export default function HudPortfolio({ data }: { data: PortfolioView }) {
     return groups;
   }, {}), [data.projects]);
   const technologyTags = useMemo(() => [...new Set(data.projects.flatMap((project) => project.tags))].slice(0, 3), [data.projects]);
+  const receiveTurnstileToken = useCallback((token: string) => setTurnstileToken(token), []);
+
+  const submitContact = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (sending) return;
+    if (!turnstileToken) {
+      setFormError("VERIFICATION_PENDING // Wait and retry.");
+      return;
+    }
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    setSending(true);
+    setFormError("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          email: formData.get("email"),
+          message: formData.get("message"),
+          website: formData.get("website"),
+          turnstileToken,
+        }),
+      });
+      const result = (await response.json().catch(() => null)) as { ok?: boolean; code?: string } | null;
+
+      if (!response.ok || !result?.ok) {
+        const retryVerification = result?.code === "VERIFICATION_FAILED" || result?.code === "VERIFICATION_REQUIRED";
+        setFormError(
+          retryVerification
+            ? "VERIFICATION_FAILED // Complete a new check."
+            : result?.code === "INVALID_FIELDS"
+              ? "INVALID_PAYLOAD // Check all fields."
+              : "TRANSFER_FAILED // Retry later.",
+        );
+        return;
+      }
+
+      form.reset();
+      setSent(true);
+    } catch {
+      setFormError("CONNECTION_LOST // Retry later.");
+    } finally {
+      setSending(false);
+      setTurnstileReset((value) => value + 1);
+    }
+  };
 
   const dragStart = (key: WindowKey) => (event: ReactPointerEvent<HTMLDivElement>) => {
     if (window.innerWidth < 768 || (event.target as HTMLElement).closest("button,input,textarea")) return;
@@ -224,7 +279,7 @@ export default function HudPortfolio({ data }: { data: PortfolioView }) {
         {category && <Panel title={category.toUpperCase()} id="003-L" onPointerDown={dragStart("projects-list")} offset={offsets["projects-list"] ?? { x: 0, y: 0 }} className="list-panel"><button className="mobile-back" aria-label="Back to sectors" onClick={() => setCategory(null)}><Glyph type="back" /></button>{(projects[category] ?? []).map(project => <button className={`project-row ${selected?.id === project.id ? "active" : ""}`} key={project.id} onClick={() => setSelected(project)}><small>{project.code}</small><span>{project.name}</span><Glyph type="arrow" /></button>)}</Panel>}
         {selected && <Panel title="FILE_METADATA" id="003-D" onPointerDown={dragStart("projects-detail")} offset={offsets["projects-detail"] ?? { x: 0, y: 0 }} className="detail-panel"><button className="mobile-back" aria-label="Back to projects" onClick={() => setSelected(null)}><Glyph type="back" /></button><div className="project-visual"><Glyph type="projects" /><span>{selected.code}</span></div><h3>{selected.name}</h3><p>{selected.description}</p><div className="tags">{selected.tags.map(tag => <span key={tag}>{tag}</span>)}</div>{selected.liveUrl ? <a className="hud-action" href={selected.liveUrl} target="_blank" rel="noreferrer">INITIATE_SYNC_LINK</a> : <button className="hud-action" disabled>LINK_NOT_AVAILABLE</button>}</Panel>}
       </div>}
-      {tab === "contact" && <Panel title="COMMLINK" id="004" onPointerDown={dragStart("contact")} offset={offsets.contact ?? { x: 0, y: 0 }} className="contact-panel">{sent ? <div className="success"><Glyph type="contact"/><b>TRANSFER_COMPLETE</b><p>Signal received. Response window: 24–48 hours.</p><button onClick={() => setSent(false)}>NEW_TRANSMISSION</button></div> : <form onSubmit={event => { event.preventDefault(); setSent(true); }}><label>IDENTIFIER<input required autoComplete="name" placeholder="Enter name" /></label><label>FREQUENCY_ROUTE<input required type="email" autoComplete="email" placeholder="Enter email" /></label><label>DATA_PAYLOAD<textarea required placeholder="Transmit message…" /></label><button className="hud-action">INITIATE_TRANSFER</button></form>}</Panel>}
+      {tab === "contact" && <Panel title="COMMLINK" id="004" onPointerDown={dragStart("contact")} offset={offsets.contact ?? { x: 0, y: 0 }} className="contact-panel">{sent ? <div className="success"><Glyph type="contact"/><b>TRANSFER_COMPLETE</b><p>Signal received. Response window: 24–48 hours.</p><button onClick={() => { setSent(false); setFormError(""); }}>NEW_TRANSMISSION</button></div> : <form onSubmit={submitContact}><label>IDENTIFIER<input name="name" required minLength={2} maxLength={80} autoComplete="name" placeholder="Enter name" /></label><label>FREQUENCY_ROUTE<input name="email" required maxLength={254} type="email" autoComplete="email" placeholder="Enter email" /></label><label>DATA_PAYLOAD<textarea name="message" required minLength={10} maxLength={4000} placeholder="Transmit message…" /></label><label className="signal-trap" aria-hidden="true">WEBSITE<input name="website" tabIndex={-1} autoComplete="off" /></label><TurnstileWidget onToken={receiveTurnstileToken} resetSignal={turnstileReset} />{formError && <p className="form-feedback error" role="alert">{formError}</p>}<button className="hud-action" disabled={sending || !turnstileToken}>{sending ? "TRANSMITTING…" : "INITIATE_TRANSFER"}</button></form>}</Panel>}
     </div></div>
     <nav className="hud-dock" aria-label="Portfolio sections">{(["about","log","projects","contact"] as Tab[]).map(item => <button key={item} className={tab === item ? "active" : ""} aria-current={tab === item ? "page" : undefined} onClick={() => switchTab(item)}><Glyph type={item}/><span>{item === "projects" ? "PROJ" : item === "contact" ? "LINK" : item.toUpperCase()}</span></button>)}</nav>
   </div>;

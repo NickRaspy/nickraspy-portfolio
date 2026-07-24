@@ -51,3 +51,8 @@ next-env.d.ts
 .vercel
 .env*
 !.env.example
+
+# Graphify runtime artifacts
+/graphify-out/*
+!/graphify-out/graph.json
+!/graphify-out/GRAPH_REPORT.md
