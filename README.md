@@ -72,6 +72,20 @@ Configure `GITHUB_CLIENT_ID`, `GITHUB_CLIENT_SECRET`, `ADMIN_GITHUB_ID`, `AUTH_O
 - `AUTH_ORIGIN` is the exact public origin for this deployment, for example `https://portfolio-data.example.vercel.app`, without a path or trailing slash. Its `/api/auth/github/callback` URL must match the callback configured in the GitHub OAuth app.
 - OAuth state, PKCE verifier, and the signed admin session are stored only in `HttpOnly`, `Secure`, host-only cookies in production.
 
+## Contact form
+
+The public contact form validates input on the server, uses a hidden honeypot field, and verifies a single-use Cloudflare Turnstile token before delivering the message through Resend.
+
+Configure these variables in both Vercel Preview and Production:
+
+- `NEXT_PUBLIC_TURNSTILE_SITE_KEY` — the public site key of a Turnstile Managed widget;
+- `TURNSTILE_SECRET_KEY` — the matching private Turnstile secret;
+- `RESEND_API_KEY` — a Resend API key with sending access;
+- `CONTACT_FROM_EMAIL` — a sender on a domain verified in Resend, for example `Portfolio <contact@example.com>`;
+- `CONTACT_TO_EMAIL` — the private inbox that receives portfolio messages.
+
+Local development uses Cloudflare's official always-pass test keys when the two Turnstile variables are absent. Email delivery still requires the three Resend variables. Production fails closed if any required variable is missing.
+
 ## Verification
 
 ```powershell
