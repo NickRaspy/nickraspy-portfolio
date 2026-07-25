@@ -79,18 +79,88 @@ function validateExternalUrls(content: PortfolioContent): ImportIssue[] {
   return issues;
 }
 
-function ensureUnique(rows: RowRecord[], sheet: string, field: string, issues: ImportIssue[]) {
+function jsonPointerSegment(value: string): string {
+  return value.replaceAll("~", "~0").replaceAll("/", "~1");
+}
+
+function validateUniqueIds(
+  items: ReadonlyArray<{ id: string }>,
+  sheet: string,
+  issues: ImportIssue[],
+) {
   const seen = new Map<string, number>();
-  rows.forEach((row) => {
-    const value = text(row[field]);
-    if (!value) {
-      addIssue(issues, sheet, row.__row, field, "Обязательное значение отсутствует.");
-    } else if (seen.has(value)) {
-      addIssue(issues, sheet, row.__row, field, `Значение «${value}» уже используется в строке ${seen.get(value)}.`);
-    } else {
-      seen.set(value, row.__row);
+  items.forEach((item, index) => {
+    const previousIndex = seen.get(item.id);
+    if (previousIndex !== undefined) {
+      addIssue(
+        issues,
+        sheet,
+        undefined,
+        `/${sheet}/${index}/id`,
+        `ID «${item.id}» already appears at /${sheet}/${previousIndex}/id.`,
+      );
+      return;
+    }
+    seen.set(item.id, index);
+  });
+}
+
+function validateRequiredTranslations(content: PortfolioContent, issues: ImportIssue[]) {
+  const translatedEntities: Array<{
+    sheet: string;
+    id: string;
+    field: string;
+    translations: TranslationMap<unknown>;
+  }> = [
+    { sheet: "profile_i18n", id: content.profile.id, field: "/profile/translations", translations: content.profile.translations },
+    ...content.categories.map((item, index) => ({
+      sheet: "category_i18n", id: item.id, field: `/categories/${index}/translations`, translations: item.translations,
+    })),
+    ...content.projects.map((item, index) => ({
+      sheet: "project_i18n", id: item.id, field: `/projects/${index}/translations`, translations: item.translations,
+    })),
+    ...content.experience.map((item, index) => ({
+      sheet: "experience_i18n", id: item.id, field: `/experience/${index}/translations`, translations: item.translations,
+    })),
+  ];
+
+  translatedEntities.forEach((entity) => content.locales.forEach((locale) => {
+    if (!Object.hasOwn(entity.translations, locale)) {
+      addIssue(
+        issues,
+        entity.sheet,
+        undefined,
+        `${entity.field}/${jsonPointerSegment(locale)}`,
+        `Translation ${locale} is missing for «${entity.id}».`,
+      );
+    }
+  }));
+}
+
+function validateContentRelationships(content: PortfolioContent): ImportIssue[] {
+  const issues: ImportIssue[] = [];
+  if (!content.locales.includes(content.defaultLocale)) {
+    addIssue(issues, "settings", undefined, "/defaultLocale", "defaultLocale must be included in locales.");
+  }
+  validateUniqueIds(content.skills, "skills", issues);
+  validateUniqueIds(content.experience, "experience", issues);
+  validateUniqueIds(content.categories, "categories", issues);
+  validateUniqueIds(content.projects, "projects", issues);
+  validateUniqueIds(content.contacts, "contacts", issues);
+  const categoryIds = new Set(content.categories.map((item) => item.id));
+  content.projects.forEach((project, index) => {
+    if (!categoryIds.has(project.categoryId)) {
+      addIssue(
+        issues,
+        "projects",
+        undefined,
+        `/projects/${index}/categoryId`,
+        `Category «${project.categoryId}» does not exist.`,
+      );
     }
   });
+  validateRequiredTranslations(content, issues);
+  return issues;
 }
 
 function translationMap<T>(rows: RowRecord[], idField: string, id: string, builder: (row: RowRecord) => T): TranslationMap<T> {
@@ -118,17 +188,10 @@ export async function importPortfolioWorkbook(input: Buffer | ArrayBuffer): Prom
     sheets[sheet] = rowsToRecords(rows);
   }
 
-  ensureUnique(sheets.skills, "skills", "skill_id", issues);
-  ensureUnique(sheets.experience, "experience", "experience_id", issues);
-  ensureUnique(sheets.categories, "categories", "category_id", issues);
-  ensureUnique(sheets.projects, "projects", "project_id", issues);
-  ensureUnique(sheets.contacts, "contacts", "contact_id", issues);
-
   const settings = new Map(sheets.settings.map((row) => [text(row.key), text(row.value)]));
   const locales = (settings.get("locales") ?? "").split(",").map((locale) => locale.trim()).filter(Boolean);
   const defaultLocale = settings.get("default_locale") ?? locales[0] ?? "";
   if (!locales.length) addIssue(issues, "settings", undefined, "locales", "Укажите хотя бы одну локаль через запятую.");
-  if (!locales.includes(defaultLocale)) addIssue(issues, "settings", undefined, "default_locale", "Основная локаль должна входить в список locales.");
 
   const profileRow = sheets.profile[0];
   if (!profileRow) addIssue(issues, "profile", undefined, undefined, "Добавьте строку профиля.");
@@ -173,31 +236,8 @@ export async function importPortfolioWorkbook(input: Buffer | ArrayBuffer): Prom
     })),
   };
 
-  const categoryIds = new Set(content.categories.map((item) => item.id));
-  content.projects.forEach((project) => {
-    if (!categoryIds.has(project.categoryId)) {
-      const source = sheets.projects.find((row) => text(row.project_id) === project.id);
-      addIssue(issues, "projects", source?.__row, "category_id", `Категория «${project.categoryId}» не найдена.`);
-    }
-  });
-
-  const translatedEntities: Array<{ sheet: string; id: string; translations: TranslationMap<unknown> }> = [
-    { sheet: "profile_i18n", id: content.profile.id, translations: content.profile.translations },
-    ...content.categories.map((item) => ({ sheet: "category_i18n", id: item.id, translations: item.translations })),
-    ...content.projects.map((item) => ({ sheet: "project_i18n", id: item.id, translations: item.translations })),
-    ...content.experience.map((item) => ({ sheet: "experience_i18n", id: item.id, translations: item.translations })),
-  ];
-  translatedEntities.forEach((entity) => locales.forEach((locale) => {
-    if (!entity.translations[locale]) addIssue(issues, entity.sheet, undefined, "locale", `Для «${entity.id}» отсутствует перевод ${locale}.`);
-  }));
-
-  if (!validateSchema(content)) {
-    for (const error of validateSchema.errors ?? []) {
-      addIssue(issues, "schema", undefined, error.instancePath || undefined, error.message ?? "Данные не соответствуют схеме.");
-    }
-  }
-
-  issues.push(...validateExternalUrls(content));
+  const publicationValidation = validatePortfolioContentForPublish(content);
+  issues.push(...publicationValidation.issues);
 
   const summary = {
     locales: content.locales.length,
@@ -213,11 +253,15 @@ export async function importPortfolioWorkbook(input: Buffer | ArrayBuffer): Prom
   return { content, checksum, issues, summary };
 }
 
-export function validatePortfolioContentForPublish(value: unknown): { valid: boolean; issues: ImportIssue[] } {
+export function validatePortfolioContentForPublish(
+  value: unknown,
+): { valid: false; issues: ImportIssue[] } | { valid: true; content: PortfolioContent; issues: ImportIssue[] } {
   const schemaValidation = validatePortfolioContent(value);
-  if (!schemaValidation.valid) return schemaValidation;
-  const issues = validateExternalUrls(value as PortfolioContent);
-  return { valid: issues.length === 0, issues };
+  if (!schemaValidation.valid) return { valid: false, issues: schemaValidation.issues };
+  const content = value as PortfolioContent;
+  const issues = [...validateContentRelationships(content), ...validateExternalUrls(content)];
+  if (issues.length > 0) return { valid: false, issues };
+  return { valid: true, content, issues };
 }
 
 export function validatePortfolioContent(value: unknown): { valid: boolean; issues: ImportIssue[] } {
