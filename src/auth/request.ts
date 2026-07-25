@@ -1,4 +1,4 @@
-import { getAdminSession } from "./admin";
+import { getAdminSession, type AdminSession } from "./admin";
 
 function allowedRequestOrigins(request: Request): Set<string> {
   const requestUrl = new URL(request.url);
@@ -17,7 +17,9 @@ function allowedRequestOrigins(request: Request): Set<string> {
   }));
 }
 
-export async function authorizeAdminMutation(request: Request) {
+export async function authorizeAdminMutation(
+  request: Request,
+): Promise<{ error: Response } | { session: AdminSession }> {
   const session = await getAdminSession();
   if (!session) return { error: Response.json({ error: "Unauthorized." }, { status: 401 }) };
 

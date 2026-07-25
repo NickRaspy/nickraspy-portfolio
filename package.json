@@ -7,13 +7,18 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "typecheck": "tsc --noEmit",
     "content:validate": "tsx scripts/content.ts validate",
     "content:migrate": "tsx scripts/content.ts migrate",
     "content:sync": "tsx scripts/content.ts sync",
     "content:history": "tsx scripts/content.ts history",
     "content:rollback": "tsx scripts/content.ts rollback",
     "telegram:chats": "node --env-file=.env.local scripts/telegram-chats.mjs",
-    "test": "tsx --test src/contact/delivery.test.ts"
+    "test": "npm run test:unit",
+    "test:unit": "tsx --test --test-concurrency=1 \"src/**/*.test.ts\" \"tests/unit/**/*.test.ts\"",
+    "test:e2e": "playwright test",
+    "verify": "npm run lint && npm run typecheck && npm run test:unit && npm run build",
+    "verify:e2e": "npm run verify && npm run test:e2e"
   },
   "dependencies": {
     "ajv": "^8.20.0",
