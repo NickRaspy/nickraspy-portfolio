@@ -521,8 +521,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_page",
-      "community": 5,
-      "community_name": "Portfolio HUD Interface",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "app/page.tsx"
     },
     {
@@ -532,8 +532,8 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "app_page_home",
-      "community": 5,
-      "community_name": "Portfolio HUD Interface",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "home()"
     },
     {
@@ -1126,8 +1126,8 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_experience_type",
-      "community": 2,
-      "community_name": "Schema Collection Rules",
+      "community": 12,
+      "community_name": "Contact Translation Schema",
       "norm_label": "type"
     },
     {
@@ -1247,8 +1247,8 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_defs",
-      "community": 26,
-      "community_name": "id",
+      "community": 0,
+      "community_name": "Portfolio Schema Core",
       "norm_label": "$defs"
     },
     {
@@ -1258,8 +1258,8 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_defs_id",
-      "community": 26,
-      "community_name": "id",
+      "community": 0,
+      "community_name": "Portfolio Schema Core",
       "norm_label": "id"
     },
     {
@@ -1269,8 +1269,8 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_id_type",
-      "community": 26,
-      "community_name": "id",
+      "community": 0,
+      "community_name": "Portfolio Schema Core",
       "norm_label": "type"
     },
     {
@@ -1280,8 +1280,8 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_id_pattern",
-      "community": 26,
-      "community_name": "id",
+      "community": 0,
+      "community_name": "Portfolio Schema Core",
       "norm_label": "pattern"
     },
     {
@@ -1291,8 +1291,8 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_defs_localizedtext",
-      "community": 35,
-      "community_name": "status",
+      "community": 6,
+      "community_name": "Required Schema Fields",
       "norm_label": "localizedtext"
     },
     {
@@ -1302,8 +1302,8 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_localizedtext_type",
-      "community": 35,
-      "community_name": "status",
+      "community": 6,
+      "community_name": "Required Schema Fields",
       "norm_label": "type"
     },
     {
@@ -1313,8 +1313,8 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_localizedtext_additionalproperties",
-      "community": 35,
-      "community_name": "status",
+      "community": 6,
+      "community_name": "Required Schema Fields",
       "norm_label": "additionalproperties"
     },
     {
@@ -1324,8 +1324,8 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_localizedtext_required",
-      "community": 35,
-      "community_name": "status",
+      "community": 6,
+      "community_name": "Required Schema Fields",
       "norm_label": "required"
     },
     {
@@ -1335,8 +1335,8 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "ref_name",
-      "community": 35,
-      "community_name": "status",
+      "community": 6,
+      "community_name": "Required Schema Fields",
       "norm_label": "name"
     },
     {
@@ -1346,8 +1346,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_localizedtext_properties",
-      "community": 35,
-      "community_name": "status",
+      "community": 6,
+      "community_name": "Required Schema Fields",
       "norm_label": "properties"
     },
     {
@@ -1357,8 +1357,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_properties_name",
-      "community": 19,
-      "community_name": "translations",
+      "community": 6,
+      "community_name": "Required Schema Fields",
       "norm_label": "name"
     },
     {
@@ -1368,8 +1368,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_name_type",
-      "community": 19,
-      "community_name": "translations",
+      "community": 6,
+      "community_name": "Required Schema Fields",
       "norm_label": "type"
     },
     {
@@ -1379,8 +1379,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_name_minlength",
-      "community": 19,
-      "community_name": "translations",
+      "community": 6,
+      "community_name": "Required Schema Fields",
       "norm_label": "minlength"
     },
     {
@@ -1390,8 +1390,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_properties_description",
-      "community": 35,
-      "community_name": "status",
+      "community": 6,
+      "community_name": "Required Schema Fields",
       "norm_label": "description"
     },
     {
@@ -1401,8 +1401,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_description_type",
-      "community": 35,
-      "community_name": "status",
+      "community": 6,
+      "community_name": "Required Schema Fields",
       "norm_label": "type"
     },
     {
@@ -1412,8 +1412,8 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_defs_profiletranslations",
-      "community": 26,
-      "community_name": "id",
+      "community": 0,
+      "community_name": "Portfolio Schema Core",
       "norm_label": "profiletranslations"
     },
     {
@@ -1423,8 +1423,8 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_profiletranslations_type",
-      "community": 26,
-      "community_name": "id",
+      "community": 0,
+      "community_name": "Portfolio Schema Core",
       "norm_label": "type"
     },
     {
@@ -1577,8 +1577,8 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_defs_skill",
-      "community": 19,
-      "community_name": "translations",
+      "community": 6,
+      "community_name": "Required Schema Fields",
       "norm_label": "skill"
     },
     {
@@ -1588,8 +1588,8 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_skill_type",
-      "community": 19,
-      "community_name": "translations",
+      "community": 6,
+      "community_name": "Required Schema Fields",
       "norm_label": "type"
     },
     {
@@ -1599,8 +1599,8 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_skill_additionalproperties",
-      "community": 19,
-      "community_name": "translations",
+      "community": 6,
+      "community_name": "Required Schema Fields",
       "norm_label": "additionalproperties"
     },
     {
@@ -1643,8 +1643,8 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_skill_properties",
-      "community": 19,
-      "community_name": "translations",
+      "community": 6,
+      "community_name": "Required Schema Fields",
       "norm_label": "properties"
     },
     {
@@ -1654,8 +1654,8 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_properties_level",
-      "community": 19,
-      "community_name": "translations",
+      "community": 6,
+      "community_name": "Required Schema Fields",
       "norm_label": "level"
     },
     {
@@ -1665,8 +1665,8 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_level_type",
-      "community": 19,
-      "community_name": "translations",
+      "community": 6,
+      "community_name": "Required Schema Fields",
       "norm_label": "type"
     },
     {
@@ -1676,8 +1676,8 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_level_minimum",
-      "community": 19,
-      "community_name": "translations",
+      "community": 6,
+      "community_name": "Required Schema Fields",
       "norm_label": "minimum"
     },
     {
@@ -1687,8 +1687,8 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_level_maximum",
-      "community": 19,
-      "community_name": "translations",
+      "community": 6,
+      "community_name": "Required Schema Fields",
       "norm_label": "maximum"
     },
     {
@@ -2017,8 +2017,8 @@
       "source_location": "L61",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_defs_project",
-      "community": 26,
-      "community_name": "id",
+      "community": 15,
+      "community_name": "Project Entry Schema",
       "norm_label": "project"
     },
     {
@@ -2028,8 +2028,8 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_project_type",
-      "community": 26,
-      "community_name": "id",
+      "community": 15,
+      "community_name": "Project Entry Schema",
       "norm_label": "type"
     },
     {
@@ -2039,8 +2039,8 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_project_additionalproperties",
-      "community": 26,
-      "community_name": "id",
+      "community": 15,
+      "community_name": "Project Entry Schema",
       "norm_label": "additionalproperties"
     },
     {
@@ -2303,8 +2303,8 @@
       "source_location": "L70",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_defs_contact",
-      "community": 22,
-      "community_name": "sortOrder",
+      "community": 12,
+      "community_name": "Contact Translation Schema",
       "norm_label": "contact"
     },
     {
@@ -2314,8 +2314,8 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_contact_type",
-      "community": 22,
-      "community_name": "sortOrder",
+      "community": 12,
+      "community_name": "Contact Translation Schema",
       "norm_label": "type"
     },
     {
@@ -2325,8 +2325,8 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_contact_additionalproperties",
-      "community": 22,
-      "community_name": "sortOrder",
+      "community": 12,
+      "community_name": "Contact Translation Schema",
       "norm_label": "additionalproperties"
     },
     {
@@ -2336,8 +2336,8 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_contact_required",
-      "community": 22,
-      "community_name": "sortOrder",
+      "community": 6,
+      "community_name": "Required Schema Fields",
       "norm_label": "required"
     },
     {
@@ -2347,8 +2347,8 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "ref_type",
-      "community": 22,
-      "community_name": "sortOrder",
+      "community": 6,
+      "community_name": "Required Schema Fields",
       "norm_label": "type"
     },
     {
@@ -2358,8 +2358,8 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "ref_label",
-      "community": 22,
-      "community_name": "sortOrder",
+      "community": 6,
+      "community_name": "Required Schema Fields",
       "norm_label": "label"
     },
     {
@@ -2369,8 +2369,8 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "ref_value",
-      "community": 22,
-      "community_name": "sortOrder",
+      "community": 6,
+      "community_name": "Required Schema Fields",
       "norm_label": "value"
     },
     {
@@ -2380,8 +2380,8 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "ref_url",
-      "community": 22,
-      "community_name": "sortOrder",
+      "community": 6,
+      "community_name": "Required Schema Fields",
       "norm_label": "url"
     },
     {
@@ -2391,8 +2391,8 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "ref_visible",
-      "community": 22,
-      "community_name": "sortOrder",
+      "community": 6,
+      "community_name": "Required Schema Fields",
       "norm_label": "visible"
     },
     {
@@ -3837,10 +3837,21 @@
       "norm_label": "request.ts"
     },
     {
-      "label": "allowedRequestOrigins()",
+      "label": "AdminSessionReader",
       "file_type": "code",
       "source_file": "src/auth/request.ts",
       "source_location": "L3",
+      "_origin": "ast",
+      "id": "src_auth_request_adminsessionreader",
+      "community": 8,
+      "community_name": "GitHub OAuth Security",
+      "norm_label": "adminsessionreader"
+    },
+    {
+      "label": "allowedRequestOrigins()",
+      "file_type": "code",
+      "source_file": "src/auth/request.ts",
+      "source_location": "L5",
       "_origin": "ast",
       "id": "src_auth_request_allowedrequestorigins",
       "community": 8,
@@ -3851,7 +3862,7 @@
       "label": "authorizeAdminMutation()",
       "file_type": "code",
       "source_file": "src/auth/request.ts",
-      "source_location": "L20",
+      "source_location": "L22",
       "_origin": "ast",
       "id": "src_auth_request_authorizeadminmutation",
       "community": 8,
@@ -4167,14 +4178,36 @@
       "norm_label": "delivercontact()"
     },
     {
+      "label": "admin-import.ts",
+      "file_type": "code",
+      "source_file": "src/content/admin-import.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_content_admin_import",
+      "community": 8,
+      "community_name": "GitHub OAuth Security",
+      "norm_label": "admin-import.ts"
+    },
+    {
+      "label": "validateAdminWorkbookFile()",
+      "file_type": "code",
+      "source_file": "src/content/admin-import.ts",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "src_content_admin_import_validateadminworkbookfile",
+      "community": 8,
+      "community_name": "GitHub OAuth Security",
+      "norm_label": "validateadminworkbookfile()"
+    },
+    {
       "label": "data.ts",
       "file_type": "code",
       "source_file": "src/content/data.ts",
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_content_data",
-      "community": 5,
-      "community_name": "Portfolio HUD Interface",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "data.ts"
     },
     {
@@ -4184,8 +4217,8 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_content_data_getcachedcontent",
-      "community": 5,
-      "community_name": "Portfolio HUD Interface",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "getcachedcontent"
     },
     {
@@ -4195,8 +4228,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_content_data_getportfolioview",
-      "community": 5,
-      "community_name": "Portfolio HUD Interface",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "getportfolioview()"
     },
     {
@@ -4514,8 +4547,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_content_types",
-      "community": 5,
-      "community_name": "Portfolio HUD Interface",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "types.ts"
     },
     {
@@ -4525,8 +4558,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_content_types_locale",
-      "community": 5,
-      "community_name": "Portfolio HUD Interface",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "locale"
     },
     {
@@ -4536,8 +4569,8 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "src_content_types_translationmap",
-      "community": 5,
-      "community_name": "Portfolio HUD Interface",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "translationmap"
     },
     {
@@ -4547,8 +4580,8 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "src_content_types_portfoliocontent",
-      "community": 5,
-      "community_name": "Portfolio HUD Interface",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "portfoliocontent"
     },
     {
@@ -4558,8 +4591,8 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "src_content_types_portfolioview",
-      "community": 5,
-      "community_name": "Portfolio HUD Interface",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "portfolioview"
     },
     {
@@ -4569,8 +4602,8 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "src_content_types_importissue",
-      "community": 5,
-      "community_name": "Portfolio HUD Interface",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "importissue"
     },
     {
@@ -4591,8 +4624,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_content_view",
-      "community": 5,
-      "community_name": "Portfolio HUD Interface",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "view.ts"
     },
     {
@@ -4602,8 +4635,8 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "src_content_view_localized",
-      "community": 5,
-      "community_name": "Portfolio HUD Interface",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "localized()"
     },
     {
@@ -4613,8 +4646,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_content_view_createportfolioview",
-      "community": 5,
-      "community_name": "Portfolio HUD Interface",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "createportfolioview()"
     },
     {
@@ -4651,10 +4684,32 @@
       "norm_label": "admin.test.ts"
     },
     {
+      "label": "authenticatedSession",
+      "file_type": "code",
+      "source_file": "tests/unit/admin.test.ts",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "tests_unit_admin_test_authenticatedsession",
+      "community": 8,
+      "community_name": "GitHub OAuth Security",
+      "norm_label": "authenticatedsession"
+    },
+    {
+      "label": "readAuthenticatedSession()",
+      "file_type": "code",
+      "source_file": "tests/unit/admin.test.ts",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "tests_unit_admin_test_readauthenticatedsession",
+      "community": 8,
+      "community_name": "GitHub OAuth Security",
+      "norm_label": "readauthenticatedsession()"
+    },
+    {
       "label": "adminRequest()",
       "file_type": "code",
       "source_file": "tests/unit/admin.test.ts",
-      "source_location": "L20",
+      "source_location": "L23",
       "_origin": "ast",
       "id": "tests_unit_admin_test_adminrequest",
       "community": 8,
@@ -4767,8 +4822,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_unit_view_test",
-      "community": 5,
-      "community_name": "Portfolio HUD Interface",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "view.test.ts"
     },
     {
@@ -4778,8 +4833,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "tests_unit_view_test_contentfixture",
-      "community": 5,
-      "community_name": "Portfolio HUD Interface",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "contentfixture()"
     },
     {
@@ -6256,7 +6311,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_api_admin_import_validate_route",
-      "target": "src_content_importer",
+      "target": "src_content_admin_import",
       "confidence_score": 1.0
     },
     {
@@ -6268,19 +6323,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_api_admin_import_validate_route",
-      "target": "src_content_importer_importportfolioworkbook",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/unit/admin.test.ts",
-      "source_location": "L6",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "tests_unit_admin_test",
-      "target": "app_api_admin_import_validate_route",
+      "target": "src_content_admin_import_validateadminworkbookfile",
       "confidence_score": 1.0
     },
     {
@@ -6301,23 +6344,11 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/api/admin/import/validate/route.ts",
-      "source_location": "L17",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_api_admin_import_validate_route_post",
-      "target": "src_content_importer_importportfolioworkbook"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/unit/admin.test.ts",
-      "source_location": "L6",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "tests_unit_admin_test",
-      "target": "app_api_admin_import_validate_route_post",
-      "confidence_score": 1.0
+      "target": "src_content_admin_import_validateadminworkbookfile"
     },
     {
       "relation": "contains",
@@ -11451,7 +11482,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/unit/admin.test.ts",
-      "source_location": "L7",
+      "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_unit_admin_test",
@@ -11467,6 +11498,18 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_auth_request",
+      "target": "src_auth_admin_adminsession",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/admin.test.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_unit_admin_test",
       "target": "src_auth_admin_adminsession",
       "confidence_score": 1.0
     },
@@ -11703,7 +11746,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/unit/admin.test.ts",
-      "source_location": "L7",
+      "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_unit_admin_test",
@@ -11723,22 +11766,21 @@
       "confidence_score": 1.0
     },
     {
-      "relation": "calls",
-      "context": "call",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
       "source_file": "src/auth/request.ts",
-      "source_location": "L23",
+      "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_auth_request_authorizeadminmutation",
-      "target": "src_auth_admin_getadminsession"
+      "source": "src_auth_request",
+      "target": "src_auth_request_adminsessionreader",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/auth/request.ts",
-      "source_location": "L3",
+      "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_auth_request",
@@ -11749,7 +11791,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/auth/request.ts",
-      "source_location": "L20",
+      "source_location": "L22",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_auth_request",
@@ -11761,7 +11803,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/unit/admin.test.ts",
-      "source_location": "L8",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_unit_admin_test",
@@ -11773,7 +11815,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/auth/request.ts",
-      "source_location": "L28",
+      "source_location": "L31",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_auth_request_authorizeadminmutation",
@@ -11785,7 +11827,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/unit/admin.test.ts",
-      "source_location": "L8",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_unit_admin_test",
@@ -12222,6 +12264,77 @@
       "_origin": "ast",
       "source": "src_contact_delivery_delivercontact",
       "target": "src_contact_delivery_sendemail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/admin-import.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_content_admin_import",
+      "target": "src_content_admin_import_validateadminworkbookfile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/admin-import.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_content_admin_import",
+      "target": "src_content_importer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/admin-import.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_content_admin_import",
+      "target": "src_content_importer_importportfolioworkbook",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/admin.test.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_unit_admin_test",
+      "target": "src_content_admin_import",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/admin-import.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_content_admin_import_validateadminworkbookfile",
+      "target": "src_content_importer_importportfolioworkbook"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/admin.test.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_unit_admin_test",
+      "target": "src_content_admin_import_validateadminworkbookfile",
       "confidence_score": 1.0
     },
     {
@@ -13308,11 +13421,33 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/unit/admin.test.ts",
-      "source_location": "L20",
+      "source_location": "L23",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_unit_admin_test",
       "target": "tests_unit_admin_test_adminrequest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/admin.test.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_unit_admin_test",
+      "target": "tests_unit_admin_test_authenticatedsession",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/admin.test.ts",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_unit_admin_test",
+      "target": "tests_unit_admin_test_readauthenticatedsession",
       "confidence_score": 1.0
     },
     {
@@ -14360,5 +14495,5 @@
       "source_file": "README.md"
     }
   ],
-  "built_at_commit": "712a84292148cb761fd133b600fd4988672dd95c"
+  "built_at_commit": "1a2efcb15309921e6ff95fcd9258d963c420afd1"
 }

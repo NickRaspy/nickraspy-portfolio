@@ -1,5 +1,7 @@
 import { getAdminSession, type AdminSession } from "./admin";
 
+export type AdminSessionReader = () => Promise<AdminSession | null>;
+
 function allowedRequestOrigins(request: Request): Set<string> {
   const requestUrl = new URL(request.url);
   const protocol = (request.headers.get("x-forwarded-proto")?.split(",")[0].trim() || requestUrl.protocol).replace(/:$/, "");
@@ -19,8 +21,9 @@ function allowedRequestOrigins(request: Request): Set<string> {
 
 export async function authorizeAdminMutation(
   request: Request,
+  readSession: AdminSessionReader = getAdminSession,
 ): Promise<{ error: Response } | { session: AdminSession }> {
-  const session = await getAdminSession();
+  const session = await readSession();
   if (!session) return { error: Response.json({ error: "Unauthorized." }, { status: 401 }) };
 
   const origin = request.headers.get("origin");
