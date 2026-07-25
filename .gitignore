@@ -13,6 +13,8 @@
 # testing
 /coverage
 /.playwright-cli/
+/playwright-report/
+/test-results/
 /outputs/portfolio-data/qa/
 /outputs/portfolio-data/build/node_modules/
 /outputs/portfolio-data/*.inspect.ndjson

@@ -98,7 +98,15 @@ Local development uses Cloudflare's official always-pass test keys when the two 
 ## Verification
 
 ```powershell
-npm run lint
-npm run build
+npm run verify
+npm run test:e2e
 npm audit
 ```
+
+`npm run verify` is also the Vercel Build Command. It runs ESLint, TypeScript,
+unit/API tests, and the production Next.js build. Browser tests stay separate so
+Vercel does not need to download Chromium during every deployment.
+
+Playwright starts an isolated local development server with the admin-only
+development bypass and runs the public portfolio and Excel validation flow in
+desktop Chromium and a mobile Pixel viewport.
