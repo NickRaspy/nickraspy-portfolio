@@ -82,3 +82,20 @@ test("rejects unsafe external links before publication", async () => {
   assert.equal(result.valid, false);
   assert.equal(result.issues.filter((issue) => issue.sheet === "links").length, 2);
 });
+
+test("rejects broken content relationships before publication", async () => {
+  const content = structuredClone(await validContent());
+  content.defaultLocale = "de";
+  content.categories[1].id = content.categories[0].id;
+  content.projects[0].categoryId = "missing-category";
+  delete content.projects[0].translations.ru;
+
+  const result = validatePortfolioContentForPublish(content);
+  const fields = new Set(result.issues.map((issue) => issue.field));
+
+  assert.equal(result.valid, false);
+  assert.equal(fields.has("/defaultLocale"), true);
+  assert.equal(fields.has("/categories/1/id"), true);
+  assert.equal(fields.has("/projects/0/categoryId"), true);
+  assert.equal(fields.has("/projects/0/translations/ru"), true);
+});

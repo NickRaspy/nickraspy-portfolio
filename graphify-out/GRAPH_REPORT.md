@@ -1,16 +1,16 @@
 # Graph Report - nickraspy-portfolio  (2026-07-26)
 
 ## Corpus Check
-- 52 files · ~15,780 words
+- 56 files · ~16,711 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 525 nodes · 747 edges · 37 communities (28 shown, 9 thin omitted)
-- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 6 edges (avg confidence: 0.91)
+- 546 nodes · 780 edges · 39 communities (30 shown, 9 thin omitted)
+- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 9 edges (avg confidence: 0.87)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1a2efcb1`
+- Built from commit: `1ba40bda`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -34,6 +34,7 @@
 - Experience Entry Schema
 - Profile Identity Schema
 - Graphify Workflow Guide
+- skill
 - Root Layout Typography
 - Browser Window Icon
 - Security Headers
@@ -49,6 +50,7 @@
 - Next.js Icon Asset
 - vercel.json
 - playwright.config.ts
+- Q: Единая серверная валидация: Повторно проверять публикуемый JSON на сервере либо выдавать подписанный одноразовый import-token. Что это значит и что будет сделано?
 
 ## God Nodes (most connected - your core abstractions)
 1. `scripts` - 17 edges
@@ -57,22 +59,22 @@
 4. `getAdminSession()` - 11 edges
 5. `authorizeAdminMutation()` - 11 edges
 6. `required` - 10 edges
-7. `POST()` - 9 edges
-8. `$defs` - 9 edges
-9. `listContentVersions()` - 9 edges
-10. `required` - 8 edges
+7. `PortfolioContent` - 10 edges
+8. `POST()` - 9 edges
+9. `$defs` - 9 edges
+10. `listContentVersions()` - 9 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `AdminPage()` --calls--> `isGitHubAuthConfigured()`  [EXTRACTED]
-  app/admin/page.tsx → src/auth/admin.ts
+- `AdminPage()` --calls--> `hasDatabase()`  [EXTRACTED]
+  app/admin/page.tsx → src/content/repository.ts
+- `AdminPage()` --calls--> `listContentVersions()`  [EXTRACTED]
+  app/admin/page.tsx → src/content/repository.ts
 - `POST()` --calls--> `authorizeAdminMutation()`  [EXTRACTED]
   app/api/admin/publish/route.ts → src/auth/request.ts
-- `POST()` --calls--> `validatePortfolioContentForPublish()`  [EXTRACTED]
-  app/api/admin/publish/route.ts → src/content/importer.ts
-- `POST()` --calls--> `authorizeAdminMutation()`  [EXTRACTED]
-  app/api/admin/rollback/route.ts → src/auth/request.ts
-- `Home()` --calls--> `getPortfolioView()`  [EXTRACTED]
-  app/page.tsx → src/content/data.ts
+- `POST()` --calls--> `handleAdminPublish()`  [EXTRACTED]
+  app/api/admin/publish/route.ts → src/content/admin-publish.ts
+- `POST()` --indirect_call--> `hasDatabase()`  [INFERRED]
+  app/api/admin/publish/route.ts → src/content/repository.ts
 
 ## Import Cycles
 - None detected.
@@ -82,15 +84,15 @@
 - **Portfolio Content Workflow** — readme_portfolio_workbook, readme_content_validate, readme_content_migrate, readme_content_sync, readme_content_history, readme_content_rollback [EXTRACTED 1.00]
 - **GitHub Admin Security** — readme_github_oauth, readme_immutable_github_id_allowlist, readme_auth_origin, readme_oauth_pkce, readme_secure_admin_cookies [EXTRACTED 1.00]
 
-## Communities (37 total, 9 thin omitted)
+## Communities (39 total, 9 thin omitted)
 
 ### Community 0 - "Portfolio Schema Core"
-Cohesion: 0.09
-Nodes (21): additionalProperties, $defs, id, profileTranslations, $id, pattern, type, type (+13 more)
+Cohesion: 0.05
+Nodes (40): additionalProperties, $defs, id, localizedText, profileTranslations, skill, type, $id (+32 more)
 
 ### Community 1 - "Admin API Publishing"
-Cohesion: 0.14
-Nodes (23): AdminPage(), metadata, AdminWorkbench(), ValidatedImport, POST(), POST(), GET(), loadWorkbook() (+15 more)
+Cohesion: 0.16
+Nodes (19): metadata, AdminWorkbench(), ValidatedImport, POST(), GET(), loadWorkbook(), main(), revalidateSite() (+11 more)
 
 ### Community 2 - "Schema Collection Rules"
 Cohesion: 0.11
@@ -105,24 +107,24 @@ Cohesion: 0.07
 Nodes (28): dom, dom.iterable, esnext, **/*.mts, .next/dev/types/**/*.ts, next-env.d.ts, .next/types/**/*.ts, node_modules (+20 more)
 
 ### Community 5 - "Portfolio HUD Interface"
-Cohesion: 0.15
-Nodes (6): Point, Project, Tab, WindowKey, TurnstileApi, Window
+Cohesion: 0.12
+Nodes (11): Home(), Point, Project, Tab, WindowKey, TurnstileApi, Window, getCachedContent (+3 more)
 
 ### Community 6 - "Required Schema Fields"
-Cohesion: 0.06
-Nodes (42): required, required, localizedText, skill, type, required, maximum, minimum (+34 more)
+Cohesion: 0.12
+Nodes (23): required, required, required, required, required, required, categoryId, clearance (+15 more)
 
 ### Community 7 - "Content Operations Documentation"
 Cohesion: 0.09
 Nodes (23): Atomic Active Content Pointer, Protected Publishing Console, Local Admin Development Bypass, Aetheris Portfolio, Deployment Authentication Origin, Content History Command, Content Migration Command, Content Rollback Command (+15 more)
 
 ### Community 8 - "GitHub OAuth Security"
-Cohesion: 0.14
-Nodes (25): POST(), adminRedirect(), GET(), GET(), POST(), AdminSession, clearAdminSession(), consumeOAuthAttempt() (+17 more)
+Cohesion: 0.12
+Nodes (29): AdminPage(), POST(), POST(), adminRedirect(), GET(), GET(), POST(), AdminSession (+21 more)
 
 ### Community 9 - "Excel Import Validation"
 Cohesion: 0.11
-Nodes (29): Home(), getCachedContent, getPortfolioView(), addIssue(), ajv, boolean(), ensureUnique(), importPortfolioWorkbook() (+21 more)
+Nodes (31): AdminPublishDependencies, handleAdminPublish(), addIssue(), ajv, boolean(), importPortfolioWorkbook(), integer(), isSafeExternalUrl() (+23 more)
 
 ### Community 10 - "Development Tooling"
 Cohesion: 0.09
@@ -160,6 +162,10 @@ Nodes (4): Answer, Outcome, Q: Займемся формой на сайте: к
 Cohesion: 0.32
 Nodes (8): Graphify Architecture Report, graphify explain, Graphify Knowledge Graph, graphify path, graphify query, graphify update, Graphify Wiki, Scoped Subgraph Navigation
 
+### Community 19 - "skill"
+Cohesion: 0.40
+Nodes (4): Answer, Outcome, Q: ну погнали, Source Nodes
+
 ### Community 20 - "Root Layout Typography"
 Cohesion: 0.40
 Nodes (3): geistMono, geistSans, metadata
@@ -184,25 +190,35 @@ Nodes (3): Globe SVG asset, 16 by 16 clipping region, Spherical globe with latit
 Cohesion: 1.00
 Nodes (3): Vercel SVG asset, Vercel brand mark, White upward-pointing triangle
 
+### Community 45 - "Q: Единая серверная валидация: Повторно проверять публикуемый JSON на сервере либо выдавать подписанный одноразовый import-token. Что это значит и что будет сделано?"
+Cohesion: 0.40
+Nodes (4): Answer, Outcome, Q: Единая серверная валидация: Повторно проверять публикуемый JSON на сервере либо выдавать подписанный одноразовый import-token. Что это значит и что будет сделано?, Source Nodes
+
 ## Knowledge Gaps
-- **230 isolated node(s):** `metadata`, `ValidatedImport`, `ContactPayload`, `TurnstileResult`, `geistSans` (+225 more)
+- **237 isolated node(s):** `metadata`, `ValidatedImport`, `ContactPayload`, `TurnstileResult`, `geistSans` (+232 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+
+## Work-memory lessons
+
+**Preferred sources** — corroborated by past sessions; start here.
+- `publish/route.ts` (2× useful, score=1.998644487) _(code changed — re-verify)_
+- `validatePortfolioContentForPublish()` (2× useful, score=1.998644487)
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `$defs` connect `Portfolio Schema Core` to `Contact Translation Schema`, `Required Schema Fields`, `Project Entry Schema`?**
-  _High betweenness centrality (0.175) - this node is a cross-community bridge._
+- **Why does `$defs` connect `Portfolio Schema Core` to `Contact Translation Schema`, `Project Entry Schema`?**
+  _High betweenness centrality (0.171) - this node is a cross-community bridge._
 - **Why does `properties` connect `Schema Collection Rules` to `Portfolio Schema Core`, `Contact Translation Schema`, `Project Entry Schema`?**
-  _High betweenness centrality (0.078) - this node is a cross-community bridge._
+  _High betweenness centrality (0.075) - this node is a cross-community bridge._
 - **Why does `text()` connect `Excel Import Validation` to `Skill Category Schema`?**
-  _High betweenness centrality (0.068) - this node is a cross-community bridge._
+  _High betweenness centrality (0.065) - this node is a cross-community bridge._
 - **What connects `metadata`, `ValidatedImport`, `ContactPayload` to the rest of the system?**
-  _230 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _237 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Portfolio Schema Core` be split into smaller, more focused modules?**
-  _Cohesion score 0.09090909090909091 - nodes in this community are weakly interconnected._
-- **Should `Admin API Publishing` be split into smaller, more focused modules?**
-  _Cohesion score 0.1431451612903226 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05 - nodes in this community are weakly interconnected._
 - **Should `Schema Collection Rules` be split into smaller, more focused modules?**
   _Cohesion score 0.11428571428571428 - nodes in this community are weakly interconnected._
+- **Should `Runtime Dependencies` be split into smaller, more focused modules?**
+  _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._
