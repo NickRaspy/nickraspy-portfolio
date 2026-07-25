@@ -1,22 +1,13 @@
 import assert from "node:assert/strict";
 import fs from "node:fs/promises";
 import path from "node:path";
-import test, { afterEach } from "node:test";
+import test from "node:test";
 
-import { POST } from "@/app/api/admin/publish/route";
+import { handleAdminPublish, type AdminPublishDependencies } from "@/src/content/admin-publish";
 import { importPortfolioWorkbook } from "@/src/content/importer";
 import type { PortfolioContent } from "@/src/content/types";
 
-const originalAdminDevBypass = process.env.ADMIN_DEV_BYPASS;
-const originalDatabaseUrl = process.env.DATABASE_URL;
 const workbookPath = path.resolve("outputs/portfolio-data/portfolio.xlsx");
-
-afterEach(() => {
-  if (originalAdminDevBypass === undefined) delete process.env.ADMIN_DEV_BYPASS;
-  else process.env.ADMIN_DEV_BYPASS = originalAdminDevBypass;
-  if (originalDatabaseUrl === undefined) delete process.env.DATABASE_URL;
-  else process.env.DATABASE_URL = originalDatabaseUrl;
-});
 
 async function validContent(): Promise<PortfolioContent> {
   const result = await importPortfolioWorkbook(await fs.readFile(workbookPath));
@@ -33,18 +24,60 @@ function publishRequest(content: PortfolioContent): Request {
       origin: "http://localhost:3000",
       "sec-fetch-site": "same-origin",
     },
-    body: JSON.stringify({ content, sourceFilename: "tampered.xlsx" }),
+    body: JSON.stringify({ content, sourceFilename: "portfolio.xlsx" }),
   });
 }
 
-test("rejects client-tampered JSON at the publish route before database access", async () => {
-  process.env.ADMIN_DEV_BYPASS = "true";
-  process.env.DATABASE_URL = "postgres://must-not-connect.invalid/portfolio";
+function dependenciesThatMustNotWrite(): AdminPublishDependencies {
+  return {
+    hasDatabase: () => true,
+    migrateContentDatabase: async () => {
+      throw new Error("Invalid content must not migrate the database.");
+    },
+    publishContent: async () => {
+      throw new Error("Invalid content must not be published.");
+    },
+    revalidatePortfolio: () => {
+      throw new Error("Invalid content must not revalidate the site.");
+    },
+  };
+}
+
+test("publishes validated content through explicit dependencies", async () => {
+  const content = await validContent();
+  let migrated = false;
+  let revalidated = false;
+  const response = await handleAdminPublish(publishRequest(content), "unit-test-admin", {
+    hasDatabase: () => true,
+    migrateContentDatabase: async () => { migrated = true; },
+    publishContent: async (published, checksum, sourceFilename, createdBy) => {
+      assert.deepEqual(published, content);
+      assert.match(checksum, /^[a-f0-9]{64}$/);
+      assert.equal(sourceFilename, "portfolio.xlsx");
+      assert.equal(createdBy, "unit-test-admin");
+      return "version-id";
+    },
+    revalidatePortfolio: () => { revalidated = true; },
+  });
+  const payload = await response.json() as { versionId?: string; checksum?: string };
+
+  assert.equal(response.status, 200);
+  assert.equal(payload.versionId, "version-id");
+  assert.match(payload.checksum ?? "", /^[a-f0-9]{64}$/);
+  assert.equal(migrated, true);
+  assert.equal(revalidated, true);
+});
+
+test("rejects client-tampered JSON in the publish handler before database access", async () => {
   const content = structuredClone(await validContent());
   content.projects[0].categoryId = "injected-category";
   content.contacts[0].url = "file:///etc/passwd";
 
-  const response = await POST(publishRequest(content));
+  const response = await handleAdminPublish(
+    publishRequest(content),
+    "unit-test-admin",
+    dependenciesThatMustNotWrite(),
+  );
   const payload = await response.json() as {
     error?: string;
     issues?: Array<{ field?: string }>;
@@ -56,9 +89,7 @@ test("rejects client-tampered JSON at the publish route before database access",
   assert.ok(payload.issues?.some((issue) => issue.field === "/contacts/0/url"));
 });
 
-test("rejects malformed JSON at the publish route", async () => {
-  process.env.ADMIN_DEV_BYPASS = "true";
-  process.env.DATABASE_URL = "postgres://must-not-connect.invalid/portfolio";
+test("rejects malformed JSON in the publish handler", async () => {
   const request = new Request("http://localhost:3000/api/admin/publish", {
     method: "POST",
     headers: {
@@ -70,7 +101,11 @@ test("rejects malformed JSON at the publish route", async () => {
     body: "{",
   });
 
-  const response = await POST(request);
+  const response = await handleAdminPublish(
+    request,
+    "unit-test-admin",
+    dependenciesThatMustNotWrite(),
+  );
 
   assert.equal(response.status, 400);
   assert.deepEqual(await response.json(), { error: "Request body must be valid JSON." });
