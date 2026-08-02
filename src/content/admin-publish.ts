@@ -4,7 +4,6 @@ import type { PortfolioContent } from "./types";
 
 export interface AdminPublishDependencies {
   hasDatabase: () => boolean;
-  migrateContentDatabase: () => Promise<void>;
   publishContent: (
     content: PortfolioContent,
     checksum: string,
@@ -42,7 +41,6 @@ export async function handleAdminPublish(
     ? payload.sourceFilename.slice(0, 180)
     : "";
   const checksum = createHash("sha256").update(JSON.stringify(validation.content)).digest("hex");
-  await dependencies.migrateContentDatabase();
   const versionId = await dependencies.publishContent(
     validation.content,
     checksum,

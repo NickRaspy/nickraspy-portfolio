@@ -31,9 +31,6 @@ function publishRequest(content: PortfolioContent): Request {
 function dependenciesThatMustNotWrite(): AdminPublishDependencies {
   return {
     hasDatabase: () => true,
-    migrateContentDatabase: async () => {
-      throw new Error("Invalid content must not migrate the database.");
-    },
     publishContent: async () => {
       throw new Error("Invalid content must not be published.");
     },
@@ -45,11 +42,9 @@ function dependenciesThatMustNotWrite(): AdminPublishDependencies {
 
 test("publishes validated content through explicit dependencies", async () => {
   const content = await validContent();
-  let migrated = false;
   let revalidated = false;
   const response = await handleAdminPublish(publishRequest(content), "unit-test-admin", {
     hasDatabase: () => true,
-    migrateContentDatabase: async () => { migrated = true; },
     publishContent: async (published, checksum, sourceFilename, createdBy) => {
       assert.deepEqual(published, content);
       assert.match(checksum, /^[a-f0-9]{64}$/);
@@ -64,7 +59,6 @@ test("publishes validated content through explicit dependencies", async () => {
   assert.equal(response.status, 200);
   assert.equal(payload.versionId, "version-id");
   assert.match(payload.checksum ?? "", /^[a-f0-9]{64}$/);
-  assert.equal(migrated, true);
   assert.equal(revalidated, true);
 });
 

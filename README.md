@@ -30,8 +30,8 @@ The editable workbook is [outputs/portfolio-data/portfolio.xlsx](outputs/portfol
 # Validate the workbook without changing production.
 npm run content:validate
 
-# Create/update the PostgreSQL content tables.
-npm run content:migrate
+# Apply pending PostgreSQL migrations as a separate operational step.
+npm run db:migrate
 
 # Validate, publish a version, save latest.json, and revalidate the site.
 npm run content:sync
@@ -50,7 +50,11 @@ npm run content:sync -- D:\content\portfolio.xlsx
 
 ## PostgreSQL
 
-The data model stores immutable JSONB snapshots in `portfolio_content_versions` and atomically points `portfolio_content_state` at the active version. The equivalent migration is in `database/001_content_versions.sql`; `content:migrate` applies it idempotently.
+The data model stores immutable JSONB snapshots in `portfolio_content_versions` and atomically points `portfolio_content_state` at the active version. Numbered SQL migrations live in `database/migrations/`.
+
+Run `npm run db:migrate` explicitly before publishing content or starting a deployment that needs a newer schema. The runner applies pending files in order inside a PostgreSQL transaction, serializes concurrent runs with an advisory lock, and records each version and checksum in `schema_migrations`. Applied migration files must not be edited; add a new numbered file instead. `content:migrate` remains as a compatibility alias.
+
+Neither the admin publishing endpoint nor `content:sync` runs migrations. If the schema is missing or outdated, publication fails instead of changing the database implicitly.
 
 Copy `.env.example` to `.env.local` and set:
 
