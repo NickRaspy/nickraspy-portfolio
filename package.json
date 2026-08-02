@@ -22,6 +22,7 @@
     "verify:e2e": "npm run verify && npm run test:e2e"
   },
   "dependencies": {
+    "@vercel/speed-insights": "^2.0.0",
     "ajv": "^8.20.0",
     "next": "^16.2.11",
     "postgres": "^3.4.9",

@@ -147,8 +147,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_api_admin_import_validate_route",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "validate/route.ts"
     },
     {
@@ -158,8 +158,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "app_api_admin_import_validate_route_post",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "post()"
     },
     {
@@ -169,8 +169,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_api_admin_publish_route",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "publish/route.ts"
     },
     {
@@ -180,8 +180,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "app_api_admin_publish_route_post",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "post()"
     },
     {
@@ -191,8 +191,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_api_admin_rollback_route",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "rollback/route.ts"
     },
     {
@@ -202,8 +202,8 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "app_api_admin_rollback_route_post",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "post()"
     },
     {
@@ -213,8 +213,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_api_admin_versions_route",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "versions/route.ts"
     },
     {
@@ -224,8 +224,8 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "app_api_admin_versions_route_get",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "get()"
     },
     {
@@ -290,8 +290,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_api_auth_logout_route",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "logout/route.ts"
     },
     {
@@ -301,8 +301,8 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "app_api_auth_logout_route_post",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "post()"
     },
     {
@@ -474,7 +474,7 @@
       "label": "geistSans",
       "file_type": "code",
       "source_file": "app/layout.tsx",
-      "source_location": "L5",
+      "source_location": "L6",
       "_origin": "ast",
       "id": "app_layout_geistsans",
       "community": 20,
@@ -485,7 +485,7 @@
       "label": "geistMono",
       "file_type": "code",
       "source_file": "app/layout.tsx",
-      "source_location": "L10",
+      "source_location": "L11",
       "_origin": "ast",
       "id": "app_layout_geistmono",
       "community": 20,
@@ -496,7 +496,7 @@
       "label": "metadata",
       "file_type": "code",
       "source_file": "app/layout.tsx",
-      "source_location": "L15",
+      "source_location": "L16",
       "_origin": "ast",
       "id": "app_layout_metadata",
       "community": 20,
@@ -507,7 +507,7 @@
       "label": "RootLayout()",
       "file_type": "code",
       "source_file": "app/layout.tsx",
-      "source_location": "L20",
+      "source_location": "L21",
       "_origin": "ast",
       "id": "app_layout_rootlayout",
       "community": 20,
@@ -961,8 +961,8 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_properties_id",
-      "community": 27,
-      "community_name": "Content Version Database",
+      "community": 26,
+      "community_name": "properties",
       "norm_label": "id"
     },
     {
@@ -972,8 +972,8 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_id_ref",
-      "community": 27,
-      "community_name": "Content Version Database",
+      "community": 26,
+      "community_name": "properties",
       "norm_label": "$ref"
     },
     {
@@ -1049,8 +1049,8 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_properties_translations",
-      "community": 46,
-      "community_name": "translations",
+      "community": 27,
+      "community_name": "Content Version Database",
       "norm_label": "translations"
     },
     {
@@ -1060,8 +1060,8 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_translations_ref",
-      "community": 46,
-      "community_name": "translations",
+      "community": 27,
+      "community_name": "Content Version Database",
       "norm_label": "$ref"
     },
     {
@@ -1126,8 +1126,8 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_experience_type",
-      "community": 26,
-      "community_name": "properties",
+      "community": 2,
+      "community_name": "Schema Collection Rules",
       "norm_label": "type"
     },
     {
@@ -1291,8 +1291,8 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_defs_localizedtext",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 0,
+      "community_name": "Portfolio Schema Core",
       "norm_label": "localizedtext"
     },
     {
@@ -1302,8 +1302,8 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_localizedtext_type",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 0,
+      "community_name": "Portfolio Schema Core",
       "norm_label": "type"
     },
     {
@@ -1313,8 +1313,8 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_localizedtext_additionalproperties",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 0,
+      "community_name": "Portfolio Schema Core",
       "norm_label": "additionalproperties"
     },
     {
@@ -1324,8 +1324,8 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_localizedtext_required",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 0,
+      "community_name": "Portfolio Schema Core",
       "norm_label": "required"
     },
     {
@@ -1335,8 +1335,8 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "ref_name",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 0,
+      "community_name": "Portfolio Schema Core",
       "norm_label": "name"
     },
     {
@@ -1346,8 +1346,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_localizedtext_properties",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 0,
+      "community_name": "Portfolio Schema Core",
       "norm_label": "properties"
     },
     {
@@ -1357,8 +1357,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_properties_name",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 0,
+      "community_name": "Portfolio Schema Core",
       "norm_label": "name"
     },
     {
@@ -1368,8 +1368,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_name_type",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 0,
+      "community_name": "Portfolio Schema Core",
       "norm_label": "type"
     },
     {
@@ -1379,8 +1379,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_name_minlength",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 0,
+      "community_name": "Portfolio Schema Core",
       "norm_label": "minlength"
     },
     {
@@ -1390,8 +1390,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_properties_description",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 0,
+      "community_name": "Portfolio Schema Core",
       "norm_label": "description"
     },
     {
@@ -1401,8 +1401,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_description_type",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 0,
+      "community_name": "Portfolio Schema Core",
       "norm_label": "type"
     },
     {
@@ -1544,8 +1544,8 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_properties_summary",
-      "community": 11,
-      "community_name": "Experience Translation Schema",
+      "community": 46,
+      "community_name": "translations",
       "norm_label": "summary"
     },
     {
@@ -1555,8 +1555,8 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_summary_type",
-      "community": 11,
-      "community_name": "Experience Translation Schema",
+      "community": 46,
+      "community_name": "translations",
       "norm_label": "type"
     },
     {
@@ -1566,8 +1566,8 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_summary_minlength",
-      "community": 11,
-      "community_name": "Experience Translation Schema",
+      "community": 46,
+      "community_name": "translations",
       "norm_label": "minlength"
     },
     {
@@ -1577,8 +1577,8 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_defs_skill",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 0,
+      "community_name": "Portfolio Schema Core",
       "norm_label": "skill"
     },
     {
@@ -1588,8 +1588,8 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_skill_type",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 0,
+      "community_name": "Portfolio Schema Core",
       "norm_label": "type"
     },
     {
@@ -1599,8 +1599,8 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_skill_additionalproperties",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 0,
+      "community_name": "Portfolio Schema Core",
       "norm_label": "additionalproperties"
     },
     {
@@ -1643,8 +1643,8 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_skill_properties",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 0,
+      "community_name": "Portfolio Schema Core",
       "norm_label": "properties"
     },
     {
@@ -1654,8 +1654,8 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_properties_level",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 0,
+      "community_name": "Portfolio Schema Core",
       "norm_label": "level"
     },
     {
@@ -1665,8 +1665,8 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_level_type",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 0,
+      "community_name": "Portfolio Schema Core",
       "norm_label": "type"
     },
     {
@@ -1676,8 +1676,8 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_level_minimum",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 0,
+      "community_name": "Portfolio Schema Core",
       "norm_label": "minimum"
     },
     {
@@ -1687,8 +1687,8 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_level_maximum",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 0,
+      "community_name": "Portfolio Schema Core",
       "norm_label": "maximum"
     },
     {
@@ -1863,8 +1863,8 @@
       "source_location": "L54",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_translations_type",
-      "community": 46,
-      "community_name": "translations",
+      "community": 27,
+      "community_name": "Content Version Database",
       "norm_label": "type"
     },
     {
@@ -2171,8 +2171,8 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_properties_year",
-      "community": 44,
-      "community_name": "year",
+      "community": 15,
+      "community_name": "Project Entry Schema",
       "norm_label": "year"
     },
     {
@@ -2182,8 +2182,8 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_year_type",
-      "community": 44,
-      "community_name": "year",
+      "community": 15,
+      "community_name": "Project Entry Schema",
       "norm_label": "type"
     },
     {
@@ -2193,8 +2193,8 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_year_minimum",
-      "community": 44,
-      "community_name": "year",
+      "community": 15,
+      "community_name": "Project Entry Schema",
       "norm_label": "minimum"
     },
     {
@@ -2204,8 +2204,8 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_year_maximum",
-      "community": 44,
-      "community_name": "year",
+      "community": 15,
+      "community_name": "Project Entry Schema",
       "norm_label": "maximum"
     },
     {
@@ -3078,10 +3078,32 @@
       "norm_label": "dependencies"
     },
     {
-      "label": "ajv",
+      "label": "@vercel/speed-insights",
       "file_type": "code",
       "source_file": "package.json",
       "source_location": "L25",
+      "_origin": "ast",
+      "id": "package_dependencies_vercel_speed_insights",
+      "community": 3,
+      "community_name": "Runtime Dependencies",
+      "norm_label": "@vercel/speed-insights"
+    },
+    {
+      "label": "@vercel/speed-insights",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "vercel_speed_insights",
+      "community": 3,
+      "community_name": "Runtime Dependencies",
+      "norm_label": "@vercel/speed-insights"
+    },
+    {
+      "label": "ajv",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L26",
       "_origin": "ast",
       "id": "package_dependencies_ajv",
       "community": 3,
@@ -3092,7 +3114,7 @@
       "label": "ajv",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L25",
+      "source_location": "L26",
       "_origin": "ast",
       "id": "ajv",
       "community": 3,
@@ -3103,7 +3125,7 @@
       "label": "next",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L26",
+      "source_location": "L27",
       "_origin": "ast",
       "id": "package_dependencies_next",
       "community": 3,
@@ -3114,7 +3136,7 @@
       "label": "next",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L26",
+      "source_location": "L27",
       "_origin": "ast",
       "id": "next",
       "community": 3,
@@ -3125,7 +3147,7 @@
       "label": "postgres",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L27",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "package_dependencies_postgres",
       "community": 3,
@@ -3136,7 +3158,7 @@
       "label": "postgres",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L27",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "postgres",
       "community": 3,
@@ -3147,7 +3169,7 @@
       "label": "react",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L28",
+      "source_location": "L29",
       "_origin": "ast",
       "id": "package_dependencies_react",
       "community": 3,
@@ -3158,7 +3180,7 @@
       "label": "react",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L28",
+      "source_location": "L29",
       "_origin": "ast",
       "id": "react",
       "community": 3,
@@ -3169,7 +3191,7 @@
       "label": "react-dom",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L29",
+      "source_location": "L30",
       "_origin": "ast",
       "id": "package_dependencies_react_dom",
       "community": 3,
@@ -3180,7 +3202,7 @@
       "label": "react-dom",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L29",
+      "source_location": "L30",
       "_origin": "ast",
       "id": "react_dom",
       "community": 3,
@@ -3191,7 +3213,7 @@
       "label": "read-excel-file",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L30",
+      "source_location": "L31",
       "_origin": "ast",
       "id": "package_dependencies_read_excel_file",
       "community": 3,
@@ -3202,7 +3224,7 @@
       "label": "read-excel-file",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L30",
+      "source_location": "L31",
       "_origin": "ast",
       "id": "read_excel_file",
       "community": 3,
@@ -3213,7 +3235,7 @@
       "label": "devDependencies",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L32",
+      "source_location": "L33",
       "_origin": "ast",
       "id": "package_devdependencies",
       "community": 10,
@@ -3224,7 +3246,7 @@
       "label": "@playwright/test",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L33",
+      "source_location": "L34",
       "_origin": "ast",
       "id": "package_devdependencies_playwright_test",
       "community": 10,
@@ -3235,7 +3257,7 @@
       "label": "@playwright/test",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L33",
+      "source_location": "L34",
       "_origin": "ast",
       "id": "playwright_test",
       "community": 10,
@@ -3246,7 +3268,7 @@
       "label": "@tailwindcss/postcss",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L34",
+      "source_location": "L35",
       "_origin": "ast",
       "id": "package_devdependencies_tailwindcss_postcss",
       "community": 10,
@@ -3257,7 +3279,7 @@
       "label": "@tailwindcss/postcss",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L34",
+      "source_location": "L35",
       "_origin": "ast",
       "id": "tailwindcss_postcss",
       "community": 10,
@@ -3268,7 +3290,7 @@
       "label": "@types/node",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L35",
+      "source_location": "L36",
       "_origin": "ast",
       "id": "package_devdependencies_types_node",
       "community": 10,
@@ -3279,7 +3301,7 @@
       "label": "@types/node",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L35",
+      "source_location": "L36",
       "_origin": "ast",
       "id": "types_node",
       "community": 10,
@@ -3290,7 +3312,7 @@
       "label": "@types/react",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L36",
+      "source_location": "L37",
       "_origin": "ast",
       "id": "package_devdependencies_types_react",
       "community": 10,
@@ -3301,7 +3323,7 @@
       "label": "@types/react",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L36",
+      "source_location": "L37",
       "_origin": "ast",
       "id": "types_react",
       "community": 10,
@@ -3312,7 +3334,7 @@
       "label": "@types/react-dom",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L37",
+      "source_location": "L38",
       "_origin": "ast",
       "id": "package_devdependencies_types_react_dom",
       "community": 10,
@@ -3323,7 +3345,7 @@
       "label": "@types/react-dom",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L37",
+      "source_location": "L38",
       "_origin": "ast",
       "id": "types_react_dom",
       "community": 10,
@@ -3334,7 +3356,7 @@
       "label": "eslint",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L38",
+      "source_location": "L39",
       "_origin": "ast",
       "id": "package_devdependencies_eslint",
       "community": 10,
@@ -3345,7 +3367,7 @@
       "label": "eslint",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L38",
+      "source_location": "L39",
       "_origin": "ast",
       "id": "eslint",
       "community": 10,
@@ -3356,7 +3378,7 @@
       "label": "eslint-config-next",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L39",
+      "source_location": "L40",
       "_origin": "ast",
       "id": "package_devdependencies_eslint_config_next",
       "community": 10,
@@ -3367,7 +3389,7 @@
       "label": "eslint-config-next",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L39",
+      "source_location": "L40",
       "_origin": "ast",
       "id": "eslint_config_next",
       "community": 10,
@@ -3378,7 +3400,7 @@
       "label": "fflate",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L40",
+      "source_location": "L41",
       "_origin": "ast",
       "id": "package_devdependencies_fflate",
       "community": 10,
@@ -3389,7 +3411,7 @@
       "label": "fflate",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L40",
+      "source_location": "L41",
       "_origin": "ast",
       "id": "fflate",
       "community": 10,
@@ -3400,7 +3422,7 @@
       "label": "tailwindcss",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L41",
+      "source_location": "L42",
       "_origin": "ast",
       "id": "package_devdependencies_tailwindcss",
       "community": 10,
@@ -3411,7 +3433,7 @@
       "label": "tailwindcss",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L41",
+      "source_location": "L42",
       "_origin": "ast",
       "id": "tailwindcss",
       "community": 10,
@@ -3422,7 +3444,7 @@
       "label": "tsx",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L42",
+      "source_location": "L43",
       "_origin": "ast",
       "id": "package_devdependencies_tsx",
       "community": 10,
@@ -3433,7 +3455,7 @@
       "label": "tsx",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L42",
+      "source_location": "L43",
       "_origin": "ast",
       "id": "tsx",
       "community": 10,
@@ -3444,7 +3466,7 @@
       "label": "typescript",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L43",
+      "source_location": "L44",
       "_origin": "ast",
       "id": "package_devdependencies_typescript",
       "community": 10,
@@ -3455,7 +3477,7 @@
       "label": "typescript",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L43",
+      "source_location": "L44",
       "_origin": "ast",
       "id": "typescript",
       "community": 10,
@@ -3466,7 +3488,7 @@
       "label": "overrides",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L45",
+      "source_location": "L46",
       "_origin": "ast",
       "id": "package_overrides",
       "community": 3,
@@ -3477,7 +3499,7 @@
       "label": "postcss",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L46",
+      "source_location": "L47",
       "_origin": "ast",
       "id": "package_overrides_postcss",
       "community": 3,
@@ -3488,7 +3510,7 @@
       "label": "sharp",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L47",
+      "source_location": "L48",
       "_origin": "ast",
       "id": "package_overrides_sharp",
       "community": 3,
@@ -3546,8 +3568,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "scripts_content",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "content.ts"
     },
     {
@@ -3557,8 +3579,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "scripts_content_workbookpath",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "workbookpath"
     },
     {
@@ -3568,8 +3590,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "scripts_content_loadworkbook",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "loadworkbook()"
     },
     {
@@ -3579,8 +3601,8 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "scripts_content_revalidatesite",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "revalidatesite()"
     },
     {
@@ -3590,8 +3612,8 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "scripts_content_main",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "main()"
     },
     {
@@ -3645,8 +3667,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_auth_admin_adminsession",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "adminsession"
     },
     {
@@ -3832,8 +3854,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_auth_request",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "request.ts"
     },
     {
@@ -3843,8 +3865,8 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "src_auth_request_adminsessionreader",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "adminsessionreader"
     },
     {
@@ -3854,8 +3876,8 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_auth_request_allowedrequestorigins",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "allowedrequestorigins()"
     },
     {
@@ -3865,8 +3887,8 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "src_auth_request_authorizeadminmutation",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "authorizeadminmutation()"
     },
     {
@@ -4184,8 +4206,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_content_admin_import",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "admin-import.ts"
     },
     {
@@ -4195,8 +4217,8 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_content_admin_import_validateadminworkbookfile",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "validateadminworkbookfile()"
     },
     {
@@ -4272,8 +4294,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_content_importer",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 1,
+      "community_name": "Admin API Publishing",
       "norm_label": "importer.ts"
     },
     {
@@ -4283,8 +4305,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_content_importer_rowrecord",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 1,
+      "community_name": "Admin API Publishing",
       "norm_label": "rowrecord"
     },
     {
@@ -4294,8 +4316,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_content_importer_workbooksheets",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 1,
+      "community_name": "Admin API Publishing",
       "norm_label": "workbooksheets"
     },
     {
@@ -4305,8 +4327,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_content_importer_requiredsheets",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 1,
+      "community_name": "Admin API Publishing",
       "norm_label": "requiredsheets"
     },
     {
@@ -4316,8 +4338,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_content_importer_ajv",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 1,
+      "community_name": "Admin API Publishing",
       "norm_label": "ajv"
     },
     {
@@ -4327,8 +4349,8 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_content_importer_validateschema",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 1,
+      "community_name": "Admin API Publishing",
       "norm_label": "validateschema"
     },
     {
@@ -4338,8 +4360,8 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "src_content_importer_text",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 1,
+      "community_name": "Admin API Publishing",
       "norm_label": "text()"
     },
     {
@@ -4349,8 +4371,8 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "src_content_importer_integer",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 1,
+      "community_name": "Admin API Publishing",
       "norm_label": "integer()"
     },
     {
@@ -4360,8 +4382,8 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "src_content_importer_boolean",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 1,
+      "community_name": "Admin API Publishing",
       "norm_label": "boolean()"
     },
     {
@@ -4371,8 +4393,8 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "src_content_importer_rowstorecords",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 1,
+      "community_name": "Admin API Publishing",
       "norm_label": "rowstorecords()"
     },
     {
@@ -4382,8 +4404,8 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "src_content_importer_addissue",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 1,
+      "community_name": "Admin API Publishing",
       "norm_label": "addissue()"
     },
     {
@@ -4393,8 +4415,8 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "src_content_importer_issafeexternalurl",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 1,
+      "community_name": "Admin API Publishing",
       "norm_label": "issafeexternalurl()"
     },
     {
@@ -4404,8 +4426,8 @@
       "source_location": "L61",
       "_origin": "ast",
       "id": "src_content_importer_validateexternalurls",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 1,
+      "community_name": "Admin API Publishing",
       "norm_label": "validateexternalurls()"
     },
     {
@@ -4415,8 +4437,8 @@
       "source_location": "L82",
       "_origin": "ast",
       "id": "src_content_importer_jsonpointersegment",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 1,
+      "community_name": "Admin API Publishing",
       "norm_label": "jsonpointersegment()"
     },
     {
@@ -4426,8 +4448,8 @@
       "source_location": "L86",
       "_origin": "ast",
       "id": "src_content_importer_validateuniqueids",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 1,
+      "community_name": "Admin API Publishing",
       "norm_label": "validateuniqueids()"
     },
     {
@@ -4437,8 +4459,8 @@
       "source_location": "L108",
       "_origin": "ast",
       "id": "src_content_importer_validaterequiredtranslations",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 1,
+      "community_name": "Admin API Publishing",
       "norm_label": "validaterequiredtranslations()"
     },
     {
@@ -4448,8 +4470,8 @@
       "source_location": "L140",
       "_origin": "ast",
       "id": "src_content_importer_validatecontentrelationships",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 1,
+      "community_name": "Admin API Publishing",
       "norm_label": "validatecontentrelationships()"
     },
     {
@@ -4459,8 +4481,8 @@
       "source_location": "L166",
       "_origin": "ast",
       "id": "src_content_importer_translationmap",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 1,
+      "community_name": "Admin API Publishing",
       "norm_label": "translationmap()"
     },
     {
@@ -4470,8 +4492,8 @@
       "source_location": "L170",
       "_origin": "ast",
       "id": "src_content_importer_importportfolioworkbook",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 1,
+      "community_name": "Admin API Publishing",
       "norm_label": "importportfolioworkbook()"
     },
     {
@@ -4481,8 +4503,8 @@
       "source_location": "L256",
       "_origin": "ast",
       "id": "src_content_importer_validateportfoliocontentforpublish",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 1,
+      "community_name": "Admin API Publishing",
       "norm_label": "validateportfoliocontentforpublish()"
     },
     {
@@ -4492,8 +4514,8 @@
       "source_location": "L267",
       "_origin": "ast",
       "id": "src_content_importer_validateportfoliocontent",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 1,
+      "community_name": "Admin API Publishing",
       "norm_label": "validateportfoliocontent()"
     },
     {
@@ -4503,8 +4525,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_content_repository",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "repository.ts"
     },
     {
@@ -4525,8 +4547,8 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "src_content_repository_hasdatabase",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "hasdatabase()"
     },
     {
@@ -4536,8 +4558,8 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "src_content_repository_sql",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "sql()"
     },
     {
@@ -4547,8 +4569,8 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "src_content_repository_getpublishedcontent",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "getpublishedcontent()"
     },
     {
@@ -4558,8 +4580,8 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "src_content_repository_publishcontent",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "publishcontent()"
     },
     {
@@ -4569,8 +4591,8 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "src_content_repository_listcontentversions",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "listcontentversions()"
     },
     {
@@ -4580,8 +4602,8 @@
       "source_location": "L88",
       "_origin": "ast",
       "id": "src_content_repository_rollbackcontent",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "rollbackcontent()"
     },
     {
@@ -4591,8 +4613,8 @@
       "source_location": "L94",
       "_origin": "ast",
       "id": "src_content_repository_closecontentdatabase",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "closecontentdatabase()"
     },
     {
@@ -4888,8 +4910,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_unit_admin_test",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "admin.test.ts"
     },
     {
@@ -4899,8 +4921,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "tests_unit_admin_test_authenticatedsession",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "authenticatedsession"
     },
     {
@@ -4910,8 +4932,8 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "tests_unit_admin_test_readauthenticatedsession",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "readauthenticatedsession()"
     },
     {
@@ -4921,8 +4943,8 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "tests_unit_admin_test_adminrequest",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "adminrequest()"
     },
     {
@@ -5009,8 +5031,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_unit_importer_test",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 1,
+      "community_name": "Admin API Publishing",
       "norm_label": "importer.test.ts"
     },
     {
@@ -5020,8 +5042,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "tests_unit_importer_test_workbookpath",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 1,
+      "community_name": "Admin API Publishing",
       "norm_label": "workbookpath"
     },
     {
@@ -5031,8 +5053,8 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "tests_unit_importer_test_removeworkbooksheet",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 1,
+      "community_name": "Admin API Publishing",
       "norm_label": "removeworkbooksheet()"
     },
     {
@@ -5042,8 +5064,8 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "tests_unit_importer_test_validcontent",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 1,
+      "community_name": "Admin API Publishing",
       "norm_label": "validcontent()"
     },
     {
@@ -5803,6 +5825,61 @@
       "id": "graphify_out_memory_query_20260802_141532_\u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u044b\u0435_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438_\u0431\u0434_\u0432\u044b\u043f\u043e\u043b\u043d\u044f\u0442\u044c_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438_\u043e\u0442\u0434\u0435\u043b\u044c\u043d_source_nodes",
       "community": 43,
       "community_name": "Q: \u041d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u044b\u0435 \u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438 \u0411\u0414: \u0432\u044b\u043f\u043e\u043b\u043d\u044f\u0442\u044c \u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438 \u043e\u0442\u0434\u0435\u043b\u044c\u043d\u043e\u0439 \u043a\u043e\u043c\u0430\u043d\u0434\u043e\u0439, \u0432\u0435\u0441\u0442\u0438 \u0442\u0430\u0431\u043b\u0438\u0446\u0443 \u043f\u0440\u0438\u043c\u0435\u043d\u0451\u043d\u043d\u044b\u0445 \u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0439 \u0438 \u043d\u0435 \u0437\u0430\u043f\u0443\u0441\u043a\u0430\u0442\u044c \u0438\u0445 \u043f\u0440\u0438 \u043f\u0443\u0431\u043b\u0438\u043a\u0430\u0446\u0438\u0438. \u041e\u0431\u044a\u044f\u0441\u043d\u0438, \u0447\u0442\u043e \u0441\u043e\u0431\u0438\u0440\u0430\u0435\u0448\u044c\u0441\u044f \u0434\u0435\u043b\u0430\u0442\u044c.",
+      "norm_label": "source nodes"
+    },
+    {
+      "label": "query_20260802_144208_\u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u0442\u044c_\u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u044b\u0435_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438_\u0431\u0434_\u043e\u0442\u0434\u0435\u043b\u044c\u043d\u043e\u0439_\u043a\u043e\u043c\u0430\u043d.md",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_144208_\u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u0442\u044c_\u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u044b\u0435_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438_\u0431\u0434_\u043e\u0442\u0434\u0435\u043b\u044c\u043d\u043e\u0439_\u043a\u043e\u043c\u0430\u043d.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_144208_\u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u0442\u044c_\u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u044b\u0435_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438_\u0431\u0434_\u043e\u0442\u0434\u0435\u043b\u044c\u043d\u043e\u0439_\u043a\u043e\u043c\u0430\u043d",
+      "community": 44,
+      "community_name": "year",
+      "norm_label": "query_20260802_144208_\u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u0442\u044c_\u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u044b\u0435_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438_\u0431\u0434_\u043e\u0442\u0434\u0435\u043b\u044c\u043d\u043e\u0438_\u043a\u043e\u043c\u0430\u043d.md"
+    },
+    {
+      "label": "Q: \u0420\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u0442\u044c \u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u044b\u0435 \u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438 \u0411\u0414 \u043e\u0442\u0434\u0435\u043b\u044c\u043d\u043e\u0439 \u043a\u043e\u043c\u0430\u043d\u0434\u043e\u0439 \u0441 \u0442\u0430\u0431\u043b\u0438\u0446\u0435\u0439 \u043f\u0440\u0438\u043c\u0435\u043d\u0451\u043d\u043d\u044b\u0445 \u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0439 \u0438 \u043d\u0435 \u0437\u0430\u043f\u0443\u0441\u043a\u0430\u0442\u044c \u0438\u0445 \u043f\u0440\u0438 \u043f\u0443\u0431\u043b\u0438\u043a\u0430\u0446\u0438\u0438.",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_144208_\u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u0442\u044c_\u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u044b\u0435_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438_\u0431\u0434_\u043e\u0442\u0434\u0435\u043b\u044c\u043d\u043e\u0439_\u043a\u043e\u043c\u0430\u043d.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_144208_\u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u0442\u044c_\u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u044b\u0435_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438_\u0431\u0434_\u043e\u0442\u0434\u0435\u043b\u044c\u043d\u043e\u0439_\u043a\u043e\u043c\u0430\u043d_q_\u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u0442\u044c_\u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u044b\u0435_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438_\u0431\u0434_\u043e\u0442\u0434\u0435\u043b\u044c\u043d\u043e\u0439_\u043a\u043e\u043c\u0430\u043d\u0434\u043e\u0439_\u0441_\u0442\u0430\u0431\u043b\u0438\u0446\u0435\u0439_\u043f\u0440\u0438\u043c\u0435\u043d\u0451\u043d\u043d\u044b\u0445_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0439_\u0438_\u043d\u0435_\u0437\u0430\u043f\u0443\u0441\u043a\u0430\u0442\u044c_\u0438\u0445_\u043f\u0440\u0438_\u043f\u0443\u0431\u043b\u0438\u043a\u0430\u0446\u0438\u0438",
+      "community": 44,
+      "community_name": "year",
+      "norm_label": "q: \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u0442\u044c \u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u044b\u0435 \u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438 \u0431\u0434 \u043e\u0442\u0434\u0435\u043b\u044c\u043d\u043e\u0438 \u043a\u043e\u043c\u0430\u043d\u0434\u043e\u0438 \u0441 \u0442\u0430\u0431\u043b\u0438\u0446\u0435\u0438 \u043f\u0440\u0438\u043c\u0435\u043d\u0435\u043d\u043d\u044b\u0445 \u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438 \u0438 \u043d\u0435 \u0437\u0430\u043f\u0443\u0441\u043a\u0430\u0442\u044c \u0438\u0445 \u043f\u0440\u0438 \u043f\u0443\u0431\u043b\u0438\u043a\u0430\u0446\u0438\u0438."
+    },
+    {
+      "label": "Answer",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_144208_\u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u0442\u044c_\u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u044b\u0435_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438_\u0431\u0434_\u043e\u0442\u0434\u0435\u043b\u044c\u043d\u043e\u0439_\u043a\u043e\u043c\u0430\u043d.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_144208_\u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u0442\u044c_\u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u044b\u0435_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438_\u0431\u0434_\u043e\u0442\u0434\u0435\u043b\u044c\u043d\u043e\u0439_\u043a\u043e\u043c\u0430\u043d_answer",
+      "community": 44,
+      "community_name": "year",
+      "norm_label": "answer"
+    },
+    {
+      "label": "Outcome",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_144208_\u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u0442\u044c_\u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u044b\u0435_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438_\u0431\u0434_\u043e\u0442\u0434\u0435\u043b\u044c\u043d\u043e\u0439_\u043a\u043e\u043c\u0430\u043d.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_144208_\u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u0442\u044c_\u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u044b\u0435_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438_\u0431\u0434_\u043e\u0442\u0434\u0435\u043b\u044c\u043d\u043e\u0439_\u043a\u043e\u043c\u0430\u043d_outcome",
+      "community": 44,
+      "community_name": "year",
+      "norm_label": "outcome"
+    },
+    {
+      "label": "Source Nodes",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_144208_\u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u0442\u044c_\u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u044b\u0435_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438_\u0431\u0434_\u043e\u0442\u0434\u0435\u043b\u044c\u043d\u043e\u0439_\u043a\u043e\u043c\u0430\u043d.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_144208_\u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u0442\u044c_\u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u044b\u0435_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438_\u0431\u0434_\u043e\u0442\u0434\u0435\u043b\u044c\u043d\u043e\u0439_\u043a\u043e\u043c\u0430\u043d_source_nodes",
+      "community": 44,
+      "community_name": "year",
       "norm_label": "source nodes"
     },
     {
@@ -7825,7 +7902,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/layout.tsx",
-      "source_location": "L10",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_layout",
@@ -7836,7 +7913,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/layout.tsx",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_layout",
@@ -7847,7 +7924,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/layout.tsx",
-      "source_location": "L15",
+      "source_location": "L16",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_layout",
@@ -7858,7 +7935,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/layout.tsx",
-      "source_location": "L20",
+      "source_location": "L21",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_layout",
@@ -10806,7 +10883,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L32",
+      "source_location": "L33",
       "weight": 1.0,
       "_origin": "ast",
       "source": "package",
@@ -10828,7 +10905,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L45",
+      "source_location": "L46",
       "weight": 1.0,
       "_origin": "ast",
       "source": "package",
@@ -11059,7 +11136,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L25",
+      "source_location": "L26",
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_dependencies",
@@ -11070,7 +11147,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L26",
+      "source_location": "L27",
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_dependencies",
@@ -11081,7 +11158,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L27",
+      "source_location": "L28",
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_dependencies",
@@ -11092,7 +11169,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L28",
+      "source_location": "L29",
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_dependencies",
@@ -11103,7 +11180,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L29",
+      "source_location": "L30",
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_dependencies",
@@ -11114,7 +11191,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L30",
+      "source_location": "L31",
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_dependencies",
@@ -11122,10 +11199,33 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "package_dependencies",
+      "target": "package_dependencies_vercel_speed_insights",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
       "source_location": "L25",
+      "weight": 1.0,
+      "context": "import",
+      "_origin": "ast",
+      "source": "package_dependencies_vercel_speed_insights",
+      "target": "vercel_speed_insights",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L26",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -11137,7 +11237,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L26",
+      "source_location": "L27",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -11149,7 +11249,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L27",
+      "source_location": "L28",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -11161,7 +11261,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L28",
+      "source_location": "L29",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -11173,7 +11273,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L29",
+      "source_location": "L30",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -11185,7 +11285,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L30",
+      "source_location": "L31",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -11197,7 +11297,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L38",
+      "source_location": "L39",
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_devdependencies",
@@ -11208,7 +11308,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L39",
+      "source_location": "L40",
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_devdependencies",
@@ -11219,7 +11319,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L40",
+      "source_location": "L41",
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_devdependencies",
@@ -11230,7 +11330,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L33",
+      "source_location": "L34",
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_devdependencies",
@@ -11241,7 +11341,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L41",
+      "source_location": "L42",
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_devdependencies",
@@ -11252,7 +11352,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L34",
+      "source_location": "L35",
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_devdependencies",
@@ -11263,7 +11363,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L42",
+      "source_location": "L43",
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_devdependencies",
@@ -11274,7 +11374,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L35",
+      "source_location": "L36",
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_devdependencies",
@@ -11285,7 +11385,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L36",
+      "source_location": "L37",
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_devdependencies",
@@ -11296,7 +11396,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L37",
+      "source_location": "L38",
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_devdependencies",
@@ -11307,7 +11407,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L43",
+      "source_location": "L44",
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_devdependencies",
@@ -11318,7 +11418,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L33",
+      "source_location": "L34",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -11330,7 +11430,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L34",
+      "source_location": "L35",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -11342,7 +11442,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L35",
+      "source_location": "L36",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -11354,7 +11454,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L36",
+      "source_location": "L37",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -11366,7 +11466,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L37",
+      "source_location": "L38",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -11378,7 +11478,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L38",
+      "source_location": "L39",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -11390,7 +11490,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L39",
+      "source_location": "L40",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -11402,7 +11502,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L40",
+      "source_location": "L41",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -11414,7 +11514,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L41",
+      "source_location": "L42",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -11426,7 +11526,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L42",
+      "source_location": "L43",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -11438,7 +11538,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L43",
+      "source_location": "L44",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -11450,7 +11550,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L46",
+      "source_location": "L47",
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_overrides",
@@ -11461,7 +11561,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L47",
+      "source_location": "L48",
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_overrides",
@@ -15193,6 +15293,50 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_144208_\u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u0442\u044c_\u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u044b\u0435_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438_\u0431\u0434_\u043e\u0442\u0434\u0435\u043b\u044c\u043d\u043e\u0439_\u043a\u043e\u043c\u0430\u043d.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_144208_\u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u0442\u044c_\u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u044b\u0435_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438_\u0431\u0434_\u043e\u0442\u0434\u0435\u043b\u044c\u043d\u043e\u0439_\u043a\u043e\u043c\u0430\u043d",
+      "target": "graphify_out_memory_query_20260802_144208_\u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u0442\u044c_\u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u044b\u0435_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438_\u0431\u0434_\u043e\u0442\u0434\u0435\u043b\u044c\u043d\u043e\u0439_\u043a\u043e\u043c\u0430\u043d_q_\u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u0442\u044c_\u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u044b\u0435_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438_\u0431\u0434_\u043e\u0442\u0434\u0435\u043b\u044c\u043d\u043e\u0439_\u043a\u043e\u043c\u0430\u043d\u0434\u043e\u0439_\u0441_\u0442\u0430\u0431\u043b\u0438\u0446\u0435\u0439_\u043f\u0440\u0438\u043c\u0435\u043d\u0451\u043d\u043d\u044b\u0445_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0439_\u0438_\u043d\u0435_\u0437\u0430\u043f\u0443\u0441\u043a\u0430\u0442\u044c_\u0438\u0445_\u043f\u0440\u0438_\u043f\u0443\u0431\u043b\u0438\u043a\u0430\u0446\u0438\u0438",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_144208_\u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u0442\u044c_\u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u044b\u0435_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438_\u0431\u0434_\u043e\u0442\u0434\u0435\u043b\u044c\u043d\u043e\u0439_\u043a\u043e\u043c\u0430\u043d.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_144208_\u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u0442\u044c_\u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u044b\u0435_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438_\u0431\u0434_\u043e\u0442\u0434\u0435\u043b\u044c\u043d\u043e\u0439_\u043a\u043e\u043c\u0430\u043d_q_\u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u0442\u044c_\u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u044b\u0435_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438_\u0431\u0434_\u043e\u0442\u0434\u0435\u043b\u044c\u043d\u043e\u0439_\u043a\u043e\u043c\u0430\u043d\u0434\u043e\u0439_\u0441_\u0442\u0430\u0431\u043b\u0438\u0446\u0435\u0439_\u043f\u0440\u0438\u043c\u0435\u043d\u0451\u043d\u043d\u044b\u0445_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0439_\u0438_\u043d\u0435_\u0437\u0430\u043f\u0443\u0441\u043a\u0430\u0442\u044c_\u0438\u0445_\u043f\u0440\u0438_\u043f\u0443\u0431\u043b\u0438\u043a\u0430\u0446\u0438\u0438",
+      "target": "graphify_out_memory_query_20260802_144208_\u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u0442\u044c_\u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u044b\u0435_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438_\u0431\u0434_\u043e\u0442\u0434\u0435\u043b\u044c\u043d\u043e\u0439_\u043a\u043e\u043c\u0430\u043d_answer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_144208_\u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u0442\u044c_\u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u044b\u0435_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438_\u0431\u0434_\u043e\u0442\u0434\u0435\u043b\u044c\u043d\u043e\u0439_\u043a\u043e\u043c\u0430\u043d.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_144208_\u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u0442\u044c_\u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u044b\u0435_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438_\u0431\u0434_\u043e\u0442\u0434\u0435\u043b\u044c\u043d\u043e\u0439_\u043a\u043e\u043c\u0430\u043d_q_\u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u0442\u044c_\u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u044b\u0435_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438_\u0431\u0434_\u043e\u0442\u0434\u0435\u043b\u044c\u043d\u043e\u0439_\u043a\u043e\u043c\u0430\u043d\u0434\u043e\u0439_\u0441_\u0442\u0430\u0431\u043b\u0438\u0446\u0435\u0439_\u043f\u0440\u0438\u043c\u0435\u043d\u0451\u043d\u043d\u044b\u0445_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0439_\u0438_\u043d\u0435_\u0437\u0430\u043f\u0443\u0441\u043a\u0430\u0442\u044c_\u0438\u0445_\u043f\u0440\u0438_\u043f\u0443\u0431\u043b\u0438\u043a\u0430\u0446\u0438\u0438",
+      "target": "graphify_out_memory_query_20260802_144208_\u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u0442\u044c_\u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u044b\u0435_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438_\u0431\u0434_\u043e\u0442\u0434\u0435\u043b\u044c\u043d\u043e\u0439_\u043a\u043e\u043c\u0430\u043d_outcome",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_144208_\u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u0442\u044c_\u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u044b\u0435_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438_\u0431\u0434_\u043e\u0442\u0434\u0435\u043b\u044c\u043d\u043e\u0439_\u043a\u043e\u043c\u0430\u043d.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_144208_\u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u0442\u044c_\u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u044b\u0435_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438_\u0431\u0434_\u043e\u0442\u0434\u0435\u043b\u044c\u043d\u043e\u0439_\u043a\u043e\u043c\u0430\u043d_q_\u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u0442\u044c_\u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u044b\u0435_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438_\u0431\u0434_\u043e\u0442\u0434\u0435\u043b\u044c\u043d\u043e\u0439_\u043a\u043e\u043c\u0430\u043d\u0434\u043e\u0439_\u0441_\u0442\u0430\u0431\u043b\u0438\u0446\u0435\u0439_\u043f\u0440\u0438\u043c\u0435\u043d\u0451\u043d\u043d\u044b\u0445_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0439_\u0438_\u043d\u0435_\u0437\u0430\u043f\u0443\u0441\u043a\u0430\u0442\u044c_\u0438\u0445_\u043f\u0440\u0438_\u043f\u0443\u0431\u043b\u0438\u043a\u0430\u0446\u0438\u0438",
+      "target": "graphify_out_memory_query_20260802_144208_\u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u0442\u044c_\u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u044b\u0435_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438_\u0431\u0434_\u043e\u0442\u0434\u0435\u043b\u044c\u043d\u043e\u0439_\u043a\u043e\u043c\u0430\u043d_source_nodes",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -15721,5 +15865,5 @@
       "source_file": "README.md"
     }
   ],
-  "built_at_commit": "c357fe85c6eba4b043f3f01fcaa62dfe67fe8dc4"
+  "built_at_commit": "720b871dbda5532da2fc90bf679003b7009d378b"
 }
