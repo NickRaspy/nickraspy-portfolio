@@ -16,6 +16,7 @@ test("uses the requested supported locale", () => {
   assert.equal(view.locale, "ru");
   assert.equal(view.profile.role, content.profile.translations.ru.role);
   assert.equal(view.categories[0].name, content.categories[0].translations.ru.name);
+  assert.equal(view.experience[0].range, "2021—НАСТ");
 });
 
 test("falls back to the default locale for an unknown locale or a missing translation", () => {
