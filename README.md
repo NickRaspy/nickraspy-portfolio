@@ -11,6 +11,13 @@ npm run dev
 
 The public portfolio is available at `http://localhost:3000`. The content console is available at `http://localhost:3000/admin`.
 
+Set `SITE_URL` to the canonical public origin for each production deployment.
+It is used for canonical links, Open Graph and Twitter preview images,
+`robots.txt`, `sitemap.xml`, and schema.org JSON-LD. When it is absent,
+Vercel's stable `VERCEL_PROJECT_PRODUCTION_URL` is used. Local development
+falls back to `http://localhost:3000`; a Vercel production deployment without
+either production origin fails instead of publishing incorrect SEO URLs.
+
 Without `DATABASE_URL`, the public page reads `content/fallback/portfolio.json` and the console stays in read-only validation mode.
 
 For local admin UI development only:

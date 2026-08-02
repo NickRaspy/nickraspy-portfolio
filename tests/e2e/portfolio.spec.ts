@@ -38,6 +38,24 @@ test("detects the browser language and persists an explicit override", async ({ 
     "Голографическое портфолио full-stack разработчика.",
   );
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", /\/ru$/);
+  await expect(page.locator('meta[property="og:type"]')).toHaveAttribute("content", "website");
+  await expect(page.locator('meta[property="og:image"]')).toHaveAttribute(
+    "content",
+    /\/opengraph-image/,
+  );
+  await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute(
+    "content",
+    "summary_large_image",
+  );
+  await expect(page.locator('meta[name="twitter:image"]')).toHaveAttribute(
+    "content",
+    /\/twitter-image/,
+  );
+  const structuredData = JSON.parse(
+    (await page.locator('script[type="application/ld+json"]').textContent()) ?? "{}",
+  ) as { "@graph"?: Array<{ "@type"?: string }> };
+  expect(structuredData["@graph"]?.some((node) => node["@type"] === "Person")).toBe(true);
+  expect(structuredData["@graph"]?.some((node) => node["@type"] === "CreativeWork")).toBe(true);
   await expect(page.getByRole("heading", { name: "СИСТЕМНЫЙ_ПРОФИЛЬ" })).toBeVisible();
   const languageTargets = await page.locator(".language-switcher a").evaluateAll((links) =>
     links.map((link) => ({ width: link.getBoundingClientRect().width, height: link.getBoundingClientRect().height })),
@@ -52,6 +70,29 @@ test("detects the browser language and persists an explicit override", async ({ 
   await page.goto("/");
   await expect(page).toHaveURL(/\/en$/);
   await context.close();
+});
+
+test("serves crawler directives, sitemap and messenger preview images", async ({ request }, testInfo) => {
+  const siteUrl = String(testInfo.project.use.baseURL);
+  const robotsResponse = await request.get("/robots.txt");
+  expect(robotsResponse.ok()).toBe(true);
+  const robotsBody = await robotsResponse.text();
+  expect(robotsBody).toContain(`Sitemap: ${siteUrl}/sitemap.xml`);
+  expect(robotsBody).not.toContain("nickraspy.dev");
+
+  const sitemapResponse = await request.get("/sitemap.xml");
+  expect(sitemapResponse.ok()).toBe(true);
+  const sitemapBody = await sitemapResponse.text();
+  expect(sitemapBody).toContain(`${siteUrl}/en`);
+  expect(sitemapBody).toContain(`${siteUrl}/ru`);
+  expect(sitemapBody).not.toContain("nickraspy.dev");
+
+  for (const path of ["/opengraph-image", "/twitter-image", "/apple-icon"]) {
+    const response = await request.get(path);
+    expect(response.ok()).toBe(true);
+    expect(response.headers()["content-type"]).toContain("image/png");
+    expect((await response.body()).byteLength).toBeGreaterThan(1_000);
+  }
 });
 
 function assertLanguageTargets(targets: Array<{ width: number; height: number }>) {

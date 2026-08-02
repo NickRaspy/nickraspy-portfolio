@@ -27,6 +27,7 @@ export default defineConfig({
     env: {
       ADMIN_DEV_BYPASS: "true",
       DATABASE_URL: "",
+      SITE_URL: baseURL,
     },
   },
   projects: [

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://nickraspy.dev/schemas/portfolio.schema.json",
+  "$id": "urn:nickraspy:portfolio:schema:1",
   "title": "Aetheris portfolio content",
   "type": "object",
   "additionalProperties": false,

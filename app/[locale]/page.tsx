@@ -3,7 +3,8 @@ import { notFound } from "next/navigation";
 import HudPortfolio from "@/src/components/hudPortfolio";
 import { getPortfolioView } from "@/src/content/data";
 import { isSupportedLocale, locales, type SupportedLocale } from "@/src/i18n/config";
-import { messages } from "@/src/i18n/messages";
+import { createPortfolioJsonLd, serializeJsonLd } from "@/src/seo/jsonLd";
+import { createLocaleMetadata } from "@/src/seo/metadata";
 
 type LocalePageProps = {
   params: Promise<{ locale: string }>;
@@ -20,32 +21,23 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: LocalePageProps): Promise<Metadata> {
   const locale = requireLocale((await params).locale);
-  const localizedMetadata = messages[locale].metadata;
-
-  return {
-    title: localizedMetadata.title,
-    description: localizedMetadata.description,
-    alternates: {
-      canonical: `/${locale}`,
-      languages: { en: "/en", ru: "/ru", "x-default": "/" },
-    },
-    openGraph: {
-      title: localizedMetadata.title,
-      description: localizedMetadata.description,
-      locale: locale === "ru" ? "ru_RU" : "en_US",
-      alternateLocale: locale === "ru" ? ["en_US"] : ["ru_RU"],
-      type: "website",
-    },
-  };
+  return createLocaleMetadata(locale);
 }
 
 export default async function LocaleHome({ params }: LocalePageProps) {
   const locale = requireLocale((await params).locale);
   const data = await getPortfolioView(locale);
+  const jsonLd = createPortfolioJsonLd(data, locale);
 
   return (
-    <main id="main-content" className="portfolio-shell">
-      <HudPortfolio data={data} locale={locale} />
-    </main>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }}
+      />
+      <main id="main-content" className="portfolio-shell">
+        <HudPortfolio data={data} locale={locale} />
+      </main>
+    </>
   );
 }
