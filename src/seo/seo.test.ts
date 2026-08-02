@@ -1,32 +1,39 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import fallbackContent from "@/content/fallback/portfolio.json";
-import robots from "@/app/robots";
-import sitemap from "@/app/sitemap";
+import { createRobots } from "@/app/robots";
+import { createSitemap } from "@/app/sitemap";
 import { createPortfolioView } from "@/src/content/view";
 import type { PortfolioContent } from "@/src/content/types";
 import { createPortfolioJsonLd, serializeJsonLd } from "./jsonLd";
 import { createLocaleMetadata } from "./metadata";
-import { resolveSiteUrl, siteConfig } from "./site";
+import { resolveSiteUrl } from "./site";
 
-function withTestSiteUrl<T>(callback: () => T): T {
-  const originalSiteUrl = process.env.SITE_URL;
-  process.env.SITE_URL = "https://portfolio.example";
-
-  try {
-    return callback();
-  } finally {
-    if (originalSiteUrl === undefined) {
-      delete process.env.SITE_URL;
-    } else {
-      process.env.SITE_URL = originalSiteUrl;
-    }
-  }
-}
-
-test("resolves the canonical origin from deployment configuration", () => {
+test("resolves the canonical origin from overrides, request headers and Vercel", () => {
+  assert.equal(
+    resolveSiteUrl(
+      { SITE_URL: "https://portfolio.example/path?preview=1" },
+      new Headers({ host: "request.example", "x-forwarded-proto": "https" }),
+    ).toString(),
+    "https://request.example/",
+  );
   assert.equal(
     resolveSiteUrl({ SITE_URL: "https://portfolio.example/path?preview=1" }).toString(),
+    "https://portfolio.example/",
+  );
+  assert.equal(
+    resolveSiteUrl({}, new Headers({ host: "localhost:3000" })).toString(),
+    "http://localhost:3000/",
+  );
+  assert.equal(
+    resolveSiteUrl(
+      {},
+      new Headers({
+        host: "internal:3000",
+        "x-forwarded-host": "portfolio.example",
+        "x-forwarded-proto": "https",
+      }),
+    ).toString(),
     "https://portfolio.example/",
   );
   assert.equal(
@@ -35,6 +42,10 @@ test("resolves the canonical origin from deployment configuration", () => {
   );
   assert.throws(() => resolveSiteUrl({}), /canonical site origin/);
   assert.throws(() => resolveSiteUrl({ SITE_URL: "ftp://portfolio.example" }), /http/);
+  assert.throws(
+    () => resolveSiteUrl({}, new Headers({ host: "portfolio.example/path" })),
+    /host is invalid/,
+  );
 });
 
 test("builds localized canonical, Open Graph and Twitter metadata", () => {
@@ -55,32 +66,31 @@ test("builds localized canonical, Open Graph and Twitter metadata", () => {
 });
 
 test("publishes only public localized pages in robots and sitemap", () => {
-  withTestSiteUrl(() => {
-    const robotsData = robots();
-    const sitemapData = sitemap();
-    const siteOrigin = siteConfig.url.origin;
+  const siteUrl = new URL("https://portfolio.example");
+  const robotsData = createRobots(siteUrl);
+  const sitemapData = createSitemap(siteUrl);
 
-    assert.deepEqual(robotsData.rules, {
-      userAgent: "*",
-      allow: "/",
-      disallow: ["/admin", "/api"],
-    });
-    assert.equal(robotsData.sitemap, `${siteOrigin}/sitemap.xml`);
-    assert.deepEqual(
-      sitemapData.map((entry) => entry.url),
-      [`${siteOrigin}/en`, `${siteOrigin}/ru`],
-    );
+  assert.deepEqual(robotsData.rules, {
+    userAgent: "*",
+    allow: "/",
+    disallow: ["/admin", "/api"],
   });
+  assert.equal(robotsData.sitemap, "https://portfolio.example/sitemap.xml");
+  assert.deepEqual(
+    sitemapData.map((entry) => entry.url),
+    ["https://portfolio.example/en", "https://portfolio.example/ru"],
+  );
 });
 
 test("builds Person and CreativeWork JSON-LD from published portfolio content", () => {
   const view = createPortfolioView(fallbackContent as PortfolioContent, "en");
-  const jsonLd = withTestSiteUrl(() => createPortfolioJsonLd(view, "en"));
+  const jsonLd = createPortfolioJsonLd(view, "en", new URL("https://portfolio.example"));
   const graph = jsonLd["@graph"] as Array<Record<string, unknown>>;
   const person = graph.find((node) => node["@type"] === "Person");
   const creativeWorks = graph.filter((node) => node["@type"] === "CreativeWork");
 
   assert.equal(person?.name, "Nickraspy");
+  assert.equal(person?.url, "https://portfolio.example/en");
   assert.equal(person?.jobTitle, view.profile.role);
   assert.deepEqual(person?.knowsAbout, view.skills.map((skill) => skill.name));
   assert.equal(creativeWorks.length, view.projects.length);

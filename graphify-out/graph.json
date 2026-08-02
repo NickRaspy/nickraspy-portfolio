@@ -67,7 +67,7 @@
       "label": "LocalePageProps",
       "file_type": "code",
       "source_file": "app/[locale]/page.tsx",
-      "source_location": "L9",
+      "source_location": "L10",
       "_origin": "ast",
       "id": "app_locale_page_localepageprops",
       "community": 20,
@@ -78,7 +78,7 @@
       "label": "requireLocale()",
       "file_type": "code",
       "source_file": "app/[locale]/page.tsx",
-      "source_location": "L13",
+      "source_location": "L14",
       "_origin": "ast",
       "id": "app_locale_page_requirelocale",
       "community": 20,
@@ -89,7 +89,7 @@
       "label": "generateStaticParams()",
       "file_type": "code",
       "source_file": "app/[locale]/page.tsx",
-      "source_location": "L18",
+      "source_location": "L19",
       "_origin": "ast",
       "id": "app_locale_page_generatestaticparams",
       "community": 20,
@@ -100,7 +100,7 @@
       "label": "generateMetadata()",
       "file_type": "code",
       "source_file": "app/[locale]/page.tsx",
-      "source_location": "L22",
+      "source_location": "L23",
       "_origin": "ast",
       "id": "app_locale_page_generatemetadata",
       "community": 20,
@@ -111,7 +111,7 @@
       "label": "LocaleHome()",
       "file_type": "code",
       "source_file": "app/[locale]/page.tsx",
-      "source_location": "L27",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "app_locale_page_localehome",
       "community": 20,
@@ -573,7 +573,7 @@
       "label": "geistSans",
       "file_type": "code",
       "source_file": "app/layout.tsx",
-      "source_location": "L9",
+      "source_location": "L10",
       "_origin": "ast",
       "id": "app_layout_geistsans",
       "community": 20,
@@ -584,7 +584,7 @@
       "label": "geistMono",
       "file_type": "code",
       "source_file": "app/layout.tsx",
-      "source_location": "L14",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "app_layout_geistmono",
       "community": 20,
@@ -592,21 +592,21 @@
       "norm_label": "geistmono"
     },
     {
-      "label": "metadata",
+      "label": "generateMetadata()",
       "file_type": "code",
       "source_file": "app/layout.tsx",
-      "source_location": "L19",
+      "source_location": "L20",
       "_origin": "ast",
-      "id": "app_layout_metadata",
+      "id": "app_layout_generatemetadata",
       "community": 20,
       "community_name": "Root Layout Typography",
-      "norm_label": "metadata"
+      "norm_label": "generatemetadata()"
     },
     {
       "label": "RootLayout()",
       "file_type": "code",
       "source_file": "app/layout.tsx",
-      "source_location": "L60",
+      "source_location": "L63",
       "_origin": "ast",
       "id": "app_layout_rootlayout",
       "community": 20,
@@ -669,10 +669,21 @@
       "norm_label": "robots.ts"
     },
     {
+      "label": "createRobots()",
+      "file_type": "code",
+      "source_file": "app/robots.ts",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "app_robots_createrobots",
+      "community": 20,
+      "community_name": "Root Layout Typography",
+      "norm_label": "createrobots()"
+    },
+    {
       "label": "robots()",
       "file_type": "code",
       "source_file": "app/robots.ts",
-      "source_location": "L4",
+      "source_location": "L17",
       "_origin": "ast",
       "id": "app_robots_robots",
       "community": 20,
@@ -691,10 +702,21 @@
       "norm_label": "sitemap.ts"
     },
     {
+      "label": "createSitemap()",
+      "file_type": "code",
+      "source_file": "app/sitemap.ts",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "app_sitemap_createsitemap",
+      "community": 20,
+      "community_name": "Root Layout Typography",
+      "norm_label": "createsitemap()"
+    },
+    {
       "label": "sitemap()",
       "file_type": "code",
       "source_file": "app/sitemap.ts",
-      "source_location": "L5",
+      "source_location": "L17",
       "_origin": "ast",
       "id": "app_sitemap_sitemap",
       "community": 20,
@@ -972,8 +994,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_properties_locales",
-      "community": 15,
-      "community_name": "Project Entry Schema",
+      "community": 2,
+      "community_name": "Schema Collection Rules",
       "norm_label": "locales"
     },
     {
@@ -983,8 +1005,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_locales_type",
-      "community": 15,
-      "community_name": "Project Entry Schema",
+      "community": 2,
+      "community_name": "Schema Collection Rules",
       "norm_label": "type"
     },
     {
@@ -994,8 +1016,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_locales_minitems",
-      "community": 15,
-      "community_name": "Project Entry Schema",
+      "community": 2,
+      "community_name": "Schema Collection Rules",
       "norm_label": "minitems"
     },
     {
@@ -1005,8 +1027,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_locales_uniqueitems",
-      "community": 15,
-      "community_name": "Project Entry Schema",
+      "community": 2,
+      "community_name": "Schema Collection Rules",
       "norm_label": "uniqueitems"
     },
     {
@@ -1016,8 +1038,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_locales_items",
-      "community": 15,
-      "community_name": "Project Entry Schema",
+      "community": 2,
+      "community_name": "Schema Collection Rules",
       "norm_label": "items"
     },
     {
@@ -1027,8 +1049,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_items_type",
-      "community": 15,
-      "community_name": "Project Entry Schema",
+      "community": 2,
+      "community_name": "Schema Collection Rules",
       "norm_label": "type"
     },
     {
@@ -1038,8 +1060,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_items_minlength",
-      "community": 15,
-      "community_name": "Project Entry Schema",
+      "community": 2,
+      "community_name": "Schema Collection Rules",
       "norm_label": "minlength"
     },
     {
@@ -1148,8 +1170,8 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_properties_id",
-      "community": 27,
-      "community_name": "Content Version Database",
+      "community": 22,
+      "community_name": "sortOrder",
       "norm_label": "id"
     },
     {
@@ -1159,8 +1181,8 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_id_ref",
-      "community": 27,
-      "community_name": "Content Version Database",
+      "community": 22,
+      "community_name": "sortOrder",
       "norm_label": "$ref"
     },
     {
@@ -1170,8 +1192,8 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_properties_status",
-      "community": 15,
-      "community_name": "Project Entry Schema",
+      "community": 63,
+      "community_name": "status",
       "norm_label": "status"
     },
     {
@@ -1181,8 +1203,8 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_status_type",
-      "community": 15,
-      "community_name": "Project Entry Schema",
+      "community": 63,
+      "community_name": "status",
       "norm_label": "type"
     },
     {
@@ -1192,8 +1214,8 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_status_minlength",
-      "community": 15,
-      "community_name": "Project Entry Schema",
+      "community": 63,
+      "community_name": "status",
       "norm_label": "minlength"
     },
     {
@@ -1236,8 +1258,8 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_properties_translations",
-      "community": 26,
-      "community_name": "properties",
+      "community": 27,
+      "community_name": "Content Version Database",
       "norm_label": "translations"
     },
     {
@@ -1247,8 +1269,8 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_translations_ref",
-      "community": 26,
-      "community_name": "properties",
+      "community": 27,
+      "community_name": "Content Version Database",
       "norm_label": "$ref"
     },
     {
@@ -1434,8 +1456,8 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_defs",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 61,
+      "community_name": "$defs",
       "norm_label": "$defs"
     },
     {
@@ -1445,8 +1467,8 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_defs_id",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 61,
+      "community_name": "$defs",
       "norm_label": "id"
     },
     {
@@ -1456,8 +1478,8 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_id_type",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 61,
+      "community_name": "$defs",
       "norm_label": "type"
     },
     {
@@ -1467,8 +1489,8 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_id_pattern",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 61,
+      "community_name": "$defs",
       "norm_label": "pattern"
     },
     {
@@ -1478,8 +1500,8 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_defs_localizedtext",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 35,
+      "community_name": "status",
       "norm_label": "localizedtext"
     },
     {
@@ -1489,8 +1511,8 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_localizedtext_type",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 35,
+      "community_name": "status",
       "norm_label": "type"
     },
     {
@@ -1500,8 +1522,8 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_localizedtext_additionalproperties",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 35,
+      "community_name": "status",
       "norm_label": "additionalproperties"
     },
     {
@@ -1511,8 +1533,8 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_localizedtext_required",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 35,
+      "community_name": "status",
       "norm_label": "required"
     },
     {
@@ -1522,8 +1544,8 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "ref_name",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 35,
+      "community_name": "status",
       "norm_label": "name"
     },
     {
@@ -1533,8 +1555,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_localizedtext_properties",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 35,
+      "community_name": "status",
       "norm_label": "properties"
     },
     {
@@ -1544,8 +1566,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_properties_name",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 35,
+      "community_name": "status",
       "norm_label": "name"
     },
     {
@@ -1555,8 +1577,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_name_type",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 35,
+      "community_name": "status",
       "norm_label": "type"
     },
     {
@@ -1566,8 +1588,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_name_minlength",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 35,
+      "community_name": "status",
       "norm_label": "minlength"
     },
     {
@@ -1577,8 +1599,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_properties_description",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 35,
+      "community_name": "status",
       "norm_label": "description"
     },
     {
@@ -1588,8 +1610,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_description_type",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 35,
+      "community_name": "status",
       "norm_label": "type"
     },
     {
@@ -1599,8 +1621,8 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_defs_profiletranslations",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 61,
+      "community_name": "$defs",
       "norm_label": "profiletranslations"
     },
     {
@@ -1610,8 +1632,8 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_profiletranslations_type",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 61,
+      "community_name": "$defs",
       "norm_label": "type"
     },
     {
@@ -1764,8 +1786,8 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_defs_skill",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 35,
+      "community_name": "status",
       "norm_label": "skill"
     },
     {
@@ -1775,8 +1797,8 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_skill_type",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 35,
+      "community_name": "status",
       "norm_label": "type"
     },
     {
@@ -1786,8 +1808,8 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_skill_additionalproperties",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 35,
+      "community_name": "status",
       "norm_label": "additionalproperties"
     },
     {
@@ -1830,8 +1852,8 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_skill_properties",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 35,
+      "community_name": "status",
       "norm_label": "properties"
     },
     {
@@ -1841,8 +1863,8 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_properties_level",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 35,
+      "community_name": "status",
       "norm_label": "level"
     },
     {
@@ -1852,8 +1874,8 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_level_type",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 35,
+      "community_name": "status",
       "norm_label": "type"
     },
     {
@@ -1863,8 +1885,8 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_level_minimum",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 35,
+      "community_name": "status",
       "norm_label": "minimum"
     },
     {
@@ -1874,8 +1896,8 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_level_maximum",
-      "community": 6,
-      "community_name": "Required Schema Fields",
+      "community": 35,
+      "community_name": "status",
       "norm_label": "maximum"
     },
     {
@@ -1885,8 +1907,8 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_properties_sortorder",
-      "community": 22,
-      "community_name": "sortOrder",
+      "community": 26,
+      "community_name": "properties",
       "norm_label": "sortorder"
     },
     {
@@ -1896,8 +1918,8 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_sortorder_type",
-      "community": 22,
-      "community_name": "sortOrder",
+      "community": 26,
+      "community_name": "properties",
       "norm_label": "type"
     },
     {
@@ -1907,8 +1929,8 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_sortorder_minimum",
-      "community": 22,
-      "community_name": "sortOrder",
+      "community": 26,
+      "community_name": "properties",
       "norm_label": "minimum"
     },
     {
@@ -2050,8 +2072,8 @@
       "source_location": "L54",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_translations_type",
-      "community": 26,
-      "community_name": "properties",
+      "community": 27,
+      "community_name": "Content Version Database",
       "norm_label": "type"
     },
     {
@@ -2204,8 +2226,8 @@
       "source_location": "L61",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_defs_project",
-      "community": 15,
-      "community_name": "Project Entry Schema",
+      "community": 61,
+      "community_name": "$defs",
       "norm_label": "project"
     },
     {
@@ -2215,8 +2237,8 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_project_type",
-      "community": 15,
-      "community_name": "Project Entry Schema",
+      "community": 61,
+      "community_name": "$defs",
       "norm_label": "type"
     },
     {
@@ -2226,8 +2248,8 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_project_additionalproperties",
-      "community": 15,
-      "community_name": "Project Entry Schema",
+      "community": 61,
+      "community_name": "$defs",
       "norm_label": "additionalproperties"
     },
     {
@@ -2314,8 +2336,8 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_status_enum",
-      "community": 15,
-      "community_name": "Project Entry Schema",
+      "community": 63,
+      "community_name": "status",
       "norm_label": "enum"
     },
     {
@@ -2325,8 +2347,8 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "ref_draft",
-      "community": 15,
-      "community_name": "Project Entry Schema",
+      "community": 63,
+      "community_name": "status",
       "norm_label": "draft"
     },
     {
@@ -2336,8 +2358,8 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "ref_published",
-      "community": 15,
-      "community_name": "Project Entry Schema",
+      "community": 63,
+      "community_name": "status",
       "norm_label": "published"
     },
     {
@@ -2347,8 +2369,8 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "ref_archived",
-      "community": 15,
-      "community_name": "Project Entry Schema",
+      "community": 63,
+      "community_name": "status",
       "norm_label": "archived"
     },
     {
@@ -2446,8 +2468,8 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_properties_technologies",
-      "community": 15,
-      "community_name": "Project Entry Schema",
+      "community": 2,
+      "community_name": "Schema Collection Rules",
       "norm_label": "technologies"
     },
     {
@@ -2457,8 +2479,8 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_technologies_type",
-      "community": 15,
-      "community_name": "Project Entry Schema",
+      "community": 2,
+      "community_name": "Schema Collection Rules",
       "norm_label": "type"
     },
     {
@@ -2468,8 +2490,8 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_technologies_uniqueitems",
-      "community": 15,
-      "community_name": "Project Entry Schema",
+      "community": 2,
+      "community_name": "Schema Collection Rules",
       "norm_label": "uniqueitems"
     },
     {
@@ -2479,8 +2501,8 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_technologies_items",
-      "community": 15,
-      "community_name": "Project Entry Schema",
+      "community": 2,
+      "community_name": "Schema Collection Rules",
       "norm_label": "items"
     },
     {
@@ -2490,8 +2512,8 @@
       "source_location": "L70",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_defs_contact",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 61,
+      "community_name": "$defs",
       "norm_label": "contact"
     },
     {
@@ -2501,8 +2523,8 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_contact_type",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 61,
+      "community_name": "$defs",
       "norm_label": "type"
     },
     {
@@ -2512,8 +2534,8 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_contact_additionalproperties",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 61,
+      "community_name": "$defs",
       "norm_label": "additionalproperties"
     },
     {
@@ -2523,8 +2545,8 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_contact_required",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 35,
+      "community_name": "status",
       "norm_label": "required"
     },
     {
@@ -2534,8 +2556,8 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "ref_type",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 35,
+      "community_name": "status",
       "norm_label": "type"
     },
     {
@@ -2545,8 +2567,8 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "ref_label",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 35,
+      "community_name": "status",
       "norm_label": "label"
     },
     {
@@ -2556,8 +2578,8 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "ref_value",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 35,
+      "community_name": "status",
       "norm_label": "value"
     },
     {
@@ -2567,8 +2589,8 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "ref_url",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 35,
+      "community_name": "status",
       "norm_label": "url"
     },
     {
@@ -2578,8 +2600,8 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "ref_visible",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 35,
+      "community_name": "status",
       "norm_label": "visible"
     },
     {
@@ -4217,86 +4239,317 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_hudportfolio",
-      "community": 20,
-      "community_name": "Root Layout Typography",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "hudportfolio.tsx"
-    },
-    {
-      "label": "Tab",
-      "file_type": "code",
-      "source_file": "src/components/hudPortfolio.tsx",
-      "source_location": "L11",
-      "_origin": "ast",
-      "id": "src_components_hudportfolio_tab",
-      "community": 20,
-      "community_name": "Root Layout Typography",
-      "norm_label": "tab"
-    },
-    {
-      "label": "Project",
-      "file_type": "code",
-      "source_file": "src/components/hudPortfolio.tsx",
-      "source_location": "L12",
-      "_origin": "ast",
-      "id": "src_components_hudportfolio_project",
-      "community": 20,
-      "community_name": "Root Layout Typography",
-      "norm_label": "project"
-    },
-    {
-      "label": "WindowKey",
-      "file_type": "code",
-      "source_file": "src/components/hudPortfolio.tsx",
-      "source_location": "L13",
-      "_origin": "ast",
-      "id": "src_components_hudportfolio_windowkey",
-      "community": 20,
-      "community_name": "Root Layout Typography",
-      "norm_label": "windowkey"
-    },
-    {
-      "label": "Point",
-      "file_type": "code",
-      "source_file": "src/components/hudPortfolio.tsx",
-      "source_location": "L14",
-      "_origin": "ast",
-      "id": "src_components_hudportfolio_point",
-      "community": 20,
-      "community_name": "Root Layout Typography",
-      "norm_label": "point"
-    },
-    {
-      "label": "Glyph()",
-      "file_type": "code",
-      "source_file": "src/components/hudPortfolio.tsx",
-      "source_location": "L16",
-      "_origin": "ast",
-      "id": "src_components_hudportfolio_glyph",
-      "community": 20,
-      "community_name": "Root Layout Typography",
-      "norm_label": "glyph()"
-    },
-    {
-      "label": "Panel()",
-      "file_type": "code",
-      "source_file": "src/components/hudPortfolio.tsx",
-      "source_location": "L28",
-      "_origin": "ast",
-      "id": "src_components_hudportfolio_panel",
-      "community": 20,
-      "community_name": "Root Layout Typography",
-      "norm_label": "panel()"
     },
     {
       "label": "HudPortfolio()",
       "file_type": "code",
       "source_file": "src/components/hudPortfolio.tsx",
-      "source_location": "L35",
+      "source_location": "L19",
       "_origin": "ast",
       "id": "src_components_hudportfolio_hudportfolio",
+      "community": 9,
+      "community_name": "Excel Import Validation",
+      "norm_label": "hudportfolio()"
+    },
+    {
+      "label": "background.tsx",
+      "file_type": "code",
+      "source_file": "src/components/hud/background.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_hud_background",
       "community": 20,
       "community_name": "Root Layout Typography",
-      "norm_label": "hudportfolio()"
+      "norm_label": "background.tsx"
+    },
+    {
+      "label": "HudBackgroundProps",
+      "file_type": "code",
+      "source_file": "src/components/hud/background.tsx",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "src_components_hud_background_hudbackgroundprops",
+      "community": 20,
+      "community_name": "Root Layout Typography",
+      "norm_label": "hudbackgroundprops"
+    },
+    {
+      "label": "HudBackground()",
+      "file_type": "code",
+      "source_file": "src/components/hud/background.tsx",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "src_components_hud_background_hudbackground",
+      "community": 9,
+      "community_name": "Excel Import Validation",
+      "norm_label": "hudbackground()"
+    },
+    {
+      "label": "contact.tsx",
+      "file_type": "code",
+      "source_file": "src/components/hud/contact.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_hud_contact",
+      "community": 9,
+      "community_name": "Excel Import Validation",
+      "norm_label": "contact.tsx"
+    },
+    {
+      "label": "HudMessages",
+      "file_type": "code",
+      "source_file": "src/components/hud/contact.tsx",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "src_components_hud_contact_hudmessages",
+      "community": 9,
+      "community_name": "Excel Import Validation",
+      "norm_label": "hudmessages"
+    },
+    {
+      "label": "useContactForm()",
+      "file_type": "code",
+      "source_file": "src/components/hud/contact.tsx",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "src_components_hud_contact_usecontactform",
+      "community": 9,
+      "community_name": "Excel Import Validation",
+      "norm_label": "usecontactform()"
+    },
+    {
+      "label": "Contact()",
+      "file_type": "code",
+      "source_file": "src/components/hud/contact.tsx",
+      "source_location": "L84",
+      "_origin": "ast",
+      "id": "src_components_hud_contact_contact",
+      "community": 9,
+      "community_name": "Excel Import Validation",
+      "norm_label": "contact()"
+    },
+    {
+      "label": "dock.tsx",
+      "file_type": "code",
+      "source_file": "src/components/hud/dock.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_hud_dock",
+      "community": 9,
+      "community_name": "Excel Import Validation",
+      "norm_label": "dock.tsx"
+    },
+    {
+      "label": "tabs",
+      "file_type": "code",
+      "source_file": "src/components/hud/dock.tsx",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "src_components_hud_dock_tabs",
+      "community": 9,
+      "community_name": "Excel Import Validation",
+      "norm_label": "tabs"
+    },
+    {
+      "label": "HudDock()",
+      "file_type": "code",
+      "source_file": "src/components/hud/dock.tsx",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "src_components_hud_dock_huddock",
+      "community": 9,
+      "community_name": "Excel Import Validation",
+      "norm_label": "huddock()"
+    },
+    {
+      "label": "panels.tsx",
+      "file_type": "code",
+      "source_file": "src/components/hud/panels.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_hud_panels",
+      "community": 9,
+      "community_name": "Excel Import Validation",
+      "norm_label": "panels.tsx"
+    },
+    {
+      "label": "Tab",
+      "file_type": "code",
+      "source_file": "src/components/hud/panels.tsx",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "src_components_hud_panels_tab",
+      "community": 9,
+      "community_name": "Excel Import Validation",
+      "norm_label": "tab"
+    },
+    {
+      "label": "Project",
+      "file_type": "code",
+      "source_file": "src/components/hud/panels.tsx",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "src_components_hud_panels_project",
+      "community": 9,
+      "community_name": "Excel Import Validation",
+      "norm_label": "project"
+    },
+    {
+      "label": "WindowKey",
+      "file_type": "code",
+      "source_file": "src/components/hud/panels.tsx",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "src_components_hud_panels_windowkey",
+      "community": 9,
+      "community_name": "Excel Import Validation",
+      "norm_label": "windowkey"
+    },
+    {
+      "label": "Point",
+      "file_type": "code",
+      "source_file": "src/components/hud/panels.tsx",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "src_components_hud_panels_point",
+      "community": 9,
+      "community_name": "Excel Import Validation",
+      "norm_label": "point"
+    },
+    {
+      "label": "DragHandler",
+      "file_type": "code",
+      "source_file": "src/components/hud/panels.tsx",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "src_components_hud_panels_draghandler",
+      "community": 9,
+      "community_name": "Excel Import Validation",
+      "norm_label": "draghandler"
+    },
+    {
+      "label": "HudMessages",
+      "file_type": "code",
+      "source_file": "src/components/hud/panels.tsx",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "src_components_hud_panels_hudmessages",
+      "community": 9,
+      "community_name": "Excel Import Validation",
+      "norm_label": "hudmessages"
+    },
+    {
+      "label": "origin",
+      "file_type": "code",
+      "source_file": "src/components/hud/panels.tsx",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "src_components_hud_panels_origin",
+      "community": 9,
+      "community_name": "Excel Import Validation",
+      "norm_label": "origin"
+    },
+    {
+      "label": "Glyph()",
+      "file_type": "code",
+      "source_file": "src/components/hud/panels.tsx",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "src_components_hud_panels_glyph",
+      "community": 9,
+      "community_name": "Excel Import Validation",
+      "norm_label": "glyph()"
+    },
+    {
+      "label": "Panel()",
+      "file_type": "code",
+      "source_file": "src/components/hud/panels.tsx",
+      "source_location": "L62",
+      "_origin": "ast",
+      "id": "src_components_hud_panels_panel",
+      "community": 9,
+      "community_name": "Excel Import Validation",
+      "norm_label": "panel()"
+    },
+    {
+      "label": "useHudPanels()",
+      "file_type": "code",
+      "source_file": "src/components/hud/panels.tsx",
+      "source_location": "L92",
+      "_origin": "ast",
+      "id": "src_components_hud_panels_usehudpanels",
+      "community": 9,
+      "community_name": "Excel Import Validation",
+      "norm_label": "usehudpanels()"
+    },
+    {
+      "label": "ProfilePanel()",
+      "file_type": "code",
+      "source_file": "src/components/hud/panels.tsx",
+      "source_location": "L177",
+      "_origin": "ast",
+      "id": "src_components_hud_panels_profilepanel",
+      "community": 9,
+      "community_name": "Excel Import Validation",
+      "norm_label": "profilepanel()"
+    },
+    {
+      "label": "ExperiencePanel()",
+      "file_type": "code",
+      "source_file": "src/components/hud/panels.tsx",
+      "source_location": "L214",
+      "_origin": "ast",
+      "id": "src_components_hud_panels_experiencepanel",
+      "community": 9,
+      "community_name": "Excel Import Validation",
+      "norm_label": "experiencepanel()"
+    },
+    {
+      "label": "projects.tsx",
+      "file_type": "code",
+      "source_file": "src/components/hud/projects.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_hud_projects",
+      "community": 9,
+      "community_name": "Excel Import Validation",
+      "norm_label": "projects.tsx"
+    },
+    {
+      "label": "HudMessages",
+      "file_type": "code",
+      "source_file": "src/components/hud/projects.tsx",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "src_components_hud_projects_hudmessages",
+      "community": 9,
+      "community_name": "Excel Import Validation",
+      "norm_label": "hudmessages"
+    },
+    {
+      "label": "useProjectBrowser()",
+      "file_type": "code",
+      "source_file": "src/components/hud/projects.tsx",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "src_components_hud_projects_useprojectbrowser",
+      "community": 9,
+      "community_name": "Excel Import Validation",
+      "norm_label": "useprojectbrowser()"
+    },
+    {
+      "label": "Projects()",
+      "file_type": "code",
+      "source_file": "src/components/hud/projects.tsx",
+      "source_location": "L48",
+      "_origin": "ast",
+      "id": "src_components_hud_projects_projects",
+      "community": 9,
+      "community_name": "Excel Import Validation",
+      "norm_label": "projects()"
     },
     {
       "label": "spaceBackground.tsx",
@@ -4371,8 +4624,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_turnstilewidget",
-      "community": 20,
-      "community_name": "Root Layout Typography",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "turnstilewidget.tsx"
     },
     {
@@ -4382,8 +4635,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_components_turnstilewidget_turnstileapi",
-      "community": 20,
-      "community_name": "Root Layout Typography",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "turnstileapi"
     },
     {
@@ -4393,8 +4646,8 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "src_components_turnstilewidget_window",
-      "community": 20,
-      "community_name": "Root Layout Typography",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "window"
     },
     {
@@ -4404,8 +4657,8 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "src_components_turnstilewidget_turnstilewidget",
-      "community": 20,
-      "community_name": "Root Layout Typography",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "turnstilewidget()"
     },
     {
@@ -5207,8 +5460,8 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "src_content_types_portfolioview",
-      "community": 20,
-      "community_name": "Root Layout Typography",
+      "community": 1,
+      "community_name": "Admin API Publishing",
       "norm_label": "portfolioview"
     },
     {
@@ -5501,7 +5754,7 @@
       "label": "serializeJsonLd()",
       "file_type": "code",
       "source_file": "src/seo/jsonLd.ts",
-      "source_location": "L64",
+      "source_location": "L68",
       "_origin": "ast",
       "id": "src_seo_jsonld_serializejsonld",
       "community": 20,
@@ -5531,6 +5784,28 @@
       "norm_label": "createlocalemetadata()"
     },
     {
+      "label": "requestSiteUrl.ts",
+      "file_type": "code",
+      "source_file": "src/seo/requestSiteUrl.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_seo_requestsiteurl",
+      "community": 20,
+      "community_name": "Root Layout Typography",
+      "norm_label": "requestsiteurl.ts"
+    },
+    {
+      "label": "getRequestSiteUrl()",
+      "file_type": "code",
+      "source_file": "src/seo/requestSiteUrl.ts",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "src_seo_requestsiteurl_getrequestsiteurl",
+      "community": 20,
+      "community_name": "Root Layout Typography",
+      "norm_label": "getrequestsiteurl()"
+    },
+    {
       "label": "seo.test.ts",
       "file_type": "code",
       "source_file": "src/seo/seo.test.ts",
@@ -5540,17 +5815,6 @@
       "community": 20,
       "community_name": "Root Layout Typography",
       "norm_label": "seo.test.ts"
-    },
-    {
-      "label": "withTestSiteUrl()",
-      "file_type": "code",
-      "source_file": "src/seo/seo.test.ts",
-      "source_location": "L12",
-      "_origin": "ast",
-      "id": "src_seo_seo_test_withtestsiteurl",
-      "community": 20,
-      "community_name": "Root Layout Typography",
-      "norm_label": "withtestsiteurl()"
     },
     {
       "label": "site.ts",
@@ -5575,10 +5839,43 @@
       "norm_label": "siteenvironment"
     },
     {
-      "label": "resolveSiteUrl()",
+      "label": "RequestHeaders",
       "file_type": "code",
       "source_file": "src/seo/site.ts",
       "source_location": "L10",
+      "_origin": "ast",
+      "id": "src_seo_site_requestheaders",
+      "community": 20,
+      "community_name": "Root Layout Typography",
+      "norm_label": "requestheaders"
+    },
+    {
+      "label": "firstHeaderValue()",
+      "file_type": "code",
+      "source_file": "src/seo/site.ts",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "src_seo_site_firstheadervalue",
+      "community": 20,
+      "community_name": "Root Layout Typography",
+      "norm_label": "firstheadervalue()"
+    },
+    {
+      "label": "requestOrigin()",
+      "file_type": "code",
+      "source_file": "src/seo/site.ts",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "src_seo_site_requestorigin",
+      "community": 20,
+      "community_name": "Root Layout Typography",
+      "norm_label": "requestorigin()"
+    },
+    {
+      "label": "resolveSiteUrl()",
+      "file_type": "code",
+      "source_file": "src/seo/site.ts",
+      "source_location": "L36",
       "_origin": "ast",
       "id": "src_seo_site_resolvesiteurl",
       "community": 20,
@@ -5589,7 +5886,7 @@
       "label": "siteConfig",
       "file_type": "code",
       "source_file": "src/seo/site.ts",
-      "source_location": "L35",
+      "source_location": "L63",
       "_origin": "ast",
       "id": "src_seo_site_siteconfig",
       "community": 20,
@@ -5600,7 +5897,7 @@
       "label": "absoluteUrl()",
       "file_type": "code",
       "source_file": "src/seo/site.ts",
-      "source_location": "L46",
+      "source_location": "L71",
       "_origin": "ast",
       "id": "src_seo_site_absoluteurl",
       "community": 20,
@@ -5611,7 +5908,7 @@
       "label": "localizedPath()",
       "file_type": "code",
       "source_file": "src/seo/site.ts",
-      "source_location": "L50",
+      "source_location": "L75",
       "_origin": "ast",
       "id": "src_seo_site_localizedpath",
       "community": 20,
@@ -5622,7 +5919,7 @@
       "label": "localizedUrl()",
       "file_type": "code",
       "source_file": "src/seo/site.ts",
-      "source_location": "L54",
+      "source_location": "L79",
       "_origin": "ast",
       "id": "src_seo_site_localizedurl",
       "community": 20,
@@ -5633,7 +5930,7 @@
       "label": "languageAlternates()",
       "file_type": "code",
       "source_file": "src/seo/site.ts",
-      "source_location": "L58",
+      "source_location": "L83",
       "_origin": "ast",
       "id": "src_seo_site_languagealternates",
       "community": 20,
@@ -5699,7 +5996,7 @@
       "label": "assertLanguageTargets()",
       "file_type": "code",
       "source_file": "tests/e2e/portfolio.spec.ts",
-      "source_location": "L98",
+      "source_location": "L123",
       "_origin": "ast",
       "id": "tests_e2e_portfolio_spec_assertlanguagetargets",
       "community": 40,
@@ -7214,6 +7511,171 @@
       "norm_label": "source nodes"
     },
     {
+      "label": "query_20260802_195444_why_must_localhost_be_removed_from_the_seo_site_or.md",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_195444_why_must_localhost_be_removed_from_the_seo_site_or.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_195444_why_must_localhost_be_removed_from_the_seo_site_or",
+      "community": 64,
+      "community_name": "Q: Why must localhost be removed from the SEO site origin?",
+      "norm_label": "query_20260802_195444_why_must_localhost_be_removed_from_the_seo_site_or.md"
+    },
+    {
+      "label": "Q: Why must localhost be removed from the SEO site origin?",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_195444_why_must_localhost_be_removed_from_the_seo_site_or.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_195444_why_must_localhost_be_removed_from_the_seo_site_or_q_why_must_localhost_be_removed_from_the_seo_site_origin",
+      "community": 64,
+      "community_name": "Q: Why must localhost be removed from the SEO site origin?",
+      "norm_label": "q: why must localhost be removed from the seo site origin?"
+    },
+    {
+      "label": "Answer",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_195444_why_must_localhost_be_removed_from_the_seo_site_or.md",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_195444_why_must_localhost_be_removed_from_the_seo_site_or_answer",
+      "community": 64,
+      "community_name": "Q: Why must localhost be removed from the SEO site origin?",
+      "norm_label": "answer"
+    },
+    {
+      "label": "Outcome",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_195444_why_must_localhost_be_removed_from_the_seo_site_or.md",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_195444_why_must_localhost_be_removed_from_the_seo_site_or_outcome",
+      "community": 64,
+      "community_name": "Q: Why must localhost be removed from the SEO site origin?",
+      "norm_label": "outcome"
+    },
+    {
+      "label": "Source Nodes",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_195444_why_must_localhost_be_removed_from_the_seo_site_or.md",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_195444_why_must_localhost_be_removed_from_the_seo_site_or_source_nodes",
+      "community": 64,
+      "community_name": "Q: Why must localhost be removed from the SEO site origin?",
+      "norm_label": "source nodes"
+    },
+    {
+      "label": "query_20260802_200240_what_causes_cloudflare_turnstile_client_error_1102.md",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_200240_what_causes_cloudflare_turnstile_client_error_1102.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_200240_what_causes_cloudflare_turnstile_client_error_1102",
+      "community": 65,
+      "community_name": "Q: What causes Cloudflare Turnstile client error 110200 in the contact form?",
+      "norm_label": "query_20260802_200240_what_causes_cloudflare_turnstile_client_error_1102.md"
+    },
+    {
+      "label": "Q: What causes Cloudflare Turnstile client error 110200 in the contact form?",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_200240_what_causes_cloudflare_turnstile_client_error_1102.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_200240_what_causes_cloudflare_turnstile_client_error_1102_q_what_causes_cloudflare_turnstile_client_error_110200_in_the_contact_form",
+      "community": 65,
+      "community_name": "Q: What causes Cloudflare Turnstile client error 110200 in the contact form?",
+      "norm_label": "q: what causes cloudflare turnstile client error 110200 in the contact form?"
+    },
+    {
+      "label": "Answer",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_200240_what_causes_cloudflare_turnstile_client_error_1102.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_200240_what_causes_cloudflare_turnstile_client_error_1102_answer",
+      "community": 65,
+      "community_name": "Q: What causes Cloudflare Turnstile client error 110200 in the contact form?",
+      "norm_label": "answer"
+    },
+    {
+      "label": "Outcome",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_200240_what_causes_cloudflare_turnstile_client_error_1102.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_200240_what_causes_cloudflare_turnstile_client_error_1102_outcome",
+      "community": 65,
+      "community_name": "Q: What causes Cloudflare Turnstile client error 110200 in the contact form?",
+      "norm_label": "outcome"
+    },
+    {
+      "label": "Source Nodes",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_200240_what_causes_cloudflare_turnstile_client_error_1102.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_200240_what_causes_cloudflare_turnstile_client_error_1102_source_nodes",
+      "community": 65,
+      "community_name": "Q: What causes Cloudflare Turnstile client error 110200 in the contact form?",
+      "norm_label": "source nodes"
+    },
+    {
+      "label": "query_20260802_205100_npm_run_dev_fails_with_canonical_site_origin_requi.md",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_205100_npm_run_dev_fails_with_canonical_site_origin_requi.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_205100_npm_run_dev_fails_with_canonical_site_origin_requi",
+      "community": 60,
+      "community_name": "admin.ts",
+      "norm_label": "query_20260802_205100_npm_run_dev_fails_with_canonical_site_origin_requi.md"
+    },
+    {
+      "label": "Q: npm run dev fails with canonical site origin required",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_205100_npm_run_dev_fails_with_canonical_site_origin_requi.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_205100_npm_run_dev_fails_with_canonical_site_origin_requi_q_npm_run_dev_fails_with_canonical_site_origin_required",
+      "community": 60,
+      "community_name": "admin.ts",
+      "norm_label": "q: npm run dev fails with canonical site origin required"
+    },
+    {
+      "label": "Answer",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_205100_npm_run_dev_fails_with_canonical_site_origin_requi.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_205100_npm_run_dev_fails_with_canonical_site_origin_requi_answer",
+      "community": 60,
+      "community_name": "admin.ts",
+      "norm_label": "answer"
+    },
+    {
+      "label": "Outcome",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_205100_npm_run_dev_fails_with_canonical_site_origin_requi.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_205100_npm_run_dev_fails_with_canonical_site_origin_requi_outcome",
+      "community": 60,
+      "community_name": "admin.ts",
+      "norm_label": "outcome"
+    },
+    {
+      "label": "Source Nodes",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_205100_npm_run_dev_fails_with_canonical_site_origin_requi.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_205100_npm_run_dev_fails_with_canonical_site_origin_requi_source_nodes",
+      "community": 60,
+      "community_name": "admin.ts",
+      "norm_label": "source nodes"
+    },
+    {
       "label": "size",
       "file_type": "code",
       "source_file": "app/opengraph-image.tsx",
@@ -7913,7 +8375,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/[locale]/page.tsx",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_locale_page",
@@ -7924,7 +8386,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/[locale]/page.tsx",
-      "source_location": "L18",
+      "source_location": "L19",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_locale_page",
@@ -7935,7 +8397,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/[locale]/page.tsx",
-      "source_location": "L27",
+      "source_location": "L28",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_locale_page",
@@ -7946,7 +8408,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/[locale]/page.tsx",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_locale_page",
@@ -7957,7 +8419,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/[locale]/page.tsx",
-      "source_location": "L13",
+      "source_location": "L14",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_locale_page",
@@ -8109,11 +8571,35 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/[locale]/page.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_locale_page",
+      "target": "src_seo_requestsiteurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/[locale]/page.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_locale_page",
+      "target": "src_seo_requestsiteurl_getrequestsiteurl",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "app/[locale]/page.tsx",
-      "source_location": "L23",
+      "source_location": "L24",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_locale_page_generatemetadata",
@@ -8125,7 +8611,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "app/[locale]/page.tsx",
-      "source_location": "L28",
+      "source_location": "L29",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_locale_page_localehome",
@@ -8137,7 +8623,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "app/[locale]/page.tsx",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_locale_page_requirelocale",
@@ -8150,7 +8636,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/[locale]/page.tsx",
-      "source_location": "L24",
+      "source_location": "L25",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_locale_page_generatemetadata",
@@ -8162,7 +8648,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/[locale]/page.tsx",
-      "source_location": "L29",
+      "source_location": "L30",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_locale_page_localehome",
@@ -8174,7 +8660,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/[locale]/page.tsx",
-      "source_location": "L30",
+      "source_location": "L31",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_locale_page_localehome",
@@ -8186,11 +8672,23 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/[locale]/page.tsx",
-      "source_location": "L36",
+      "source_location": "L37",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_locale_page_localehome",
       "target": "src_seo_jsonld_serializejsonld"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/[locale]/page.tsx",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_locale_page_localehome",
+      "target": "src_seo_requestsiteurl_getrequestsiteurl"
     },
     {
       "relation": "contains",
@@ -9596,7 +10094,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/layout.tsx",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_layout",
@@ -9607,7 +10105,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/layout.tsx",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_layout",
@@ -9618,18 +10116,18 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/layout.tsx",
-      "source_location": "L19",
+      "source_location": "L20",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_layout",
-      "target": "app_layout_metadata",
+      "target": "app_layout_generatemetadata",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/layout.tsx",
-      "source_location": "L60",
+      "source_location": "L63",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_layout",
@@ -9669,7 +10167,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_layout",
-      "target": "src_seo_site",
+      "target": "src_seo_requestsiteurl",
       "confidence_score": 1.0
     },
     {
@@ -9678,6 +10176,30 @@
       "confidence": "EXTRACTED",
       "source_file": "app/layout.tsx",
       "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_layout",
+      "target": "src_seo_requestsiteurl_getrequestsiteurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/layout.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_layout",
+      "target": "src_seo_site",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/layout.tsx",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_layout",
@@ -9690,7 +10212,19 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/layout.tsx",
-      "source_location": "L66",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_layout_generatemetadata",
+      "target": "src_seo_requestsiteurl_getrequestsiteurl"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/layout.tsx",
+      "source_location": "L69",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_layout_rootlayout",
@@ -9830,7 +10364,18 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/robots.ts",
-      "source_location": "L4",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_robots",
+      "target": "app_robots_createrobots",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/robots.ts",
+      "source_location": "L17",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_robots",
@@ -9846,6 +10391,30 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_robots",
+      "target": "src_seo_requestsiteurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/robots.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_robots",
+      "target": "src_seo_requestsiteurl_getrequestsiteurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/robots.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_robots",
       "target": "src_seo_site",
       "confidence_score": 1.0
     },
@@ -9854,23 +10423,11 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "app/robots.ts",
-      "source_location": "L2",
+      "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_robots",
       "target": "src_seo_site_absoluteurl",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "app/robots.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_robots",
-      "target": "src_seo_site_siteconfig",
       "confidence_score": 1.0
     },
     {
@@ -9891,11 +10448,23 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/robots.ts",
-      "source_location": "L11",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_robots_createrobots",
+      "target": "src_seo_site_absoluteurl"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/robots.ts",
+      "source_location": "L18",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_robots_robots",
-      "target": "src_seo_site_absoluteurl"
+      "target": "app_robots_createrobots",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -9906,14 +10475,37 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_seo_seo_test",
-      "target": "app_robots_robots",
+      "target": "app_robots_createrobots",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/robots.ts",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_robots_robots",
+      "target": "src_seo_requestsiteurl_getrequestsiteurl"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/sitemap.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_sitemap",
+      "target": "app_sitemap_createsitemap",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/sitemap.ts",
-      "source_location": "L5",
+      "source_location": "L17",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_sitemap",
@@ -9953,7 +10545,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_sitemap",
-      "target": "src_seo_site",
+      "target": "src_seo_requestsiteurl",
       "confidence_score": 1.0
     },
     {
@@ -9965,6 +10557,30 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_sitemap",
+      "target": "src_seo_requestsiteurl_getrequestsiteurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/sitemap.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_sitemap",
+      "target": "src_seo_site",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/sitemap.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_sitemap",
       "target": "src_seo_site_languagealternates",
       "confidence_score": 1.0
     },
@@ -9973,7 +10589,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "app/sitemap.ts",
-      "source_location": "L3",
+      "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_sitemap",
@@ -9998,10 +10614,10 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/sitemap.ts",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "app_sitemap_sitemap",
+      "source": "app_sitemap_createsitemap",
       "target": "src_seo_site_languagealternates"
     },
     {
@@ -10010,11 +10626,23 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/sitemap.ts",
-      "source_location": "L9",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_sitemap_createsitemap",
+      "target": "src_seo_site_localizedurl"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/sitemap.ts",
+      "source_location": "L18",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_sitemap_sitemap",
-      "target": "src_seo_site_localizedurl"
+      "target": "app_sitemap_createsitemap",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -10025,8 +10653,20 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_seo_seo_test",
-      "target": "app_sitemap_sitemap",
+      "target": "app_sitemap_createsitemap",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/sitemap.ts",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_sitemap_sitemap",
+      "target": "src_seo_requestsiteurl_getrequestsiteurl"
     },
     {
       "relation": "contains",
@@ -14721,80 +15361,27 @@
       "confidence_score": 1.0
     },
     {
-      "relation": "contains",
+      "relation": "imports_from",
+      "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/hudPortfolio.tsx",
-      "source_location": "L16",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_hudportfolio",
-      "target": "src_components_hudportfolio_glyph",
+      "target": "src_components_hud_background",
       "confidence_score": 1.0
     },
     {
-      "relation": "contains",
+      "relation": "imports",
+      "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/hudPortfolio.tsx",
-      "source_location": "L35",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_hudportfolio",
-      "target": "src_components_hudportfolio_hudportfolio",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/hudPortfolio.tsx",
-      "source_location": "L28",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_hudportfolio",
-      "target": "src_components_hudportfolio_panel",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/hudPortfolio.tsx",
-      "source_location": "L14",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_hudportfolio",
-      "target": "src_components_hudportfolio_point",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/hudPortfolio.tsx",
-      "source_location": "L12",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_hudportfolio",
-      "target": "src_components_hudportfolio_project",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/hudPortfolio.tsx",
-      "source_location": "L11",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_hudportfolio",
-      "target": "src_components_hudportfolio_tab",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/hudPortfolio.tsx",
-      "source_location": "L13",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_hudportfolio",
-      "target": "src_components_hudportfolio_windowkey",
+      "target": "src_components_hud_background_hudbackground",
       "confidence_score": 1.0
     },
     {
@@ -14806,7 +15393,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_hudportfolio",
-      "target": "src_components_spacebackground",
+      "target": "src_components_hud_contact",
       "confidence_score": 1.0
     },
     {
@@ -14818,7 +15405,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_hudportfolio",
-      "target": "src_components_spacebackground_spacebackground",
+      "target": "src_components_hud_contact_usecontactform",
       "confidence_score": 1.0
     },
     {
@@ -14826,11 +15413,106 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/hudPortfolio.tsx",
-      "source_location": "L7",
+      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_hudportfolio",
-      "target": "src_components_turnstilewidget",
+      "target": "src_components_hud_dock",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hudPortfolio.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hudportfolio",
+      "target": "src_components_hud_panels",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hudPortfolio.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hudportfolio",
+      "target": "src_components_hud_panels_experiencepanel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hudPortfolio.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hudportfolio",
+      "target": "src_components_hud_panels_profilepanel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hudPortfolio.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hudportfolio",
+      "target": "src_components_hud_panels_tab",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hudPortfolio.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hudportfolio",
+      "target": "src_components_hud_panels_usehudpanels",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hudPortfolio.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hudportfolio",
+      "target": "src_components_hud_projects",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hudPortfolio.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hudportfolio",
+      "target": "src_components_hud_projects_useprojectbrowser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hudPortfolio.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hudportfolio",
+      "target": "src_components_hudportfolio_hudportfolio",
       "confidence_score": 1.0
     },
     {
@@ -14878,18 +15560,6 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_hudportfolio",
-      "target": "src_i18n_config_locales",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/hudPortfolio.tsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_hudportfolio",
       "target": "src_i18n_config_supportedlocale",
       "confidence_score": 1.0
     },
@@ -14915,6 +15585,656 @@
       "_origin": "ast",
       "source": "src_components_hudportfolio",
       "target": "src_i18n_messages_messages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/hudPortfolio.tsx",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hudportfolio_hudportfolio",
+      "target": "src_components_hud_contact_usecontactform"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/hudPortfolio.tsx",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hudportfolio_hudportfolio",
+      "target": "src_components_hud_panels_usehudpanels"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/hudPortfolio.tsx",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hudportfolio_hudportfolio",
+      "target": "src_components_hud_projects_useprojectbrowser"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/background.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_background",
+      "target": "src_components_hud_background_hudbackground",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/background.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_background",
+      "target": "src_components_hud_background_hudbackgroundprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/background.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_background",
+      "target": "src_components_spacebackground",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/background.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_background",
+      "target": "src_components_spacebackground_spacebackground",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/background.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_background",
+      "target": "src_i18n_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/background.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_background",
+      "target": "src_i18n_config_locales",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/background.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_background",
+      "target": "src_i18n_config_supportedlocale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/contact.tsx",
+      "source_location": "L84",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_contact",
+      "target": "src_components_hud_contact_contact",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/contact.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_contact",
+      "target": "src_components_hud_contact_hudmessages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/contact.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_contact",
+      "target": "src_components_hud_contact_usecontactform",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/contact.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_contact",
+      "target": "src_components_hud_panels",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/contact.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_contact",
+      "target": "src_components_hud_panels_draghandler",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/contact.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_contact",
+      "target": "src_components_hud_panels_glyph",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/contact.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_contact",
+      "target": "src_components_hud_panels_panel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/contact.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_contact",
+      "target": "src_components_hud_panels_point",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/contact.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_contact",
+      "target": "src_components_turnstilewidget",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/contact.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_contact",
+      "target": "src_i18n_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/contact.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_contact",
+      "target": "src_i18n_config_supportedlocale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/dock.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_dock",
+      "target": "src_components_hud_dock_huddock",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/dock.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_dock",
+      "target": "src_components_hud_dock_tabs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/dock.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_dock",
+      "target": "src_components_hud_panels",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/dock.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_dock",
+      "target": "src_components_hud_panels_glyph",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/dock.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_dock",
+      "target": "src_components_hud_panels_tab",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/panels.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_panels",
+      "target": "src_components_hud_panels_draghandler",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/panels.tsx",
+      "source_location": "L214",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_panels",
+      "target": "src_components_hud_panels_experiencepanel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/panels.tsx",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_panels",
+      "target": "src_components_hud_panels_glyph",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/panels.tsx",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_panels",
+      "target": "src_components_hud_panels_hudmessages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/panels.tsx",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_panels",
+      "target": "src_components_hud_panels_origin",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/panels.tsx",
+      "source_location": "L62",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_panels",
+      "target": "src_components_hud_panels_panel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/panels.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_panels",
+      "target": "src_components_hud_panels_point",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/panels.tsx",
+      "source_location": "L177",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_panels",
+      "target": "src_components_hud_panels_profilepanel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/panels.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_panels",
+      "target": "src_components_hud_panels_project",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/panels.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_panels",
+      "target": "src_components_hud_panels_tab",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/panels.tsx",
+      "source_location": "L92",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_panels",
+      "target": "src_components_hud_panels_usehudpanels",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/panels.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_panels",
+      "target": "src_components_hud_panels_windowkey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/panels.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_panels",
+      "target": "src_content_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/panels.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_panels",
+      "target": "src_content_types_portfolioview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/panels.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_panels",
+      "target": "src_i18n_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/panels.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_panels",
+      "target": "src_i18n_config_supportedlocale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/projects.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_projects",
+      "target": "src_components_hud_panels",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/projects.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_projects",
+      "target": "src_components_hud_panels_project",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/projects.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_projects",
+      "target": "src_components_hud_panels_windowkey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/projects.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_projects",
+      "target": "src_components_hud_panels_point",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/projects.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_projects",
+      "target": "src_components_hud_panels_draghandler",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/projects.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_projects",
+      "target": "src_components_hud_panels_glyph",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/projects.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_projects",
+      "target": "src_components_hud_panels_panel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/projects.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_projects",
+      "target": "src_components_hud_projects_hudmessages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/projects.tsx",
+      "source_location": "L48",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_projects",
+      "target": "src_components_hud_projects_projects",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/projects.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_projects",
+      "target": "src_components_hud_projects_useprojectbrowser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/projects.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_projects",
+      "target": "src_content_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/projects.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_projects",
+      "target": "src_content_types_portfolioview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/projects.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_projects",
+      "target": "src_i18n_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hud/projects.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hud_projects",
+      "target": "src_i18n_config_supportedlocale",
       "confidence_score": 1.0
     },
     {
@@ -17759,7 +19079,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/seo/jsonLd.ts",
-      "source_location": "L64",
+      "source_location": "L68",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_seo_jsonld",
@@ -17819,7 +19139,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/seo/jsonLd.ts",
-      "source_location": "L22",
+      "source_location": "L26",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_seo_jsonld_createportfoliojsonld",
@@ -17832,7 +19152,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/seo/jsonLd.ts",
-      "source_location": "L19",
+      "source_location": "L23",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_seo_jsonld_createportfoliojsonld",
@@ -17972,13 +19292,49 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/seo/seo.test.ts",
-      "source_location": "L12",
+      "source_file": "src/seo/requestSiteUrl.ts",
+      "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_seo_seo_test",
-      "target": "src_seo_seo_test_withtestsiteurl",
+      "source": "src_seo_requestsiteurl",
+      "target": "src_seo_requestsiteurl_getrequestsiteurl",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/seo/requestSiteUrl.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_seo_requestsiteurl",
+      "target": "src_seo_site",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/seo/requestSiteUrl.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_seo_requestsiteurl",
+      "target": "src_seo_site_resolvesiteurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/seo/requestSiteUrl.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_seo_requestsiteurl_getrequestsiteurl",
+      "target": "src_seo_site_resolvesiteurl"
     },
     {
       "relation": "imports_from",
@@ -18005,22 +19361,10 @@
       "confidence_score": 1.0
     },
     {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/seo/seo.test.ts",
-      "source_location": "L10",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_seo_seo_test",
-      "target": "src_seo_site_siteconfig",
-      "confidence_score": 1.0
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/seo/site.ts",
-      "source_location": "L46",
+      "source_location": "L71",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_seo_site",
@@ -18031,7 +19375,18 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/seo/site.ts",
-      "source_location": "L58",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_seo_site",
+      "target": "src_seo_site_firstheadervalue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/seo/site.ts",
+      "source_location": "L83",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_seo_site",
@@ -18042,7 +19397,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/seo/site.ts",
-      "source_location": "L50",
+      "source_location": "L75",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_seo_site",
@@ -18053,7 +19408,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/seo/site.ts",
-      "source_location": "L54",
+      "source_location": "L79",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_seo_site",
@@ -18068,6 +19423,28 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_seo_site",
+      "target": "src_seo_site_requestheaders",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/seo/site.ts",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_seo_site",
+      "target": "src_seo_site_requestorigin",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/seo/site.ts",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_seo_site",
       "target": "src_seo_site_resolvesiteurl",
       "confidence_score": 1.0
     },
@@ -18075,7 +19452,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/seo/site.ts",
-      "source_location": "L35",
+      "source_location": "L63",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_seo_site",
@@ -18094,11 +19471,47 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "references",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/seo/site.ts",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_seo_site_requestorigin",
+      "target": "src_seo_site_requestheaders"
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/seo/site.ts",
-      "source_location": "L55",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_seo_site_requestorigin",
+      "target": "src_seo_site_firstheadervalue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/seo/site.ts",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_seo_site_resolvesiteurl",
+      "target": "src_seo_site_requestorigin",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/seo/site.ts",
+      "source_location": "L80",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_seo_site_localizedurl",
@@ -18110,7 +19523,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/seo/site.ts",
-      "source_location": "L60",
+      "source_location": "L85",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_seo_site_languagealternates",
@@ -18122,7 +19535,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/seo/site.ts",
-      "source_location": "L55",
+      "source_location": "L80",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_seo_site_localizedurl",
@@ -18155,7 +19568,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/e2e/portfolio.spec.ts",
-      "source_location": "L98",
+      "source_location": "L123",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_e2e_portfolio_spec",
@@ -19405,6 +20818,138 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_195444_why_must_localhost_be_removed_from_the_seo_site_or.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_195444_why_must_localhost_be_removed_from_the_seo_site_or",
+      "target": "graphify_out_memory_query_20260802_195444_why_must_localhost_be_removed_from_the_seo_site_or_q_why_must_localhost_be_removed_from_the_seo_site_origin",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_195444_why_must_localhost_be_removed_from_the_seo_site_or.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_195444_why_must_localhost_be_removed_from_the_seo_site_or_q_why_must_localhost_be_removed_from_the_seo_site_origin",
+      "target": "graphify_out_memory_query_20260802_195444_why_must_localhost_be_removed_from_the_seo_site_or_answer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_195444_why_must_localhost_be_removed_from_the_seo_site_or.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_195444_why_must_localhost_be_removed_from_the_seo_site_or_q_why_must_localhost_be_removed_from_the_seo_site_origin",
+      "target": "graphify_out_memory_query_20260802_195444_why_must_localhost_be_removed_from_the_seo_site_or_outcome",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_195444_why_must_localhost_be_removed_from_the_seo_site_or.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_195444_why_must_localhost_be_removed_from_the_seo_site_or_q_why_must_localhost_be_removed_from_the_seo_site_origin",
+      "target": "graphify_out_memory_query_20260802_195444_why_must_localhost_be_removed_from_the_seo_site_or_source_nodes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_200240_what_causes_cloudflare_turnstile_client_error_1102.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_200240_what_causes_cloudflare_turnstile_client_error_1102",
+      "target": "graphify_out_memory_query_20260802_200240_what_causes_cloudflare_turnstile_client_error_1102_q_what_causes_cloudflare_turnstile_client_error_110200_in_the_contact_form",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_200240_what_causes_cloudflare_turnstile_client_error_1102.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_200240_what_causes_cloudflare_turnstile_client_error_1102_q_what_causes_cloudflare_turnstile_client_error_110200_in_the_contact_form",
+      "target": "graphify_out_memory_query_20260802_200240_what_causes_cloudflare_turnstile_client_error_1102_answer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_200240_what_causes_cloudflare_turnstile_client_error_1102.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_200240_what_causes_cloudflare_turnstile_client_error_1102_q_what_causes_cloudflare_turnstile_client_error_110200_in_the_contact_form",
+      "target": "graphify_out_memory_query_20260802_200240_what_causes_cloudflare_turnstile_client_error_1102_outcome",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_200240_what_causes_cloudflare_turnstile_client_error_1102.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_200240_what_causes_cloudflare_turnstile_client_error_1102_q_what_causes_cloudflare_turnstile_client_error_110200_in_the_contact_form",
+      "target": "graphify_out_memory_query_20260802_200240_what_causes_cloudflare_turnstile_client_error_1102_source_nodes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_205100_npm_run_dev_fails_with_canonical_site_origin_requi.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_205100_npm_run_dev_fails_with_canonical_site_origin_requi",
+      "target": "graphify_out_memory_query_20260802_205100_npm_run_dev_fails_with_canonical_site_origin_requi_q_npm_run_dev_fails_with_canonical_site_origin_required",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_205100_npm_run_dev_fails_with_canonical_site_origin_requi.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_205100_npm_run_dev_fails_with_canonical_site_origin_requi_q_npm_run_dev_fails_with_canonical_site_origin_required",
+      "target": "graphify_out_memory_query_20260802_205100_npm_run_dev_fails_with_canonical_site_origin_requi_answer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_205100_npm_run_dev_fails_with_canonical_site_origin_requi.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_205100_npm_run_dev_fails_with_canonical_site_origin_requi_q_npm_run_dev_fails_with_canonical_site_origin_required",
+      "target": "graphify_out_memory_query_20260802_205100_npm_run_dev_fails_with_canonical_site_origin_requi_outcome",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_205100_npm_run_dev_fails_with_canonical_site_origin_requi.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_205100_npm_run_dev_fails_with_canonical_site_origin_requi_q_npm_run_dev_fails_with_canonical_site_origin_required",
+      "target": "graphify_out_memory_query_20260802_205100_npm_run_dev_fails_with_canonical_site_origin_requi_source_nodes",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -19933,5 +21478,5 @@
       "source_file": "README.md"
     }
   ],
-  "built_at_commit": "44490f9c916a0630f23b01c5666f34d67b778058"
+  "built_at_commit": "c6d96827ea05d7c9b8331cc2e71ba18bf7af796a"
 }

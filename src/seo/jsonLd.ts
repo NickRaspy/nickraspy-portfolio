@@ -15,9 +15,13 @@ function publicWebUrl(value: string | undefined): string | undefined {
   }
 }
 
-export function createPortfolioJsonLd(data: PortfolioView, locale: SupportedLocale) {
-  const pageUrl = localizedUrl(locale);
-  const personId = siteConfig.url.toString() + "#person";
+export function createPortfolioJsonLd(
+  data: PortfolioView,
+  locale: SupportedLocale,
+  siteUrl: URL,
+) {
+  const pageUrl = localizedUrl(siteUrl, locale);
+  const personId = siteUrl.toString() + "#person";
   const sameAs = data.contacts
     .map((contact) => publicWebUrl(contact.url))
     .filter((url): url is string => Boolean(url));

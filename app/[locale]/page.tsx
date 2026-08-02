@@ -5,6 +5,7 @@ import { getPortfolioView } from "@/src/content/data";
 import { isSupportedLocale, locales, type SupportedLocale } from "@/src/i18n/config";
 import { createPortfolioJsonLd, serializeJsonLd } from "@/src/seo/jsonLd";
 import { createLocaleMetadata } from "@/src/seo/metadata";
+import { getRequestSiteUrl } from "@/src/seo/requestSiteUrl";
 
 type LocalePageProps = {
   params: Promise<{ locale: string }>;
@@ -26,8 +27,8 @@ export async function generateMetadata({ params }: LocalePageProps): Promise<Met
 
 export default async function LocaleHome({ params }: LocalePageProps) {
   const locale = requireLocale((await params).locale);
-  const data = await getPortfolioView(locale);
-  const jsonLd = createPortfolioJsonLd(data, locale);
+  const [data, siteUrl] = await Promise.all([getPortfolioView(locale), getRequestSiteUrl()]);
+  const jsonLd = createPortfolioJsonLd(data, locale, siteUrl);
 
   return (
     <>
