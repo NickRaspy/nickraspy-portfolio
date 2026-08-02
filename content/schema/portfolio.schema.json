@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nickraspy:portfolio:schema:1",
+  "title": "Aetheris portfolio content",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "defaultLocale", "locales", "profile", "skills", "experience", "categories", "projects", "contacts"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "defaultLocale": { "type": "string", "minLength": 2 },
+    "locales": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 2 } },
+    "profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "status", "clearance", "translations"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "status": { "type": "string", "minLength": 1 },
+        "clearance": { "type": "string", "minLength": 1 },
+        "translations": { "$ref": "#/$defs/profileTranslations" }
+      }
+    },
+    "skills": { "type": "array", "items": { "$ref": "#/$defs/skill" } },
+    "experience": { "type": "array", "items": { "$ref": "#/$defs/experience" } },
+    "categories": { "type": "array", "items": { "$ref": "#/$defs/category" } },
+    "projects": { "type": "array", "items": { "$ref": "#/$defs/project" } },
+    "contacts": { "type": "array", "items": { "$ref": "#/$defs/contact" } }
+  },
+  "$defs": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9_-]*$" },
+    "localizedText": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name"],
+      "properties": { "name": { "type": "string", "minLength": 1 }, "description": { "type": "string" } }
+    },
+    "profileTranslations": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["role", "summary"],
+        "properties": { "role": { "type": "string", "minLength": 1 }, "summary": { "type": "string", "minLength": 1 } }
+      }
+    },
+    "skill": {
+      "type": "object", "additionalProperties": false, "required": ["id", "name", "level", "sortOrder"],
+      "properties": { "id": { "$ref": "#/$defs/id" }, "name": { "type": "string", "minLength": 1 }, "level": { "type": "integer", "minimum": 0, "maximum": 100 }, "sortOrder": { "type": "integer", "minimum": 0 } }
+    },
+    "experience": {
+      "type": "object", "additionalProperties": false, "required": ["id", "start", "end", "sortOrder", "translations"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" }, "start": { "type": "string", "minLength": 4 }, "end": { "type": "string", "minLength": 2 }, "sortOrder": { "type": "integer", "minimum": 0 },
+        "translations": { "type": "object", "additionalProperties": { "type": "object", "additionalProperties": false, "required": ["role", "company"], "properties": { "role": { "type": "string", "minLength": 1 }, "company": { "type": "string", "minLength": 1 }, "summary": { "type": "string" } } } }
+      }
+    },
+    "category": {
+      "type": "object", "additionalProperties": false, "required": ["id", "code", "sortOrder", "translations"],
+      "properties": { "id": { "$ref": "#/$defs/id" }, "code": { "type": "string", "minLength": 1 }, "sortOrder": { "type": "integer", "minimum": 0 }, "translations": { "type": "object", "additionalProperties": { "$ref": "#/$defs/localizedText" } } }
+    },
+    "project": {
+      "type": "object", "additionalProperties": false, "required": ["id", "categoryId", "status", "year", "sortOrder", "technologies", "translations"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" }, "categoryId": { "$ref": "#/$defs/id" }, "status": { "enum": ["draft", "published", "archived"] },
+        "year": { "type": "integer", "minimum": 1990, "maximum": 2200 }, "sortOrder": { "type": "integer", "minimum": 0 }, "liveUrl": { "type": "string" }, "repositoryUrl": { "type": "string" },
+        "technologies": { "type": "array", "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+        "translations": { "type": "object", "additionalProperties": { "$ref": "#/$defs/localizedText" } }
+      }
+    },
+    "contact": {
+      "type": "object", "additionalProperties": false, "required": ["id", "type", "label", "value", "url", "sortOrder", "visible"],
+      "properties": { "id": { "$ref": "#/$defs/id" }, "type": { "type": "string", "minLength": 1 }, "label": { "type": "string", "minLength": 1 }, "value": { "type": "string", "minLength": 1 }, "url": { "type": "string" }, "sortOrder": { "type": "integer", "minimum": 0 }, "visible": { "type": "boolean" } }
+    }
+  }
+}

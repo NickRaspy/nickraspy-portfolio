@@ -13,6 +13,11 @@
 # testing
 /coverage
 /.playwright-cli/
+/playwright-report/
+/test-results/
+/outputs/portfolio-data/qa/
+/outputs/portfolio-data/build/node_modules/
+/outputs/portfolio-data/*.inspect.ndjson
 
 # local IDE
 /.idea/
@@ -36,6 +41,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
@@ -43,3 +49,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+.vercel
+.env*
+!.env.example
+
+# Graphify runtime artifacts
+/graphify-out/*
+!/graphify-out/graph.json
+!/graphify-out/GRAPH_REPORT.md
