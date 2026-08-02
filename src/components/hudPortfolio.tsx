@@ -1,137 +1,15 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState, type FormEvent, type PointerEvent as ReactPointerEvent } from "react";
+import { useCallback, useMemo, useRef, useState, type FormEvent, type PointerEvent as ReactPointerEvent } from "react";
 import type { PortfolioView } from "@/src/content/types";
 import TurnstileWidget from "./turnstileWidget";
+import SpaceBackground from "./spaceBackground";
 import "./hudPortfolio.css";
 
 type Tab = "about" | "log" | "projects" | "contact";
 type Project = PortfolioView["projects"][number];
 type WindowKey = "about" | "log" | "projects-category" | "projects-list" | "projects-detail" | "contact";
 type Point = { x: number; y: number };
-
-function SpaceBackground() {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    const gl = canvas?.getContext("webgl", { antialias: false, alpha: false });
-    if (!canvas || !gl) return;
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const lowPower = window.matchMedia("(max-width: 767px), (pointer: coarse)").matches;
-    const highPrecision = gl.getShaderPrecisionFormat(gl.FRAGMENT_SHADER, gl.HIGH_FLOAT);
-    const floatPrecision = highPrecision?.precision ? "highp" : "mediump";
-    let frame = 0;
-    let active = true;
-    const vertexSource = `attribute vec2 position;void main(){gl_Position=vec4(position,0.0,1.0);}`;
-    const hashSource = lowPower
-      ? `float hash(vec2 p){p=fract(p*vec2(123.34,456.21));p+=dot(p,p+45.32);return fract(p.x*p.y);}`
-      : `float hash(vec2 p){return fract(sin(dot(p,vec2(12.9898,78.233)))*43758.5453);}`;
-    const starSource = lowPower ? `
-        vec2 tunnelUv=uv-vec2(0.0,0.02);
-        float tunnelRadius=max(length(tunnelUv),0.018);
-        float tunnelAngle=(atan(tunnelUv.y,tunnelUv.x)+3.14159265)/6.2831853;
-
-        vec2 starUvA=vec2(tunnelAngle*96.0,log(tunnelRadius+0.075)*11.0-time*12.0);
-        vec2 cellA=floor(starUvA);
-        vec2 localA=fract(starUvA)-0.5;
-        float seedA=hash(cellA);
-        float radiusA=mix(0.075,0.115,hash(cellA+vec2(3.7,8.1)));
-        float starA=(1.0-smoothstep(0.0,radiusA,length(vec2(localA.x*1.9,localA.y*0.34))))*step(0.972,seedA);
-
-        vec2 starUvB=vec2(tunnelAngle*148.0,log(tunnelRadius+0.045)*15.0-time*15.0);
-        vec2 cellB=floor(starUvB);
-        vec2 localB=fract(starUvB)-0.5;
-        float seedB=hash(cellB);
-        float radiusB=mix(0.055,0.09,hash(cellB+vec2(6.2,1.9)));
-        float starB=(1.0-smoothstep(0.0,radiusB,length(vec2(localB.x*2.1,localB.y*0.3))))*step(0.982,seedB);
-
-        float tunnelFade=smoothstep(0.035,0.2,tunnelRadius)*(1.0-smoothstep(0.95,1.65,tunnelRadius));
-        vec3 tintA=mix(vec3(0.62,0.88,1.0),vec3(1.0,0.88,0.62),hash(cellA+vec2(4.3,1.7)));
-        vec3 stars=(tintA*starA+vec3(0.72,0.9,1.0)*starB*0.78)*tunnelFade;
-      ` : `
-        vec3 stars=vec3(0.0);
-        for(float i=0.0;i<64.0;i+=1.0){
-          float seed=hash(vec2(i*7.17,i*3.91));
-          float life=fract(seed+time*(0.25+hash(vec2(i,9.4))*0.20));
-          float angle=hash(vec2(i*2.31,5.73))*6.2831853;
-          vec2 direction=vec2(cos(angle),sin(angle));
-          float radius=pow(life,1.7)*(1.15+hash(vec2(i,2.8))*0.85);
-          vec2 starPosition=direction*radius;
-          float size=mix(0.0012,0.0042,life);
-          vec2 starDelta=uv-starPosition;
-          vec2 tangent=vec2(-direction.y,direction.x);
-          float lateralOffset=dot(starDelta,tangent);
-          float radialOffset=dot(starDelta,direction);
-          float streakScale=mix(0.58,0.28,life);
-          float dotStar=smoothstep(size,0.0,length(vec2(lateralOffset*1.45,radialOffset*streakScale)));
-          float fade=smoothstep(0.0,0.12,life)*smoothstep(1.0,0.72,life);
-          vec3 starTint=mix(vec3(0.62,0.88,1.0),vec3(1.0,0.88,0.62),hash(vec2(i,1.2)));
-          stars+=starTint*dotStar*fade*(0.55+life*0.8);
-        }
-      `;
-    const fragmentSource = `
-      precision ${floatPrecision} float;
-      uniform vec2 resolution;
-      uniform float time;
-      ${hashSource}
-      float noise(vec2 p){vec2 i=floor(p);vec2 f=fract(p);f=f*f*(3.0-2.0*f);return mix(mix(hash(i),hash(i+vec2(1.0,0.0)),f.x),mix(hash(i+vec2(0.0,1.0)),hash(i+vec2(1.0,1.0)),f.x),f.y);}
-      float fbm(vec2 p){float v=0.0;float a=0.5;mat2 rot=mat2(0.866,-0.5,0.5,0.866);for(int i=0;i<${lowPower ? 3 : 5};++i){v+=a*noise(p);p=rot*p*2.0;a*=0.5;}return v;}
-      void main(){
-        vec2 uv=(gl_FragCoord.xy-0.5*resolution.xy)/resolution.y;
-        float t=time*0.035;
-        float q=fbm(uv*2.0-t*0.14);
-        vec2 r=vec2(fbm(uv+q+t*0.07),fbm(uv+q-t*0.1));
-        float f=fbm(uv+r*1.5);
-        vec3 purple=vec3(0.08,0.01,0.15);
-        vec3 blue=vec3(0.0,0.05,0.15);
-        vec3 gold=vec3(0.15,0.10,0.05);
-        vec3 color=mix(vec3(0.001,0.003,0.008),purple,clamp(q*1.2,0.0,1.0));
-        color=mix(color,blue,clamp(r.x*1.3,0.0,1.0));
-        color=mix(color,gold,clamp(r.y*f,0.0,1.0)*0.32);
-        ${starSource}
-        gl_FragColor=vec4(color*0.78+stars,1.0);
-      }`;
-    const compile = (source: string, type: number) => {
-      const shader = gl.createShader(type);
-      if (!shader) return null;
-      gl.shaderSource(shader, source); gl.compileShader(shader);
-      if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) { console.error(gl.getShaderInfoLog(shader)); gl.deleteShader(shader); return null; }
-      return shader;
-    };
-    const vertex = compile(vertexSource, gl.VERTEX_SHADER);
-    const fragment = compile(fragmentSource, gl.FRAGMENT_SHADER);
-    if (!vertex || !fragment) return;
-    const program = gl.createProgram();
-    if (!program) return;
-    gl.attachShader(program, vertex); gl.attachShader(program, fragment); gl.linkProgram(program); gl.useProgram(program);
-    const buffer = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, buffer); gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1,1,-1,-1,1,1,1]), gl.STATIC_DRAW);
-    const position = gl.getAttribLocation(program, "position"); gl.enableVertexAttribArray(position); gl.vertexAttribPointer(position, 2, gl.FLOAT, false, 0, 0);
-    const resolution = gl.getUniformLocation(program, "resolution");
-    const time = gl.getUniformLocation(program, "time");
-    const resize = () => {
-      const ratio = Math.min(window.devicePixelRatio || 1, lowPower ? 0.75 : 1.5);
-      canvas.width = Math.floor(window.innerWidth * ratio); canvas.height = Math.floor(window.innerHeight * ratio);
-      gl.viewport(0, 0, canvas.width, canvas.height); gl.uniform2f(resolution, canvas.width, canvas.height);
-    };
-    const render = (now = 0) => {
-      if (!active) return;
-      gl.uniform1f(time, reduced ? 8.0 : now / 1000); gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
-      if (!reduced) frame = requestAnimationFrame(render);
-    };
-    const handleVisibility = () => {
-      active = !document.hidden;
-      cancelAnimationFrame(frame);
-      if (active && !reduced) frame = requestAnimationFrame(render);
-    };
-    resize(); render(); window.addEventListener("resize", resize); document.addEventListener("visibilitychange", handleVisibility);
-    return () => {
-      window.removeEventListener("resize", resize); document.removeEventListener("visibilitychange", handleVisibility); cancelAnimationFrame(frame);
-      if (buffer) gl.deleteBuffer(buffer);
-      gl.deleteShader(vertex); gl.deleteShader(fragment); gl.deleteProgram(program);
-    };
-  }, []);
-  return <canvas ref={canvasRef} className="space-background" aria-hidden="true" />;
-}
 
 function Glyph({ type }: { type: Tab | "arrow" | "back" }) {
   const paths = {

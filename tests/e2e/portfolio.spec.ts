@@ -46,6 +46,31 @@ test("navigates projects correctly on desktop and mobile", async ({ page }, test
   expect(hasHorizontalOverflow).toBe(false);
 });
 
+test("shows the fallback and rebuilds the renderer after WebGL context loss", async ({ page }) => {
+  await page.goto("/");
+
+  const canvas = page.locator(".space-background");
+  await expect(canvas).toHaveAttribute("data-webgl-state", "ready");
+  const supportsContextLoss = await canvas.evaluate((element) => {
+    const extension = (element as HTMLCanvasElement).getContext("webgl")?.getExtension("WEBGL_lose_context");
+    (element as HTMLCanvasElement & { recoveryExtension?: typeof extension }).recoveryExtension = extension;
+    return Boolean(extension);
+  });
+  test.skip(!supportsContextLoss, "WEBGL_lose_context is unavailable in this browser");
+
+  await canvas.evaluate((element) => {
+    (element as HTMLCanvasElement & { recoveryExtension: WEBGL_lose_context }).recoveryExtension.loseContext();
+  });
+  await expect(canvas).toHaveAttribute("data-webgl-state", "fallback");
+  await expect(canvas).toHaveCSS("opacity", "0");
+
+  await canvas.evaluate((element) => {
+    (element as HTMLCanvasElement & { recoveryExtension: WEBGL_lose_context }).recoveryExtension.restoreContext();
+  });
+  await expect(canvas).toHaveAttribute("data-webgl-state", "ready");
+  await expect(canvas).toHaveCSS("opacity", "1");
+});
+
 test("submits the contact form after Turnstile verification", async ({ page }) => {
   let submittedPayload: Record<string, unknown> | undefined;
   await page.route("**/api/contact", async (route) => {
