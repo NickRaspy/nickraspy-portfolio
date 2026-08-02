@@ -2,6 +2,8 @@
 
 import { useCallback, useMemo, useRef, useState, type FormEvent, type PointerEvent as ReactPointerEvent } from "react";
 import type { PortfolioView } from "@/src/content/types";
+import { locales, type SupportedLocale } from "@/src/i18n/config";
+import { messages } from "@/src/i18n/messages";
 import TurnstileWidget from "./turnstileWidget";
 import SpaceBackground from "./spaceBackground";
 import "./hudPortfolio.css";
@@ -30,7 +32,8 @@ function Panel({ title, id, children, onPointerDown, offset, className = "" }: {
   </section>;
 }
 
-export default function HudPortfolio({ data }: { data: PortfolioView }) {
+export default function HudPortfolio({ data, locale }: { data: PortfolioView; locale: SupportedLocale }) {
+  const t = messages[locale];
   const [tab, setTab] = useState<Tab>("about");
   const [category, setCategory] = useState<string | null>(null);
   const [selected, setSelected] = useState<Project | null>(null);
@@ -47,13 +50,14 @@ export default function HudPortfolio({ data }: { data: PortfolioView }) {
     return groups;
   }, {}), [data.projects]);
   const technologyTags = useMemo(() => [...new Set(data.projects.flatMap((project) => project.tags))].slice(0, 3), [data.projects]);
+  const selectedCategory = data.categories.find((item) => item.id === category);
   const receiveTurnstileToken = useCallback((token: string) => setTurnstileToken(token), []);
 
   const submitContact = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (sending) return;
     if (!turnstileToken) {
-      setFormError("VERIFICATION_PENDING // Wait and retry.");
+      setFormError(t.contact.verificationPending);
       return;
     }
 
@@ -80,10 +84,10 @@ export default function HudPortfolio({ data }: { data: PortfolioView }) {
         const retryVerification = result?.code === "VERIFICATION_FAILED" || result?.code === "VERIFICATION_REQUIRED";
         setFormError(
           retryVerification
-            ? "VERIFICATION_FAILED // Complete a new check."
+            ? t.contact.verificationFailed
             : result?.code === "INVALID_FIELDS"
-              ? "INVALID_PAYLOAD // Check all fields."
-              : "TRANSFER_FAILED // Retry later.",
+              ? t.contact.invalidPayload
+              : t.contact.transferFailed,
         );
         return;
       }
@@ -91,7 +95,7 @@ export default function HudPortfolio({ data }: { data: PortfolioView }) {
       form.reset();
       setSent(true);
     } catch {
-      setFormError("CONNECTION_LOST // Retry later.");
+      setFormError(t.contact.connectionLost);
     } finally {
       setSending(false);
       setTurnstileReset((value) => value + 1);
@@ -145,20 +149,31 @@ export default function HudPortfolio({ data }: { data: PortfolioView }) {
     <SpaceBackground />
     <div className="scanlines" aria-hidden="true" />
     <div className="reticle reticle-a" aria-hidden="true" /><div className="reticle reticle-b" aria-hidden="true" />
+    <nav className="language-switcher" aria-label={t.languageSwitcher}>
+      {locales.map((nextLocale) => <a
+        key={nextLocale}
+        className={locale === nextLocale ? "active" : ""}
+        href={`/${nextLocale}?setLocale=${nextLocale}`}
+        hrefLang={nextLocale}
+        lang={nextLocale}
+        aria-label={t.languages[nextLocale]}
+        aria-current={locale === nextLocale ? "page" : undefined}
+      >{nextLocale.toUpperCase()}</a>)}
+    </nav>
     <div ref={stageRef} className="hud-stage"><div className="hud-anchor">
-      {tab === "about" && <Panel title="SYS_PROFILE" id="001" onPointerDown={dragStart("about")} offset={offsets.about ?? { x: 0, y: 0 }}>
-        <div className="profile"><div className="avatar"><Glyph type="about" /></div><div><small>DESIGNATION</small><h3>{data.profile.role}</h3></div></div>
+      {tab === "about" && <Panel title={t.panels.profile} id="001" onPointerDown={dragStart("about")} offset={offsets.about ?? { x: 0, y: 0 }}>
+        <div className="profile"><div className="avatar"><Glyph type="about" /></div><div><small>{t.labels.designation}</small><h3>{data.profile.role}</h3></div></div>
         <p>{data.profile.summary}</p>
-        <div className="stats"><div><small>STATUS</small><strong>{data.profile.status}</strong></div><div><small>CLEARANCE</small><strong>{data.profile.clearance}</strong></div></div>
+        <div className="stats"><div><small>{t.labels.status}</small><strong>{t.profileValues[data.profile.status] ?? data.profile.status}</strong></div><div><small>{t.labels.clearance}</small><strong>{t.profileValues[data.profile.clearance] ?? data.profile.clearance}</strong></div></div>
       </Panel>}
-      {tab === "log" && <Panel title="CHRONO_CORE" id="002" onPointerDown={dragStart("log")} offset={offsets.log ?? { x: 0, y: 0 }} className="log-panel"><div className="log-grid"><div><label>TECH_SPECS</label>{data.skills.map((skill) => <div className="meter" key={skill.id}><div><span>{skill.name}</span><b>{skill.level}%</b></div><i><em style={{ width: `${skill.level}%` }} /></i></div>)}<div className="tags">{technologyTags.map((tag) => <span key={tag}>{tag}</span>)}</div></div><div className="timeline"><label>SYSTEM_LOG</label>{data.experience.map((item) => <div key={item.id}><time>{item.range}</time><b>{item.role}</b></div>)}</div></div></Panel>}
+      {tab === "log" && <Panel title={t.panels.experience} id="002" onPointerDown={dragStart("log")} offset={offsets.log ?? { x: 0, y: 0 }} className="log-panel"><div className="log-grid"><div><label>{t.labels.technicalSpecs}</label>{data.skills.map((skill) => <div className="meter" key={skill.id}><div><span>{skill.name}</span><b>{skill.level}%</b></div><i><em style={{ width: `${skill.level}%` }} /></i></div>)}<div className="tags">{technologyTags.map((tag) => <span key={tag}>{tag}</span>)}</div></div><div className="timeline"><label>{t.labels.systemLog}</label>{data.experience.map((item) => <div key={item.id}><time>{item.range}</time><b>{item.role}</b></div>)}</div></div></Panel>}
       {tab === "projects" && <div className="project-grid">
-        <Panel title="DATABANK_DIR" id="003" onPointerDown={dragStart("projects-category")} offset={offsets["projects-category"] ?? { x: 0, y: 0 }}><label>SELECT_SECTOR</label>{data.categories.map((item) => <button className={`sector ${category === item.id ? "active" : ""}`} key={item.id} onClick={() => { setCategory(item.id); setSelected(null); }}><span>{item.code}</span><Glyph type="arrow" /></button>)}</Panel>
-        {category && <Panel title={category.toUpperCase()} id="003-L" onPointerDown={dragStart("projects-list")} offset={offsets["projects-list"] ?? { x: 0, y: 0 }} className="list-panel"><button className="mobile-back" aria-label="Back to sectors" onClick={() => setCategory(null)}><Glyph type="back" /></button>{(projects[category] ?? []).map(project => <button className={`project-row ${selected?.id === project.id ? "active" : ""}`} key={project.id} onClick={() => setSelected(project)}><small>{project.code}</small><span>{project.name}</span><Glyph type="arrow" /></button>)}</Panel>}
-        {selected && <Panel title="FILE_METADATA" id="003-D" onPointerDown={dragStart("projects-detail")} offset={offsets["projects-detail"] ?? { x: 0, y: 0 }} className="detail-panel"><button className="mobile-back" aria-label="Back to projects" onClick={() => setSelected(null)}><Glyph type="back" /></button><div className="project-visual"><Glyph type="projects" /><span>{selected.code}</span></div><h3>{selected.name}</h3><p>{selected.description}</p><div className="tags">{selected.tags.map(tag => <span key={tag}>{tag}</span>)}</div>{selected.liveUrl ? <a className="hud-action" href={selected.liveUrl} target="_blank" rel="noreferrer">INITIATE_SYNC_LINK</a> : <button className="hud-action" disabled>LINK_NOT_AVAILABLE</button>}</Panel>}
+        <Panel title={t.panels.projects} id="003" onPointerDown={dragStart("projects-category")} offset={offsets["projects-category"] ?? { x: 0, y: 0 }}><label>{t.labels.selectSector}</label>{data.categories.map((item) => <button className={`sector ${category === item.id ? "active" : ""}`} key={item.id} onClick={() => { setCategory(item.id); setSelected(null); }}><span><b>{item.name}</b><small>{item.code}</small></span><Glyph type="arrow" /></button>)}</Panel>
+        {category && <Panel title={(selectedCategory?.name ?? category).toUpperCase()} id="003-L" onPointerDown={dragStart("projects-list")} offset={offsets["projects-list"] ?? { x: 0, y: 0 }} className="list-panel"><button className="mobile-back" aria-label={t.project.backToSectors} onClick={() => setCategory(null)}><Glyph type="back" /></button>{(projects[category] ?? []).map(project => <button className={`project-row ${selected?.id === project.id ? "active" : ""}`} key={project.id} onClick={() => setSelected(project)}><small>{project.code}</small><span>{project.name}</span><Glyph type="arrow" /></button>)}</Panel>}
+        {selected && <Panel title={t.panels.projectMetadata} id="003-D" onPointerDown={dragStart("projects-detail")} offset={offsets["projects-detail"] ?? { x: 0, y: 0 }} className="detail-panel"><button className="mobile-back" aria-label={t.project.backToProjects} onClick={() => setSelected(null)}><Glyph type="back" /></button><div className="project-visual"><Glyph type="projects" /><span>{selected.code}</span></div><h3>{selected.name}</h3><p>{selected.description}</p><div className="tags">{selected.tags.map(tag => <span key={tag}>{tag}</span>)}</div>{selected.liveUrl ? <a className="hud-action" href={selected.liveUrl} target="_blank" rel="noreferrer">{t.project.openLive}</a> : <button className="hud-action" disabled>{t.project.linkUnavailable}</button>}</Panel>}
       </div>}
-      {tab === "contact" && <Panel title="COMMLINK" id="004" onPointerDown={dragStart("contact")} offset={offsets.contact ?? { x: 0, y: 0 }} className="contact-panel">{sent ? <div className="success"><Glyph type="contact"/><b>TRANSFER_COMPLETE</b><p>Signal received. Response window: 24–48 hours.</p><button onClick={() => { setSent(false); setFormError(""); }}>NEW_TRANSMISSION</button></div> : <form onSubmit={submitContact}><label>IDENTIFIER<input name="name" required minLength={2} maxLength={80} autoComplete="name" placeholder="Enter name" /></label><label>FREQUENCY_ROUTE<input name="email" required maxLength={254} type="email" autoComplete="email" placeholder="Enter email" /></label><label>DATA_PAYLOAD<textarea name="message" required minLength={10} maxLength={4000} placeholder="Transmit message…" /></label><label className="signal-trap" aria-hidden="true">WEBSITE<input name="website" tabIndex={-1} autoComplete="off" /></label><TurnstileWidget onToken={receiveTurnstileToken} resetSignal={turnstileReset} />{formError && <p className="form-feedback error" role="alert">{formError}</p>}<button className="hud-action" disabled={sending || !turnstileToken}>{sending ? "TRANSMITTING…" : "INITIATE_TRANSFER"}</button></form>}</Panel>}
+      {tab === "contact" && <Panel title={t.panels.contact} id="004" onPointerDown={dragStart("contact")} offset={offsets.contact ?? { x: 0, y: 0 }} className="contact-panel">{sent ? <div className="success"><Glyph type="contact"/><b>{t.contact.success}</b><p>{t.contact.successDescription}</p><button onClick={() => { setSent(false); setFormError(""); }}>{t.contact.newTransmission}</button></div> : <form onSubmit={submitContact}><label>{t.contact.name}<input name="name" required minLength={2} maxLength={80} autoComplete="name" placeholder={t.contact.namePlaceholder} /></label><label>{t.contact.email}<input name="email" required maxLength={254} type="email" autoComplete="email" placeholder={t.contact.emailPlaceholder} /></label><label>{t.contact.message}<textarea name="message" required minLength={10} maxLength={4000} placeholder={t.contact.messagePlaceholder} /></label><label className="signal-trap" aria-hidden="true">{t.contact.website}<input name="website" tabIndex={-1} autoComplete="off" /></label><TurnstileWidget onToken={receiveTurnstileToken} resetSignal={turnstileReset} />{formError && <p className="form-feedback error" role="alert">{formError}</p>}<button className="hud-action" disabled={sending || !turnstileToken}>{sending ? t.contact.submitting : t.contact.submit}</button></form>}</Panel>}
     </div></div>
-    <nav className="hud-dock" aria-label="Portfolio sections">{(["about","log","projects","contact"] as Tab[]).map(item => <button key={item} className={tab === item ? "active" : ""} aria-current={tab === item ? "page" : undefined} onClick={() => switchTab(item)}><Glyph type={item}/><span>{item === "projects" ? "PROJ" : item === "contact" ? "LINK" : item.toUpperCase()}</span></button>)}</nav>
+    <nav className="hud-dock" aria-label={t.sectionsNavigation}>{(["about","log","projects","contact"] as Tab[]).map(item => <button key={item} className={tab === item ? "active" : ""} aria-current={tab === item ? "page" : undefined} onClick={() => switchTab(item)}><Glyph type={item}/><span>{t.dock[item]}</span></button>)}</nav>
   </div>;
 }

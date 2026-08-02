@@ -1,11 +1,12 @@
-import HudPortfolio from "@/src/components/hudPortfolio";
-import { getPortfolioView } from "@/src/content/data";
+import { cookies, headers } from "next/headers";
+import { redirect } from "next/navigation";
+import { detectPreferredLocale, isSupportedLocale, localeCookieName } from "@/src/i18n/config";
 
 export default async function Home() {
-  const data = await getPortfolioView();
-  return (
-    <main className="portfolio-shell">
-        <HudPortfolio data={data} />
-    </main>
-  );
+  const savedLocale = (await cookies()).get(localeCookieName)?.value;
+  const locale = isSupportedLocale(savedLocale)
+    ? savedLocale
+    : detectPreferredLocale((await headers()).get("accept-language"));
+
+  redirect(`/${locale}`);
 }

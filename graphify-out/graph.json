@@ -53,14 +53,80 @@
   },
   "nodes": [
     {
+      "label": "[locale]/page.tsx",
+      "file_type": "code",
+      "source_file": "app/[locale]/page.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "app_locale_page",
+      "community": 20,
+      "community_name": "Root Layout Typography",
+      "norm_label": "[locale]/page.tsx"
+    },
+    {
+      "label": "LocalePageProps",
+      "file_type": "code",
+      "source_file": "app/[locale]/page.tsx",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "app_locale_page_localepageprops",
+      "community": 20,
+      "community_name": "Root Layout Typography",
+      "norm_label": "localepageprops"
+    },
+    {
+      "label": "requireLocale()",
+      "file_type": "code",
+      "source_file": "app/[locale]/page.tsx",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "app_locale_page_requirelocale",
+      "community": 20,
+      "community_name": "Root Layout Typography",
+      "norm_label": "requirelocale()"
+    },
+    {
+      "label": "generateStaticParams()",
+      "file_type": "code",
+      "source_file": "app/[locale]/page.tsx",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "app_locale_page_generatestaticparams",
+      "community": 20,
+      "community_name": "Root Layout Typography",
+      "norm_label": "generatestaticparams()"
+    },
+    {
+      "label": "generateMetadata()",
+      "file_type": "code",
+      "source_file": "app/[locale]/page.tsx",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "app_locale_page_generatemetadata",
+      "community": 20,
+      "community_name": "Root Layout Typography",
+      "norm_label": "generatemetadata()"
+    },
+    {
+      "label": "LocaleHome()",
+      "file_type": "code",
+      "source_file": "app/[locale]/page.tsx",
+      "source_location": "L42",
+      "_origin": "ast",
+      "id": "app_locale_page_localehome",
+      "community": 20,
+      "community_name": "Root Layout Typography",
+      "norm_label": "localehome()"
+    },
+    {
       "label": "admin/page.tsx",
       "file_type": "code",
       "source_file": "app/admin/page.tsx",
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_admin_page",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 8,
+      "community_name": "GitHub OAuth Security",
       "norm_label": "admin/page.tsx"
     },
     {
@@ -70,8 +136,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "app_admin_page_metadata",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 8,
+      "community_name": "GitHub OAuth Security",
       "norm_label": "metadata"
     },
     {
@@ -81,8 +147,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "app_admin_page_mark",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 8,
+      "community_name": "GitHub OAuth Security",
       "norm_label": "mark()"
     },
     {
@@ -92,8 +158,8 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "app_admin_page_adminpage",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 8,
+      "community_name": "GitHub OAuth Security",
       "norm_label": "adminpage()"
     },
     {
@@ -103,8 +169,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_admin_workbench",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 1,
+      "community_name": "Admin API Publishing",
       "norm_label": "workbench.tsx"
     },
     {
@@ -114,8 +180,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "app_admin_workbench_validatedimport",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 1,
+      "community_name": "Admin API Publishing",
       "norm_label": "validatedimport"
     },
     {
@@ -125,8 +191,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "app_admin_workbench_icon",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 1,
+      "community_name": "Admin API Publishing",
       "norm_label": "icon()"
     },
     {
@@ -136,8 +202,8 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "app_admin_workbench_adminworkbench",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 1,
+      "community_name": "Admin API Publishing",
       "norm_label": "adminworkbench()"
     },
     {
@@ -474,7 +540,7 @@
       "label": "geistSans",
       "file_type": "code",
       "source_file": "app/layout.tsx",
-      "source_location": "L6",
+      "source_location": "L8",
       "_origin": "ast",
       "id": "app_layout_geistsans",
       "community": 20,
@@ -485,7 +551,7 @@
       "label": "geistMono",
       "file_type": "code",
       "source_file": "app/layout.tsx",
-      "source_location": "L11",
+      "source_location": "L13",
       "_origin": "ast",
       "id": "app_layout_geistmono",
       "community": 20,
@@ -496,7 +562,7 @@
       "label": "metadata",
       "file_type": "code",
       "source_file": "app/layout.tsx",
-      "source_location": "L16",
+      "source_location": "L18",
       "_origin": "ast",
       "id": "app_layout_metadata",
       "community": 20,
@@ -507,7 +573,7 @@
       "label": "RootLayout()",
       "file_type": "code",
       "source_file": "app/layout.tsx",
-      "source_location": "L21",
+      "source_location": "L23",
       "_origin": "ast",
       "id": "app_layout_rootlayout",
       "community": 20,
@@ -521,19 +587,19 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_page",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "app/page.tsx"
     },
     {
       "label": "Home()",
       "file_type": "code",
       "source_file": "app/page.tsx",
-      "source_location": "L4",
+      "source_location": "L5",
       "_origin": "ast",
       "id": "app_page_home",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "home()"
     },
     {
@@ -543,8 +609,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema",
-      "community": 0,
-      "community_name": "Portfolio Schema Core",
+      "community": 2,
+      "community_name": "Schema Collection Rules",
       "norm_label": "portfolio.schema.json"
     },
     {
@@ -554,8 +620,8 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_schema",
-      "community": 0,
-      "community_name": "Portfolio Schema Core",
+      "community": 2,
+      "community_name": "Schema Collection Rules",
       "norm_label": "$schema"
     },
     {
@@ -565,8 +631,8 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_id",
-      "community": 0,
-      "community_name": "Portfolio Schema Core",
+      "community": 2,
+      "community_name": "Schema Collection Rules",
       "norm_label": "$id"
     },
     {
@@ -576,8 +642,8 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_title",
-      "community": 0,
-      "community_name": "Portfolio Schema Core",
+      "community": 2,
+      "community_name": "Schema Collection Rules",
       "norm_label": "title"
     },
     {
@@ -587,8 +653,8 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_type",
-      "community": 0,
-      "community_name": "Portfolio Schema Core",
+      "community": 2,
+      "community_name": "Schema Collection Rules",
       "norm_label": "type"
     },
     {
@@ -598,8 +664,8 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_additionalproperties",
-      "community": 0,
-      "community_name": "Portfolio Schema Core",
+      "community": 2,
+      "community_name": "Schema Collection Rules",
       "norm_label": "additionalproperties"
     },
     {
@@ -609,8 +675,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_required",
-      "community": 0,
-      "community_name": "Portfolio Schema Core",
+      "community": 2,
+      "community_name": "Schema Collection Rules",
       "norm_label": "required"
     },
     {
@@ -620,8 +686,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "ref_schemaversion",
-      "community": 0,
-      "community_name": "Portfolio Schema Core",
+      "community": 2,
+      "community_name": "Schema Collection Rules",
       "norm_label": "schemaversion"
     },
     {
@@ -631,8 +697,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "ref_defaultlocale",
-      "community": 0,
-      "community_name": "Portfolio Schema Core",
+      "community": 2,
+      "community_name": "Schema Collection Rules",
       "norm_label": "defaultlocale"
     },
     {
@@ -642,8 +708,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "ref_locales",
-      "community": 0,
-      "community_name": "Portfolio Schema Core",
+      "community": 2,
+      "community_name": "Schema Collection Rules",
       "norm_label": "locales"
     },
     {
@@ -653,8 +719,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "ref_profile",
-      "community": 0,
-      "community_name": "Portfolio Schema Core",
+      "community": 2,
+      "community_name": "Schema Collection Rules",
       "norm_label": "profile"
     },
     {
@@ -664,8 +730,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "ref_skills",
-      "community": 0,
-      "community_name": "Portfolio Schema Core",
+      "community": 2,
+      "community_name": "Schema Collection Rules",
       "norm_label": "skills"
     },
     {
@@ -675,8 +741,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "ref_experience",
-      "community": 0,
-      "community_name": "Portfolio Schema Core",
+      "community": 2,
+      "community_name": "Schema Collection Rules",
       "norm_label": "experience"
     },
     {
@@ -686,8 +752,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "ref_categories",
-      "community": 0,
-      "community_name": "Portfolio Schema Core",
+      "community": 2,
+      "community_name": "Schema Collection Rules",
       "norm_label": "categories"
     },
     {
@@ -697,8 +763,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "ref_projects",
-      "community": 0,
-      "community_name": "Portfolio Schema Core",
+      "community": 2,
+      "community_name": "Schema Collection Rules",
       "norm_label": "projects"
     },
     {
@@ -708,8 +774,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "ref_contacts",
-      "community": 0,
-      "community_name": "Portfolio Schema Core",
+      "community": 2,
+      "community_name": "Schema Collection Rules",
       "norm_label": "contacts"
     },
     {
@@ -1049,8 +1115,8 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_properties_translations",
-      "community": 26,
-      "community_name": "properties",
+      "community": 22,
+      "community_name": "sortOrder",
       "norm_label": "translations"
     },
     {
@@ -1060,8 +1126,8 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_translations_ref",
-      "community": 26,
-      "community_name": "properties",
+      "community": 22,
+      "community_name": "sortOrder",
       "norm_label": "$ref"
     },
     {
@@ -1577,8 +1643,8 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_defs_skill",
-      "community": 49,
-      "community_name": "$defs",
+      "community": 51,
+      "community_name": "properties",
       "norm_label": "skill"
     },
     {
@@ -1588,8 +1654,8 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_skill_type",
-      "community": 49,
-      "community_name": "$defs",
+      "community": 51,
+      "community_name": "properties",
       "norm_label": "type"
     },
     {
@@ -1599,8 +1665,8 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_skill_additionalproperties",
-      "community": 49,
-      "community_name": "$defs",
+      "community": 51,
+      "community_name": "properties",
       "norm_label": "additionalproperties"
     },
     {
@@ -1731,8 +1797,8 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_defs_experience",
-      "community": 52,
-      "community_name": "required",
+      "community": 26,
+      "community_name": "properties",
       "norm_label": "experience"
     },
     {
@@ -1742,8 +1808,8 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_experience_additionalproperties",
-      "community": 52,
-      "community_name": "required",
+      "community": 26,
+      "community_name": "properties",
       "norm_label": "additionalproperties"
     },
     {
@@ -1753,8 +1819,8 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_experience_required",
-      "community": 52,
-      "community_name": "required",
+      "community": 6,
+      "community_name": "Required Schema Fields",
       "norm_label": "required"
     },
     {
@@ -1764,8 +1830,8 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "ref_start",
-      "community": 52,
-      "community_name": "required",
+      "community": 6,
+      "community_name": "Required Schema Fields",
       "norm_label": "start"
     },
     {
@@ -1775,8 +1841,8 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "ref_end",
-      "community": 52,
-      "community_name": "required",
+      "community": 6,
+      "community_name": "Required Schema Fields",
       "norm_label": "end"
     },
     {
@@ -1863,8 +1929,8 @@
       "source_location": "L54",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_translations_type",
-      "community": 26,
-      "community_name": "properties",
+      "community": 22,
+      "community_name": "sortOrder",
       "norm_label": "type"
     },
     {
@@ -1907,8 +1973,8 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_defs_category",
-      "community": 22,
-      "community_name": "sortOrder",
+      "community": 49,
+      "community_name": "$defs",
       "norm_label": "category"
     },
     {
@@ -1918,8 +1984,8 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_category_type",
-      "community": 22,
-      "community_name": "sortOrder",
+      "community": 49,
+      "community_name": "$defs",
       "norm_label": "type"
     },
     {
@@ -1929,8 +1995,8 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_category_additionalproperties",
-      "community": 22,
-      "community_name": "sortOrder",
+      "community": 49,
+      "community_name": "$defs",
       "norm_label": "additionalproperties"
     },
     {
@@ -3573,6 +3639,50 @@
       "norm_label": "config"
     },
     {
+      "label": "proxy.ts",
+      "file_type": "code",
+      "source_file": "proxy.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "proxy",
+      "community": 20,
+      "community_name": "Root Layout Typography",
+      "norm_label": "proxy.ts"
+    },
+    {
+      "label": "localeFromPathname()",
+      "file_type": "code",
+      "source_file": "proxy.ts",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "proxy_localefrompathname",
+      "community": 20,
+      "community_name": "Root Layout Typography",
+      "norm_label": "localefrompathname()"
+    },
+    {
+      "label": "proxy()",
+      "file_type": "code",
+      "source_file": "proxy.ts",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "proxy_proxy",
+      "community": 20,
+      "community_name": "Root Layout Typography",
+      "norm_label": "proxy()"
+    },
+    {
+      "label": "config",
+      "file_type": "code",
+      "source_file": "proxy.ts",
+      "source_location": "L52",
+      "_origin": "ast",
+      "id": "proxy_config",
+      "community": 20,
+      "community_name": "Root Layout Typography",
+      "norm_label": "config"
+    },
+    {
       "label": "content.ts",
       "file_type": "code",
       "source_file": "scripts/content.ts",
@@ -3700,8 +3810,8 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "src_auth_admin_islocaladminbypass",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 8,
+      "community_name": "GitHub OAuth Security",
       "norm_label": "islocaladminbypass()"
     },
     {
@@ -3799,8 +3909,8 @@
       "source_location": "L78",
       "_origin": "ast",
       "id": "src_auth_admin_getadminsession",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 8,
+      "community_name": "GitHub OAuth Security",
       "norm_label": "getadminsession()"
     },
     {
@@ -3909,85 +4019,85 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_hudportfolio",
-      "community": 47,
-      "community_name": "spaceBackground.tsx",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "hudportfolio.tsx"
     },
     {
       "label": "Tab",
       "file_type": "code",
       "source_file": "src/components/hudPortfolio.tsx",
-      "source_location": "L9",
+      "source_location": "L11",
       "_origin": "ast",
       "id": "src_components_hudportfolio_tab",
-      "community": 47,
-      "community_name": "spaceBackground.tsx",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "tab"
     },
     {
       "label": "Project",
       "file_type": "code",
       "source_file": "src/components/hudPortfolio.tsx",
-      "source_location": "L10",
+      "source_location": "L12",
       "_origin": "ast",
       "id": "src_components_hudportfolio_project",
-      "community": 47,
-      "community_name": "spaceBackground.tsx",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "project"
     },
     {
       "label": "WindowKey",
       "file_type": "code",
       "source_file": "src/components/hudPortfolio.tsx",
-      "source_location": "L11",
+      "source_location": "L13",
       "_origin": "ast",
       "id": "src_components_hudportfolio_windowkey",
-      "community": 47,
-      "community_name": "spaceBackground.tsx",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "windowkey"
     },
     {
       "label": "Point",
       "file_type": "code",
       "source_file": "src/components/hudPortfolio.tsx",
-      "source_location": "L12",
+      "source_location": "L14",
       "_origin": "ast",
       "id": "src_components_hudportfolio_point",
-      "community": 47,
-      "community_name": "spaceBackground.tsx",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "point"
     },
     {
       "label": "Glyph()",
       "file_type": "code",
       "source_file": "src/components/hudPortfolio.tsx",
-      "source_location": "L14",
+      "source_location": "L16",
       "_origin": "ast",
       "id": "src_components_hudportfolio_glyph",
-      "community": 47,
-      "community_name": "spaceBackground.tsx",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "glyph()"
     },
     {
       "label": "Panel()",
       "file_type": "code",
       "source_file": "src/components/hudPortfolio.tsx",
-      "source_location": "L26",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "src_components_hudportfolio_panel",
-      "community": 47,
-      "community_name": "spaceBackground.tsx",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "panel()"
     },
     {
       "label": "HudPortfolio()",
       "file_type": "code",
       "source_file": "src/components/hudPortfolio.tsx",
-      "source_location": "L33",
+      "source_location": "L35",
       "_origin": "ast",
       "id": "src_components_hudportfolio_hudportfolio",
-      "community": 47,
-      "community_name": "spaceBackground.tsx",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "hudportfolio()"
     },
     {
@@ -4063,8 +4173,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_turnstilewidget",
-      "community": 47,
-      "community_name": "spaceBackground.tsx",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "turnstilewidget.tsx"
     },
     {
@@ -4074,8 +4184,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_components_turnstilewidget_turnstileapi",
-      "community": 47,
-      "community_name": "spaceBackground.tsx",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "turnstileapi"
     },
     {
@@ -4085,8 +4195,8 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "src_components_turnstilewidget_window",
-      "community": 47,
-      "community_name": "spaceBackground.tsx",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "window"
     },
     {
@@ -4096,8 +4206,8 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "src_components_turnstilewidget_turnstilewidget",
-      "community": 47,
-      "community_name": "spaceBackground.tsx",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "turnstilewidget()"
     },
     {
@@ -4723,8 +4833,8 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_content_repository_contentversion",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 1,
+      "community_name": "Admin API Publishing",
       "norm_label": "contentversion"
     },
     {
@@ -4921,8 +5031,8 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "src_content_types_importresult",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 1,
+      "community_name": "Admin API Publishing",
       "norm_label": "importresult"
     },
     {
@@ -5058,6 +5168,94 @@
       "norm_label": "rundatabasemigrations()"
     },
     {
+      "label": "config.test.ts",
+      "file_type": "code",
+      "source_file": "src/i18n/config.test.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_i18n_config_test",
+      "community": 20,
+      "community_name": "Root Layout Typography",
+      "norm_label": "config.test.ts"
+    },
+    {
+      "label": "config.ts",
+      "file_type": "code",
+      "source_file": "src/i18n/config.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_i18n_config",
+      "community": 20,
+      "community_name": "Root Layout Typography",
+      "norm_label": "config.ts"
+    },
+    {
+      "label": "locales",
+      "file_type": "code",
+      "source_file": "src/i18n/config.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_i18n_config_locales",
+      "community": 20,
+      "community_name": "Root Layout Typography",
+      "norm_label": "locales"
+    },
+    {
+      "label": "SupportedLocale",
+      "file_type": "code",
+      "source_file": "src/i18n/config.ts",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "src_i18n_config_supportedlocale",
+      "community": 20,
+      "community_name": "Root Layout Typography",
+      "norm_label": "supportedlocale"
+    },
+    {
+      "label": "isSupportedLocale()",
+      "file_type": "code",
+      "source_file": "src/i18n/config.ts",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "src_i18n_config_issupportedlocale",
+      "community": 20,
+      "community_name": "Root Layout Typography",
+      "norm_label": "issupportedlocale()"
+    },
+    {
+      "label": "detectPreferredLocale()",
+      "file_type": "code",
+      "source_file": "src/i18n/config.ts",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "src_i18n_config_detectpreferredlocale",
+      "community": 20,
+      "community_name": "Root Layout Typography",
+      "norm_label": "detectpreferredlocale()"
+    },
+    {
+      "label": "messages.ts",
+      "file_type": "code",
+      "source_file": "src/i18n/messages.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_i18n_messages",
+      "community": 20,
+      "community_name": "Root Layout Typography",
+      "norm_label": "messages.ts"
+    },
+    {
+      "label": "Messages",
+      "file_type": "code",
+      "source_file": "src/i18n/messages.ts",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "src_i18n_messages_messages",
+      "community": 20,
+      "community_name": "Root Layout Typography",
+      "norm_label": "messages"
+    },
+    {
       "label": "admin.spec.ts",
       "file_type": "code",
       "source_file": "tests/e2e/admin.spec.ts",
@@ -5078,6 +5276,17 @@
       "community": 40,
       "community_name": "portfolio.spec.ts",
       "norm_label": "portfolio.spec.ts"
+    },
+    {
+      "label": "assertLanguageTargets()",
+      "file_type": "code",
+      "source_file": "tests/e2e/portfolio.spec.ts",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "tests_e2e_portfolio_spec_assertlanguagetargets",
+      "community": 40,
+      "community_name": "portfolio.spec.ts",
+      "norm_label": "assertlanguagetargets()"
     },
     {
       "label": "admin-publish-route.test.ts",
@@ -6988,6 +7197,217 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "app/[locale]/page.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_locale_page",
+      "target": "app_locale_page_generatemetadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/[locale]/page.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_locale_page",
+      "target": "app_locale_page_generatestaticparams",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/[locale]/page.tsx",
+      "source_location": "L42",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_locale_page",
+      "target": "app_locale_page_localehome",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/[locale]/page.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_locale_page",
+      "target": "app_locale_page_localepageprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/[locale]/page.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_locale_page",
+      "target": "app_locale_page_requirelocale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/[locale]/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_locale_page",
+      "target": "src_components_hudportfolio",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/[locale]/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_locale_page",
+      "target": "src_content_data",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/[locale]/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_locale_page",
+      "target": "src_content_data_getportfolioview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/[locale]/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_locale_page",
+      "target": "src_i18n_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/[locale]/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_locale_page",
+      "target": "src_i18n_config_issupportedlocale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/[locale]/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_locale_page",
+      "target": "src_i18n_config_locales",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/[locale]/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_locale_page",
+      "target": "src_i18n_config_supportedlocale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/[locale]/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_locale_page",
+      "target": "src_i18n_messages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/[locale]/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_locale_page",
+      "target": "src_i18n_messages_messages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/[locale]/page.tsx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_locale_page_generatemetadata",
+      "target": "app_locale_page_requirelocale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/[locale]/page.tsx",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_locale_page_localehome",
+      "target": "app_locale_page_requirelocale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/[locale]/page.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_locale_page_requirelocale",
+      "target": "src_i18n_config_issupportedlocale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/[locale]/page.tsx",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_locale_page_localehome",
+      "target": "src_content_data_getportfolioview"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "app/admin/page.tsx",
       "source_location": "L19",
       "weight": 1.0,
@@ -8367,7 +8787,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/layout.tsx",
-      "source_location": "L11",
+      "source_location": "L13",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_layout",
@@ -8378,7 +8798,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/layout.tsx",
-      "source_location": "L6",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_layout",
@@ -8389,7 +8809,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/layout.tsx",
-      "source_location": "L16",
+      "source_location": "L18",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_layout",
@@ -8400,7 +8820,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/layout.tsx",
-      "source_location": "L21",
+      "source_location": "L23",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_layout",
@@ -8408,10 +8828,46 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/layout.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_layout",
+      "target": "src_i18n_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/layout.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_layout",
+      "target": "src_i18n_config_issupportedlocale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/layout.tsx",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_layout_rootlayout",
+      "target": "src_i18n_config_issupportedlocale"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/page.tsx",
-      "source_location": "L4",
+      "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_page",
@@ -8423,23 +8879,11 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "app/page.tsx",
-      "source_location": "L1",
+      "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_page",
-      "target": "src_components_hudportfolio",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "app/page.tsx",
-      "source_location": "L2",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_page",
-      "target": "src_content_data",
+      "target": "src_i18n_config",
       "confidence_score": 1.0
     },
     {
@@ -8447,11 +8891,23 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "app/page.tsx",
-      "source_location": "L2",
+      "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_page",
-      "target": "src_content_data_getportfolioview",
+      "target": "src_i18n_config_detectpreferredlocale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_page",
+      "target": "src_i18n_config_issupportedlocale",
       "confidence_score": 1.0
     },
     {
@@ -8460,11 +8916,23 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/page.tsx",
-      "source_location": "L5",
+      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_page_home",
-      "target": "src_content_data_getportfolioview"
+      "target": "src_i18n_config_detectpreferredlocale"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_page_home",
+      "target": "src_i18n_config_issupportedlocale"
     },
     {
       "relation": "contains",
@@ -12069,6 +12537,135 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "proxy.ts",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "proxy",
+      "target": "proxy_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "proxy.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "proxy",
+      "target": "proxy_localefrompathname",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "proxy.ts",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "proxy",
+      "target": "proxy_proxy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "proxy.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "proxy",
+      "target": "src_i18n_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "proxy.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "proxy",
+      "target": "src_i18n_config_detectpreferredlocale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "proxy.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "proxy",
+      "target": "src_i18n_config_issupportedlocale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "proxy.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "proxy",
+      "target": "src_i18n_config_supportedlocale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "proxy.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "proxy_localefrompathname",
+      "target": "src_i18n_config_issupportedlocale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "proxy.ts",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "proxy_proxy",
+      "target": "proxy_localefrompathname",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "proxy.ts",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "proxy_proxy",
+      "target": "src_i18n_config_detectpreferredlocale"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "proxy.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "proxy_proxy",
+      "target": "src_i18n_config_issupportedlocale"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "scripts/content.ts",
       "source_location": "L18",
       "weight": 1.0,
@@ -12897,7 +13494,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/hudPortfolio.tsx",
-      "source_location": "L14",
+      "source_location": "L16",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_hudportfolio",
@@ -12908,7 +13505,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/hudPortfolio.tsx",
-      "source_location": "L33",
+      "source_location": "L35",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_hudportfolio",
@@ -12919,7 +13516,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/hudPortfolio.tsx",
-      "source_location": "L26",
+      "source_location": "L28",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_hudportfolio",
@@ -12930,7 +13527,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/hudPortfolio.tsx",
-      "source_location": "L12",
+      "source_location": "L14",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_hudportfolio",
@@ -12941,7 +13538,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/hudPortfolio.tsx",
-      "source_location": "L10",
+      "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_hudportfolio",
@@ -12952,7 +13549,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/hudPortfolio.tsx",
-      "source_location": "L9",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_hudportfolio",
@@ -12963,7 +13560,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/hudPortfolio.tsx",
-      "source_location": "L11",
+      "source_location": "L13",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_hudportfolio",
@@ -12975,7 +13572,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/hudPortfolio.tsx",
-      "source_location": "L6",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_hudportfolio",
@@ -12987,7 +13584,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/hudPortfolio.tsx",
-      "source_location": "L6",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_hudportfolio",
@@ -12999,7 +13596,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/hudPortfolio.tsx",
-      "source_location": "L5",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_hudportfolio",
@@ -13028,6 +13625,66 @@
       "_origin": "ast",
       "source": "src_components_hudportfolio",
       "target": "src_content_types_portfolioview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hudPortfolio.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hudportfolio",
+      "target": "src_i18n_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hudPortfolio.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hudportfolio",
+      "target": "src_i18n_config_locales",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hudPortfolio.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hudportfolio",
+      "target": "src_i18n_config_supportedlocale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hudPortfolio.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hudportfolio",
+      "target": "src_i18n_messages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/hudPortfolio.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_hudportfolio",
+      "target": "src_i18n_messages_messages",
       "confidence_score": 1.0
     },
     {
@@ -15529,6 +16186,144 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/i18n/config.test.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_i18n_config_test",
+      "target": "src_i18n_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/i18n/config.test.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_i18n_config_test",
+      "target": "src_i18n_config_detectpreferredlocale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/i18n/config.test.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_i18n_config_test",
+      "target": "src_i18n_config_issupportedlocale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/i18n/config.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_i18n_config",
+      "target": "src_i18n_config_detectpreferredlocale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/i18n/config.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_i18n_config",
+      "target": "src_i18n_config_issupportedlocale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/i18n/config.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_i18n_config",
+      "target": "src_i18n_config_locales",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/i18n/config.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_i18n_config",
+      "target": "src_i18n_config_supportedlocale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/i18n/messages.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_i18n_messages",
+      "target": "src_i18n_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/i18n/messages.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_i18n_messages",
+      "target": "src_i18n_config_supportedlocale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/i18n/config.ts",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_i18n_config_detectpreferredlocale",
+      "target": "src_i18n_config_issupportedlocale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/i18n/messages.ts",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_i18n_messages",
+      "target": "src_i18n_messages_messages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/e2e/portfolio.spec.ts",
+      "source_location": "L57",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_e2e_portfolio_spec",
+      "target": "tests_e2e_portfolio_spec_assertlanguagetargets",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/unit/admin-publish-route.test.ts",
@@ -17079,5 +17874,5 @@
       "source_file": "README.md"
     }
   ],
-  "built_at_commit": "2308865c33cd80900726034f3f29f9fd8ce083e6"
+  "built_at_commit": "85be2c7e03552787d3f722032fbc4a4a63d061a3"
 }

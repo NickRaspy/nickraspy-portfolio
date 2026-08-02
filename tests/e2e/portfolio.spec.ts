@@ -18,6 +18,50 @@ test.beforeEach(async ({ page }) => {
   });
 });
 
+test("detects the browser language and persists an explicit override", async ({ browser }, testInfo) => {
+  const isMobile = testInfo.project.name === "mobile-chromium";
+  const context = await browser.newContext({
+    baseURL: testInfo.project.use.baseURL as string,
+    locale: "ru-RU",
+    viewport: isMobile ? { width: 412, height: 915 } : { width: 1440, height: 900 },
+    hasTouch: isMobile,
+    isMobile,
+  });
+  const page = await context.newPage();
+  await page.goto("/");
+
+  await expect(page).toHaveURL(/\/ru$/);
+  await expect(page.locator("html")).toHaveAttribute("lang", "ru");
+  await expect(page).toHaveTitle("Aetheris // Портфолио Nickraspy");
+  await expect(page.locator('meta[name="description"]')).toHaveAttribute(
+    "content",
+    "Голографическое портфолио full-stack разработчика.",
+  );
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", /\/ru$/);
+  await expect(page.getByRole("heading", { name: "СИСТЕМНЫЙ_ПРОФИЛЬ" })).toBeVisible();
+  const languageTargets = await page.locator(".language-switcher a").evaluateAll((links) =>
+    links.map((link) => ({ width: link.getBoundingClientRect().width, height: link.getBoundingClientRect().height })),
+  );
+  assertLanguageTargets(languageTargets);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth + 1)).toBe(false);
+
+  await page.getByRole("link", { name: "Английский" }).click();
+  await expect(page).toHaveURL(/\/en$/);
+  await expect(page.locator("html")).toHaveAttribute("lang", "en");
+
+  await page.goto("/");
+  await expect(page).toHaveURL(/\/en$/);
+  await context.close();
+});
+
+function assertLanguageTargets(targets: Array<{ width: number; height: number }>) {
+  expect(targets).toHaveLength(2);
+  for (const target of targets) {
+    expect(target.width).toBeGreaterThanOrEqual(44);
+    expect(target.height).toBeGreaterThanOrEqual(44);
+  }
+}
+
 test("navigates projects correctly on desktop and mobile", async ({ page }, testInfo) => {
   await page.goto("/");
 

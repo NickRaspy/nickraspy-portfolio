@@ -16,7 +16,8 @@ export function createPortfolioView(content: PortfolioContent, requestedLocale?:
       .sort((a, b) => a.sortOrder - b.sortOrder)
       .map((item) => {
         const translation = localized(item.translations, locale, content.defaultLocale);
-        return { id: item.id, range: `${item.start}—${item.end}`, role: translation.role, company: translation.company };
+        const localizedEnd = locale === "ru" && item.end === "CUR" ? "НАСТ" : item.end;
+        return { id: item.id, range: `${item.start}—${localizedEnd}`, role: translation.role, company: translation.company };
       }),
     categories: [...content.categories]
       .sort((a, b) => a.sortOrder - b.sortOrder)
