@@ -95,6 +95,31 @@ test("serves crawler directives, sitemap and messenger preview images", async ({
   }
 });
 
+test("derives SEO URLs from the forwarded request origin", async ({ request }) => {
+  const headers = {
+    "x-forwarded-host": "portfolio.example",
+    "x-forwarded-proto": "https",
+  };
+
+  const pageResponse = await request.get("/en", { headers });
+  expect(pageResponse.ok()).toBe(true);
+  expect(await pageResponse.text()).toContain(
+    '<link rel="canonical" href="https://portfolio.example/en"',
+  );
+
+  const robotsResponse = await request.get("/robots.txt", { headers });
+  expect(robotsResponse.ok()).toBe(true);
+  const robotsBody = await robotsResponse.text();
+  expect(robotsBody).toContain("Host: https://portfolio.example");
+  expect(robotsBody).toContain("Sitemap: https://portfolio.example/sitemap.xml");
+
+  const sitemapResponse = await request.get("/sitemap.xml", { headers });
+  expect(sitemapResponse.ok()).toBe(true);
+  const sitemapBody = await sitemapResponse.text();
+  expect(sitemapBody).toContain("https://portfolio.example/en");
+  expect(sitemapBody).toContain("https://portfolio.example/ru");
+});
+
 function assertLanguageTargets(targets: Array<{ width: number; height: number }>) {
   expect(targets).toHaveLength(2);
   for (const target of targets) {

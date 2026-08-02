@@ -7,13 +7,41 @@ type SiteEnvironment = Partial<
   >
 >;
 
+type RequestHeaders = Pick<Headers, "get">;
+
+function firstHeaderValue(value: string | null): string | undefined {
+  return value?.split(",")[0]?.trim() || undefined;
+}
+
+function requestOrigin(requestHeaders: RequestHeaders | undefined): string | undefined {
+  if (!requestHeaders) return undefined;
+
+  const host =
+    firstHeaderValue(requestHeaders.get("x-forwarded-host")) ||
+    firstHeaderValue(requestHeaders.get("host"));
+  if (!host) return undefined;
+  if (/[\\/\s@]/.test(host)) throw new Error("Request host is invalid.");
+
+  const forwardedProtocol = firstHeaderValue(requestHeaders.get("x-forwarded-proto"));
+  const protocol =
+    forwardedProtocol ||
+    (/^(localhost|127\.0\.0\.1|\[::1\])(?::\d+)?$/i.test(host) ? "http" : "https");
+  if (protocol !== "https" && protocol !== "http") {
+    throw new Error("Request protocol must be http or https.");
+  }
+
+  return `${protocol}://${host}`;
+}
+
 export function resolveSiteUrl(
   environment: SiteEnvironment = process.env as SiteEnvironment,
+  requestHeaders?: RequestHeaders,
 ): URL {
   const vercelOrigin = environment.VERCEL_PROJECT_PRODUCTION_URL
     ? "https://" + environment.VERCEL_PROJECT_PRODUCTION_URL
     : undefined;
   const candidate =
+    requestOrigin(requestHeaders) ||
     environment.SITE_URL?.trim() ||
     vercelOrigin;
 
@@ -38,21 +66,18 @@ export const siteConfig = {
   authorName: "Nickraspy",
   defaultLocale,
   locales,
-  get url(): URL {
-    return resolveSiteUrl();
-  },
 } as const;
 
-export function absoluteUrl(pathname = "/"): string {
-  return new URL(pathname, siteConfig.url).toString();
+export function absoluteUrl(siteUrl: URL, pathname = "/"): string {
+  return new URL(pathname, siteUrl).toString();
 }
 
 export function localizedPath(locale: SupportedLocale): string {
   return "/" + locale;
 }
 
-export function localizedUrl(locale: SupportedLocale): string {
-  return absoluteUrl(localizedPath(locale));
+export function localizedUrl(siteUrl: URL, locale: SupportedLocale): string {
+  return absoluteUrl(siteUrl, localizedPath(locale));
 }
 
 export function languageAlternates(): Record<string, string> {
