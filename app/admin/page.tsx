@@ -28,7 +28,11 @@ export default async function AdminPage() {
         <h1 id="admin-login-title">Панель публикации портфолио</h1>
         <p>Доступ разрешён только GitHub-аккаунтам из production allowlist.</p>
         {configured
-          ? <a className="admin-primary" href="/api/auth/github">Войти через GitHub</a>
+          ? <>
+              {/* OAuth starts in a Route Handler and must use a full document navigation. */}
+              {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+              <a className="admin-primary" href="/api/auth/github">Войти через GitHub</a>
+            </>
           : <div className="admin-notice" role="status"><strong>AUTH_OFFLINE</strong><span>Заполни GitHub OAuth-переменные из .env.example.</span></div>}
         <Link className="admin-secondary" href="/">Вернуться на сайт</Link>
       </section>
