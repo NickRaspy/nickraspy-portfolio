@@ -38,6 +38,7 @@ npm run content:sync
 
 # Inspect and restore published versions.
 npm run content:history
+npm run content:audit
 npm run content:rollback -- <version-id>
 ```
 
@@ -51,6 +52,8 @@ npm run content:sync -- D:\content\portfolio.xlsx
 ## PostgreSQL
 
 The data model stores immutable JSONB snapshots in `portfolio_content_versions` and atomically points `portfolio_content_state` at the active version. Numbered SQL migrations live in `database/migrations/`.
+
+Every publication and rollback also appends an immutable row to `portfolio_content_audit_log` in the same transaction as the active-version change. Admin-console events include the stable numeric GitHub account ID and login; local CLI events use the `local-cli` login with no GitHub ID. The row records the previous and resulting content version plus the database timestamp. Use `npm run content:audit` to inspect the latest events.
 
 Run `npm run db:migrate` explicitly before publishing content or starting a deployment that needs a newer schema. The runner applies pending files in order inside a PostgreSQL transaction, serializes concurrent runs with an advisory lock, and records each version and checksum in `schema_migrations`. Applied migration files must not be edited; add a new numbered file instead. `content:migrate` remains as a compatibility alias.
 

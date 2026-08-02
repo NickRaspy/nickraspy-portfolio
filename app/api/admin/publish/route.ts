@@ -9,7 +9,7 @@ export const maxDuration = 30;
 export async function POST(request: Request) {
   const authorization = await authorizeAdminMutation(request);
   if ("error" in authorization) return authorization.error;
-  return handleAdminPublish(request, authorization.session.login, {
+  return handleAdminPublish(request, authorization.session, {
     hasDatabase,
     publishContent,
     revalidatePortfolio: () => revalidateTag("portfolio-data", "max"),

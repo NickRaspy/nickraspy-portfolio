@@ -88,3 +88,13 @@ test("records a migration only after its SQL succeeds", async () => {
 
   assert.deepEqual(events, ["execute:select 1;", "record:001", "execute:broken sql;"]);
 });
+
+test("content audit migration records actor and version transitions and is append-only", async () => {
+  const sql = await fs.readFile(path.resolve("database/migrations/002_content_audit_log.sql"), "utf8");
+
+  assert.match(sql, /actor_github_id bigint/i);
+  assert.match(sql, /from_version_id uuid references portfolio_content_versions\(id\)/i);
+  assert.match(sql, /to_version_id uuid not null references portfolio_content_versions\(id\)/i);
+  assert.match(sql, /occurred_at timestamptz not null default now\(\)/i);
+  assert.match(sql, /before update or delete on portfolio_content_audit_log/i);
+});

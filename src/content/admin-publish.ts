@@ -1,5 +1,6 @@
 import { createHash } from "node:crypto";
 import { validatePortfolioContentForPublish } from "./importer";
+import type { ContentActor } from "./repository";
 import type { PortfolioContent } from "./types";
 
 export interface AdminPublishDependencies {
@@ -8,14 +9,14 @@ export interface AdminPublishDependencies {
     content: PortfolioContent,
     checksum: string,
     sourceFilename: string,
-    createdBy: string,
+    actor: ContentActor,
   ) => Promise<string>;
   revalidatePortfolio: () => void;
 }
 
 export async function handleAdminPublish(
   request: Request,
-  createdBy: string,
+  actor: ContentActor,
   dependencies: AdminPublishDependencies,
 ): Promise<Response> {
   if (!dependencies.hasDatabase()) {
@@ -45,7 +46,7 @@ export async function handleAdminPublish(
     validation.content,
     checksum,
     sourceFilename || "admin-upload.xlsx",
-    createdBy,
+    actor,
   );
   dependencies.revalidatePortfolio();
   return Response.json({ versionId, checksum });

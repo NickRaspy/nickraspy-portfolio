@@ -13,6 +13,7 @@
     "content:migrate": "npm run db:migrate",
     "content:sync": "tsx scripts/content.ts sync",
     "content:history": "tsx scripts/content.ts history",
+    "content:audit": "tsx scripts/content.ts audit",
     "content:rollback": "tsx scripts/content.ts rollback",
     "telegram:chats": "node --env-file=.env.local scripts/telegram-chats.mjs",
     "test": "npm run test:unit",
