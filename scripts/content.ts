@@ -2,7 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { loadEnvConfig } from "@next/env";
 import { importPortfolioWorkbook } from "../src/content/importer";
-import { closeContentDatabase, listContentVersions, migrateContentDatabase, publishContent, rollbackContent } from "../src/content/repository";
+import { closeContentDatabase, listContentVersions, publishContent, rollbackContent } from "../src/content/repository";
 
 loadEnvConfig(process.cwd());
 
@@ -44,12 +44,8 @@ async function revalidateSite(): Promise<void> {
 async function main() {
   if (command === "validate") {
     await loadWorkbook();
-  } else if (command === "migrate") {
-    await migrateContentDatabase();
-    console.log("Content database is ready.");
   } else if (command === "sync") {
     const result = await loadWorkbook();
-    await migrateContentDatabase();
     const id = await publishContent(result.content!, result.checksum!, path.basename(workbookPath), "local-cli");
     await fs.mkdir(path.resolve("outputs/portfolio-data"), { recursive: true });
     await fs.writeFile(path.resolve("outputs/portfolio-data/latest.json"), JSON.stringify(result.content, null, 2) + "\n", "utf8");
