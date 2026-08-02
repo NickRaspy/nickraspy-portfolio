@@ -2,7 +2,13 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { loadEnvConfig } from "@next/env";
 import { importPortfolioWorkbook } from "../src/content/importer";
-import { closeContentDatabase, listContentVersions, publishContent, rollbackContent } from "../src/content/repository";
+import {
+  closeContentDatabase,
+  listContentAuditEvents,
+  listContentVersions,
+  publishContent,
+  rollbackContent,
+} from "../src/content/repository";
 
 loadEnvConfig(process.cwd());
 
@@ -46,17 +52,22 @@ async function main() {
     await loadWorkbook();
   } else if (command === "sync") {
     const result = await loadWorkbook();
-    const id = await publishContent(result.content!, result.checksum!, path.basename(workbookPath), "local-cli");
+    const id = await publishContent(result.content!, result.checksum!, path.basename(workbookPath), {
+      githubId: null,
+      login: "local-cli",
+    });
     await fs.mkdir(path.resolve("outputs/portfolio-data"), { recursive: true });
     await fs.writeFile(path.resolve("outputs/portfolio-data/latest.json"), JSON.stringify(result.content, null, 2) + "\n", "utf8");
     console.log(`Published content version ${id}.`);
     await revalidateSite();
   } else if (command === "history") {
     console.table(await listContentVersions(50));
+  } else if (command === "audit") {
+    console.table(await listContentAuditEvents(100));
   } else if (command === "rollback") {
     const versionId = process.argv[3];
     if (!versionId) throw new Error("Usage: npm run content:rollback -- <version-id>");
-    await rollbackContent(versionId);
+    await rollbackContent(versionId, { githubId: null, login: "local-cli" });
     await revalidateSite();
     console.log(`Rolled back to ${versionId}.`);
   } else {
