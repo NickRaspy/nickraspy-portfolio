@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import type { ContentVersion } from "@/src/content/repository";
 import type { ImportResult, PortfolioContent } from "@/src/content/types";
+import { formatVersionTimestamp } from "@/src/content/formatVersionTimestamp";
 
 type ValidatedImport = ImportResult & { content: PortfolioContent; checksum: string; sourceFilename: string };
 const maxWorkbookBytes = 4 * 1024 * 1024;
@@ -156,7 +157,7 @@ export default function AdminWorkbench({ sessionLogin, databaseReady, devBypass,
 
         <section className="admin-panel" aria-labelledby="history-title">
           <div className="admin-panel-title"><span><Icon name="history" /></span><div><small>VERSION_LEDGER</small><h2 id="history-title">История публикаций</h2></div></div>
-          {versions.length === 0 ? <p className="admin-empty">Опубликованных версий пока нет.</p> : <div className="admin-history">{versions.map((version) => <article key={version.id} className={version.active ? "active" : ""}><div><code>{version.id.slice(0, 8)}</code><strong>{version.sourceFilename}</strong><span>{new Date(version.createdAt).toLocaleString("ru-RU")} · {version.createdBy}</span></div>{version.active ? <b>ACTIVE</b> : <button disabled={pending} onClick={() => void rollback(version.id)}>RESTORE</button>}</article>)}</div>}
+          {versions.length === 0 ? <p className="admin-empty">Опубликованных версий пока нет.</p> : <div className="admin-history">{versions.map((version) => <article key={version.id} className={version.active ? "active" : ""}><div><code>{version.id.slice(0, 8)}</code><strong>{version.sourceFilename}</strong><span>{formatVersionTimestamp(version.createdAt)} · {version.createdBy}</span></div>{version.active ? <b>ACTIVE</b> : <button disabled={pending} onClick={() => void rollback(version.id)}>RESTORE</button>}</article>)}</div>}
         </section>
       </section>
     </div>
