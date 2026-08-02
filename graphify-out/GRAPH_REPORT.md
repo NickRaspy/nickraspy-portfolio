@@ -1,16 +1,16 @@
 # Graph Report - nickraspy-portfolio  (2026-08-03)
 
 ## Corpus Check
-- 91 files · ~23,842 words
+- 92 files · ~23,970 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 688 nodes · 1037 edges · 58 communities (47 shown, 11 thin omitted)
+- 701 nodes · 1050 edges · 60 communities (48 shown, 12 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 13 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `8f863023`
+- Built from commit: `44490f9c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -70,6 +70,8 @@
 - size
 - Q: Переменная SITE_URL с fallback на https://nickraspy.dev. Поясни зачем это.
 - Q: Если я не владею nickraspy.dev, будет ли сайт использовать этот адрес?
+- 002_content_audit_log.sql
+- 001_content_versions.sql
 
 ## God Nodes (most connected - your core abstractions)
 1. `scripts` - 19 edges
@@ -86,14 +88,14 @@
 ## Surprising Connections (you probably didn't know these)
 - `LocaleHome()` --calls--> `getPortfolioView()`  [EXTRACTED]
   app/[locale]/page.tsx → src/content/data.ts
-- `AdminPage()` --calls--> `hasDatabase()`  [EXTRACTED]
-  app/admin/page.tsx → src/content/repository.ts
-- `AdminPage()` --calls--> `listContentVersions()`  [EXTRACTED]
-  app/admin/page.tsx → src/content/repository.ts
-- `POST()` --calls--> `authorizeAdminMutation()`  [EXTRACTED]
-  app/api/admin/publish/route.ts → src/auth/request.ts
 - `POST()` --calls--> `handleAdminPublish()`  [EXTRACTED]
   app/api/admin/publish/route.ts → src/content/admin-publish.ts
+- `POST()` --indirect_call--> `hasDatabase()`  [INFERRED]
+  app/api/admin/publish/route.ts → src/content/repository.ts
+- `POST()` --indirect_call--> `publishContent()`  [INFERRED]
+  app/api/admin/publish/route.ts → src/content/repository.ts
+- `POST()` --indirect_call--> `rollbackContent()`  [INFERRED]
+  app/api/admin/rollback/route.ts → src/content/repository.ts
 
 ## Import Cycles
 - None detected.
@@ -103,7 +105,7 @@
 - **Portfolio Content Workflow** — readme_portfolio_workbook, readme_content_validate, readme_content_migrate, readme_content_sync, readme_content_history, readme_content_rollback [EXTRACTED 1.00]
 - **GitHub Admin Security** — readme_github_oauth, readme_immutable_github_id_allowlist, readme_auth_origin, readme_oauth_pkce, readme_secure_admin_cookies [EXTRACTED 1.00]
 
-## Communities (58 total, 11 thin omitted)
+## Communities (60 total, 12 thin omitted)
 
 ### Community 0 - "createSocialImage"
 Cohesion: 0.57
@@ -111,11 +113,11 @@ Nodes (4): OpenGraphImage(), TwitterImage(), createSocialImage(), socialImageSiz
 
 ### Community 1 - "Admin API Publishing"
 Cohesion: 0.08
-Nodes (39): AdminWorkbench(), ValidatedImport, AdminPublishDependencies, handleAdminPublish(), getCachedContent, getPortfolioView(), addIssue(), ajv (+31 more)
+Nodes (38): AdminWorkbench(), ValidatedImport, AdminPublishDependencies, handleAdminPublish(), getCachedContent, getPortfolioView(), addIssue(), ajv (+30 more)
 
 ### Community 2 - "Schema Collection Rules"
-Cohesion: 0.07
-Nodes (33): items, type, items, type, minLength, type, items, type (+25 more)
+Cohesion: 0.11
+Nodes (22): items, type, items, type, minLength, type, items, type (+14 more)
 
 ### Community 3 - "Runtime Dependencies"
 Cohesion: 0.05
@@ -130,20 +132,20 @@ Cohesion: 0.31
 Nodes (10): main(), AppliedMigration, applyDatabaseMigrations(), DatabaseMigration, loadDatabaseMigrations(), MigrationExecutor, MigrationRunResult, pendingDatabaseMigrations() (+2 more)
 
 ### Community 6 - "Required Schema Fields"
-Cohesion: 0.12
-Nodes (23): required, required, required, required, required, required, categoryId, clearance (+15 more)
+Cohesion: 0.05
+Nodes (40): additionalProperties, $defs, id, localizedText, profileTranslations, skill, type, $id (+32 more)
 
 ### Community 7 - "Content Operations Documentation"
 Cohesion: 0.09
 Nodes (23): Atomic Active Content Pointer, Protected Publishing Console, Local Admin Development Bypass, Aetheris Portfolio, Deployment Authentication Origin, Content History Command, Content Migration Command, Content Rollback Command (+15 more)
 
 ### Community 8 - "GitHub OAuth Security"
-Cohesion: 0.12
-Nodes (29): AdminPage(), metadata, POST(), adminRedirect(), GET(), GET(), POST(), AdminSession (+21 more)
+Cohesion: 0.07
+Nodes (50): AdminPage(), metadata, POST(), POST(), POST(), GET(), adminRedirect(), GET() (+42 more)
 
 ### Community 9 - "Excel Import Validation"
-Cohesion: 0.16
-Nodes (21): POST(), POST(), GET(), loadWorkbook(), main(), revalidateSite(), workbookPath, AdminRollbackDependencies (+13 more)
+Cohesion: 0.22
+Nodes (9): additionalProperties, required, type, contact, label, type, url, value (+1 more)
 
 ### Community 10 - "Development Tooling"
 Cohesion: 0.09
@@ -166,8 +168,8 @@ Cohesion: 0.11
 Nodes (26): ContactPayload, isSameOrigin(), json(), normalizedName(), POST(), remoteAddress(), text(), TurnstileResult (+18 more)
 
 ### Community 15 - "Project Entry Schema"
-Cohesion: 0.14
-Nodes (14): $ref, project, type, additionalProperties, properties, type, categoryId, liveUrl (+6 more)
+Cohesion: 0.06
+Nodes (32): $ref, project, minLength, type, type, items, minItems, type (+24 more)
 
 ### Community 16 - "Experience Entry Schema"
 Cohesion: 0.40
@@ -187,7 +189,7 @@ Nodes (4): Answer, Outcome, Q: ну погнали, Source Nodes
 
 ### Community 20 - "Root Layout Typography"
 Cohesion: 0.08
-Nodes (37): geistMono, geistSans, metadata, RootLayout(), generateMetadata(), LocaleHome(), LocalePageProps, requireLocale() (+29 more)
+Nodes (38): geistMono, geistSans, metadata, RootLayout(), generateMetadata(), LocaleHome(), LocalePageProps, requireLocale() (+30 more)
 
 ### Community 21 - "Browser Window Icon"
 Cohesion: 0.50
@@ -222,8 +224,8 @@ Cohesion: 1.00
 Nodes (3): Vercel SVG asset, Vercel brand mark, White upward-pointing triangle
 
 ### Community 35 - "status"
-Cohesion: 0.29
-Nodes (7): status, enum, minLength, type, archived, draft, published
+Cohesion: 0.17
+Nodes (17): required, required, required, required, required, categoryId, clearance, code (+9 more)
 
 ### Community 41 - "Q: Fix the attached Vercel build failure where admin-publish-route tests call cookies outside a request scope."
 Cohesion: 0.40
@@ -258,12 +260,12 @@ Cohesion: 0.40
 Nodes (4): Answer, Outcome, Q: > WebGL recovery`n> Обрабатывать webglcontextlost, показывать CSS-fallback и динамически снижать качество по фактическому FPS.`n`nпоясни, что ты хотел здесь сделать, Source Nodes
 
 ### Community 49 - "$defs"
-Cohesion: 0.12
-Nodes (17): additionalProperties, properties, type, contact, minLength, type, label, type (+9 more)
+Cohesion: 0.14
+Nodes (14): properties, minLength, type, label, type, url, value, visible (+6 more)
 
 ### Community 51 - "properties"
-Cohesion: 0.05
-Nodes (40): additionalProperties, $defs, id, localizedText, profileTranslations, skill, type, $id (+32 more)
+Cohesion: 0.40
+Nodes (4): Answer, Outcome, Q: Why does the Vercel build fail in the SEO robots and sitemap unit test?, Source Nodes
 
 ### Community 53 - "Q: давай"
 Cohesion: 0.40
@@ -281,35 +283,39 @@ Nodes (4): Answer, Outcome, Q: Переменная SITE_URL с fallback на ht
 Cohesion: 0.40
 Nodes (4): Answer, Outcome, Q: Если я не владею nickraspy.dev, будет ли сайт использовать этот адрес?, Source Nodes
 
+### Community 58 - "002_content_audit_log.sql"
+Cohesion: 0.67
+Nodes (3): portfolio_content_audit_log, portfolio_content_audit_log_append_only, reject_portfolio_content_audit_mutation()
+
 ## Knowledge Gaps
-- **286 isolated node(s):** `LocalePageProps`, `metadata`, `ValidatedImport`, `ContactPayload`, `TurnstileResult` (+281 more)
+- **290 isolated node(s):** `LocalePageProps`, `metadata`, `ValidatedImport`, `ContactPayload`, `TurnstileResult` (+285 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **11 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **12 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Work-memory lessons
 
 **Preferred sources** — corroborated by past sessions; start here.
-- `generateMetadata()` (2× useful, score=1.997899507)
-- `WebGL HUD` (2× useful, score=1.992895014) _(code changed — re-verify)_
-- `publishContent()` (2× useful, score=1.992496146)
-- `repository.ts` (2× useful, score=1.791063239)
-- `admin-publish-route.test.ts` (2× useful, score=1.667078536)
-- `validatePortfolioContentForPublish()` (2× useful, score=1.666052708)
+- `generateMetadata()` (2× useful, score=1.997198919)
+- `WebGL HUD` (2× useful, score=1.992196181) _(code changed — re-verify)_
+- `publishContent()` (2× useful, score=1.991797453)
+- `repository.ts` (2× useful, score=1.790435181)
+- `admin-publish-route.test.ts` (2× useful, score=1.666493955)
+- `validatePortfolioContentForPublish()` (2× useful, score=1.665468486)
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `$defs` connect `properties` to `$defs`, `properties`, `sortOrder`, `Project Entry Schema`?**
-  _High betweenness centrality (0.148) - this node is a cross-community bridge._
-- **Why does `properties` connect `Schema Collection Rules` to `Content Version Database`, `properties`?**
-  _High betweenness centrality (0.061) - this node is a cross-community bridge._
+- **Why does `$defs` connect `Required Schema Fields` to `Excel Import Validation`, `properties`, `sortOrder`, `Project Entry Schema`?**
+  _High betweenness centrality (0.143) - this node is a cross-community bridge._
+- **Why does `properties` connect `Schema Collection Rules` to `Content Version Database`, `Required Schema Fields`, `Project Entry Schema`?**
+  _High betweenness centrality (0.059) - this node is a cross-community bridge._
 - **Why does `text()` connect `Admin API Publishing` to `Skill Category Schema`?**
-  _High betweenness centrality (0.051) - this node is a cross-community bridge._
+  _High betweenness centrality (0.049) - this node is a cross-community bridge._
 - **What connects `LocalePageProps`, `metadata`, `ValidatedImport` to the rest of the system?**
-  _286 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _290 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Admin API Publishing` be split into smaller, more focused modules?**
-  _Cohesion score 0.08055152394775036 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08220211161387632 - nodes in this community are weakly interconnected._
 - **Should `Schema Collection Rules` be split into smaller, more focused modules?**
-  _Cohesion score 0.07007575757575757 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.10822510822510822 - nodes in this community are weakly interconnected._
 - **Should `Runtime Dependencies` be split into smaller, more focused modules?**
   _Cohesion score 0.04878048780487805 - nodes in this community are weakly interconnected._

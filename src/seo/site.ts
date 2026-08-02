@@ -1,10 +1,8 @@
 import { defaultLocale, locales, type SupportedLocale } from "@/src/i18n/config";
 
-const localSiteOrigin = "http://localhost:3000";
-
 type SiteEnvironment = Partial<
   Record<
-    "SITE_URL" | "VERCEL_PROJECT_PRODUCTION_URL" | "VERCEL" | "VERCEL_ENV",
+    "SITE_URL" | "VERCEL_PROJECT_PRODUCTION_URL",
     string
   >
 >;
@@ -20,16 +18,9 @@ export function resolveSiteUrl(
     vercelOrigin;
 
   if (!candidate) {
-    const isVercelProduction =
-      environment.VERCEL === "1" || environment.VERCEL_ENV === "production";
-
-    if (isVercelProduction) {
-      throw new Error(
-        "A production site origin is required. Set SITE_URL or enable VERCEL_PROJECT_PRODUCTION_URL.",
-      );
-    }
-
-    return new URL(localSiteOrigin);
+    throw new Error(
+      "A canonical site origin is required. Set SITE_URL or provide VERCEL_PROJECT_PRODUCTION_URL.",
+    );
   }
 
   const parsed = new URL(candidate);
@@ -47,7 +38,9 @@ export const siteConfig = {
   authorName: "Nickraspy",
   defaultLocale,
   locales,
-  url: resolveSiteUrl(),
+  get url(): URL {
+    return resolveSiteUrl();
+  },
 } as const;
 
 export function absoluteUrl(pathname = "/"): string {

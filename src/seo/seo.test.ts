@@ -7,7 +7,22 @@ import { createPortfolioView } from "@/src/content/view";
 import type { PortfolioContent } from "@/src/content/types";
 import { createPortfolioJsonLd, serializeJsonLd } from "./jsonLd";
 import { createLocaleMetadata } from "./metadata";
-import { resolveSiteUrl } from "./site";
+import { resolveSiteUrl, siteConfig } from "./site";
+
+function withTestSiteUrl<T>(callback: () => T): T {
+  const originalSiteUrl = process.env.SITE_URL;
+  process.env.SITE_URL = "https://portfolio.example";
+
+  try {
+    return callback();
+  } finally {
+    if (originalSiteUrl === undefined) {
+      delete process.env.SITE_URL;
+    } else {
+      process.env.SITE_URL = originalSiteUrl;
+    }
+  }
+}
 
 test("resolves the canonical origin from deployment configuration", () => {
   assert.equal(
@@ -18,12 +33,8 @@ test("resolves the canonical origin from deployment configuration", () => {
     resolveSiteUrl({ VERCEL_PROJECT_PRODUCTION_URL: "portfolio.vercel.app" }).toString(),
     "https://portfolio.vercel.app/",
   );
-  assert.equal(resolveSiteUrl({}).toString(), "http://localhost:3000/");
+  assert.throws(() => resolveSiteUrl({}), /canonical site origin/);
   assert.throws(() => resolveSiteUrl({ SITE_URL: "ftp://portfolio.example" }), /http/);
-  assert.throws(
-    () => resolveSiteUrl({ VERCEL: "1", VERCEL_ENV: "production" }),
-    /production site origin/,
-  );
 });
 
 test("builds localized canonical, Open Graph and Twitter metadata", () => {
@@ -44,24 +55,27 @@ test("builds localized canonical, Open Graph and Twitter metadata", () => {
 });
 
 test("publishes only public localized pages in robots and sitemap", () => {
-  const robotsData = robots();
-  const sitemapData = sitemap();
+  withTestSiteUrl(() => {
+    const robotsData = robots();
+    const sitemapData = sitemap();
+    const siteOrigin = siteConfig.url.origin;
 
-  assert.deepEqual(robotsData.rules, {
-    userAgent: "*",
-    allow: "/",
-    disallow: ["/admin", "/api"],
+    assert.deepEqual(robotsData.rules, {
+      userAgent: "*",
+      allow: "/",
+      disallow: ["/admin", "/api"],
+    });
+    assert.equal(robotsData.sitemap, `${siteOrigin}/sitemap.xml`);
+    assert.deepEqual(
+      sitemapData.map((entry) => entry.url),
+      [`${siteOrigin}/en`, `${siteOrigin}/ru`],
+    );
   });
-  assert.equal(robotsData.sitemap, "http://localhost:3000/sitemap.xml");
-  assert.deepEqual(
-    sitemapData.map((entry) => entry.url),
-    ["http://localhost:3000/en", "http://localhost:3000/ru"],
-  );
 });
 
 test("builds Person and CreativeWork JSON-LD from published portfolio content", () => {
   const view = createPortfolioView(fallbackContent as PortfolioContent, "en");
-  const jsonLd = createPortfolioJsonLd(view, "en");
+  const jsonLd = withTestSiteUrl(() => createPortfolioJsonLd(view, "en"));
   const graph = jsonLd["@graph"] as Array<Record<string, unknown>>;
   const person = graph.find((node) => node["@type"] === "Person");
   const creativeWorks = graph.filter((node) => node["@type"] === "CreativeWork");
