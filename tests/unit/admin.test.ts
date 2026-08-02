@@ -3,7 +3,11 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import test, { afterEach } from "node:test";
 
-import { isAllowedGitHubId, type AdminSession } from "@/src/auth/admin";
+import {
+  adminCookieDeletionOptions,
+  isAllowedGitHubId,
+  type AdminSession,
+} from "@/src/auth/admin";
 import { authorizeAdminMutation } from "@/src/auth/request";
 import { validateAdminWorkbookFile } from "@/src/content/admin-import";
 
@@ -38,6 +42,17 @@ test("matches GitHub administrators by immutable numeric id", () => {
   assert.equal(isAllowedGitHubId(90720459), true);
   assert.equal(isAllowedGitHubId(42), true);
   assert.equal(isAllowedGitHubId(7), false);
+});
+
+test("expires __Host admin cookies with browser-required attributes", () => {
+  const options = adminCookieDeletionOptions("__Host-aetheris_admin");
+
+  assert.equal(options.httpOnly, true);
+  assert.equal(options.secure, true);
+  assert.equal(options.sameSite, "lax");
+  assert.equal(options.path, "/");
+  assert.equal(options.maxAge, 0);
+  assert.equal(options.expires.getTime(), 0);
 });
 
 test("allows same-origin admin mutations for an authenticated session", async () => {
