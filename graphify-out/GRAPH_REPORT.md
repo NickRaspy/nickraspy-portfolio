@@ -1,16 +1,16 @@
 # Graph Report - nickraspy-portfolio  (2026-08-03)
 
 ## Corpus Check
-- 101 files · ~25,209 words
+- 109 files · ~26,142 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 743 nodes · 1143 edges · 65 communities (53 shown, 12 thin omitted)
+- 778 nodes · 1177 edges · 75 communities (63 shown, 12 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 13 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `c6d96827`
+- Built from commit: `6fcbff09`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -74,9 +74,19 @@
 - 001_content_versions.sql
 - admin.ts
 - $defs
+- Q: Make localhost and custom domains work without SITE_URL
 - status
 - Q: Why must localhost be removed from the SEO site origin?
 - Q: What causes Cloudflare Turnstile client error 110200 in the contact form?
+- Q: Production /admin returns Vercel INTERNAL_FUNCTION_NOT_FOUND after GitHub OAuth (credentials redacted)
+- Q: Какой Custom Environment Variable Prefix был установлен для Neon?
+- skill
+- localizedText
+- required
+- Q: React #418 и CSP блокировка vercel.live на /admin
+- Q: React #418 и CSP появляются при logout из admin
+- Q: Почему dev Preview всё ещё отдаёт старый CSP после push 6fcbff0?
+- value
 
 ## God Nodes (most connected - your core abstractions)
 1. `scripts` - 19 edges
@@ -91,16 +101,16 @@
 10. `getRequestSiteUrl()` - 10 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `LocaleHome()` --calls--> `getPortfolioView()`  [EXTRACTED]
-  app/[locale]/page.tsx → src/content/data.ts
-- `POST()` --calls--> `handleAdminPublish()`  [EXTRACTED]
-  app/api/admin/publish/route.ts → src/content/admin-publish.ts
+- `AdminPage()` --calls--> `hasDatabase()`  [EXTRACTED]
+  app/admin/page.tsx → src/content/repository.ts
+- `AdminPage()` --calls--> `listContentVersions()`  [EXTRACTED]
+  app/admin/page.tsx → src/content/repository.ts
+- `POST()` --calls--> `authorizeAdminMutation()`  [EXTRACTED]
+  app/api/admin/publish/route.ts → src/auth/request.ts
 - `POST()` --indirect_call--> `hasDatabase()`  [INFERRED]
   app/api/admin/publish/route.ts → src/content/repository.ts
 - `POST()` --indirect_call--> `publishContent()`  [INFERRED]
   app/api/admin/publish/route.ts → src/content/repository.ts
-- `POST()` --indirect_call--> `rollbackContent()`  [INFERRED]
-  app/api/admin/rollback/route.ts → src/content/repository.ts
 
 ## Import Cycles
 - None detected.
@@ -110,15 +120,15 @@
 - **Portfolio Content Workflow** — readme_portfolio_workbook, readme_content_validate, readme_content_migrate, readme_content_sync, readme_content_history, readme_content_rollback [EXTRACTED 1.00]
 - **GitHub Admin Security** — readme_github_oauth, readme_immutable_github_id_allowlist, readme_auth_origin, readme_oauth_pkce, readme_secure_admin_cookies [EXTRACTED 1.00]
 
-## Communities (65 total, 12 thin omitted)
+## Communities (75 total, 12 thin omitted)
 
 ### Community 0 - "createSocialImage"
 Cohesion: 0.57
 Nodes (4): OpenGraphImage(), TwitterImage(), createSocialImage(), socialImageSize
 
 ### Community 1 - "Admin API Publishing"
-Cohesion: 0.08
-Nodes (39): AdminWorkbench(), ValidatedImport, AdminPublishDependencies, handleAdminPublish(), getCachedContent, getPortfolioView(), addIssue(), ajv (+31 more)
+Cohesion: 0.13
+Nodes (24): addIssue(), ajv, boolean(), importPortfolioWorkbook(), integer(), isSafeExternalUrl(), jsonPointerSegment(), requiredSheets (+16 more)
 
 ### Community 2 - "Schema Collection Rules"
 Cohesion: 0.07
@@ -145,12 +155,12 @@ Cohesion: 0.09
 Nodes (23): Atomic Active Content Pointer, Protected Publishing Console, Local Admin Development Bypass, Aetheris Portfolio, Deployment Authentication Origin, Content History Command, Content Migration Command, Content Rollback Command (+15 more)
 
 ### Community 8 - "GitHub OAuth Security"
-Cohesion: 0.07
-Nodes (50): AdminPage(), metadata, POST(), POST(), POST(), GET(), adminRedirect(), GET() (+42 more)
+Cohesion: 0.11
+Nodes (31): AdminPage(), metadata, POST(), GET(), adminRedirect(), GET(), GET(), POST() (+23 more)
 
 ### Community 9 - "Excel Import Validation"
-Cohesion: 0.12
-Nodes (21): HudBackground(), HudMessages, useContactForm(), tabs, DragHandler, ExperiencePanel(), Glyph(), HudMessages (+13 more)
+Cohesion: 0.11
+Nodes (28): AdminWorkbench(), ValidatedImport, POST(), POST(), loadWorkbook(), main(), revalidateSite(), workbookPath (+20 more)
 
 ### Community 10 - "Development Tooling"
 Cohesion: 0.09
@@ -193,8 +203,8 @@ Cohesion: 0.40
 Nodes (4): Answer, Outcome, Q: ну погнали, Source Nodes
 
 ### Community 20 - "Root Layout Typography"
-Cohesion: 0.10
-Nodes (38): geistMono, geistSans, generateMetadata(), RootLayout(), generateMetadata(), LocaleHome(), LocalePageProps, requireLocale() (+30 more)
+Cohesion: 0.05
+Nodes (67): geistMono, geistSans, generateMetadata(), RootLayout(), generateMetadata(), LocaleHome(), LocalePageProps, requireLocale() (+59 more)
 
 ### Community 21 - "Browser Window Icon"
 Cohesion: 0.50
@@ -202,7 +212,7 @@ Nodes (5): Browser window icon, Gray #666 fill, Window SVG asset, Three title-ba
 
 ### Community 22 - "sortOrder"
 Cohesion: 0.22
-Nodes (9): additionalProperties, properties, type, minLength, type, category, $ref, code (+1 more)
+Nodes (9): properties, minLength, type, $ref, code, id, sortOrder, minimum (+1 more)
 
 ### Community 23 - "Security Headers"
 Cohesion: 0.50
@@ -213,8 +223,8 @@ Cohesion: 0.50
 Nodes (4): 16×16 SVG view box, file.svg asset, Document file icon, Gray #666 fill
 
 ### Community 26 - "properties"
-Cohesion: 0.17
-Nodes (12): experience, minLength, type, additionalProperties, properties, end, sortOrder, start (+4 more)
+Cohesion: 0.22
+Nodes (9): experience, minLength, type, additionalProperties, properties, end, start, minLength (+1 more)
 
 ### Community 27 - "Content Version Database"
 Cohesion: 0.20
@@ -229,8 +239,8 @@ Cohesion: 1.00
 Nodes (3): Vercel SVG asset, Vercel brand mark, White upward-pointing triangle
 
 ### Community 35 - "status"
-Cohesion: 0.06
-Nodes (42): required, required, localizedText, skill, type, required, maximum, minimum (+34 more)
+Cohesion: 0.17
+Nodes (17): required, required, required, required, required, categoryId, clearance, code (+9 more)
 
 ### Community 41 - "Q: Fix the attached Vercel build failure where admin-publish-route tests call cookies outside a request scope."
 Cohesion: 0.40
@@ -266,7 +276,7 @@ Nodes (4): Answer, Outcome, Q: > WebGL recovery`n> Обрабатывать webg
 
 ### Community 49 - "$defs"
 Cohesion: 0.14
-Nodes (14): properties, minLength, type, label, type, url, value, visible (+6 more)
+Nodes (14): additionalProperties, properties, type, contact, minLength, type, label, type (+6 more)
 
 ### Community 51 - "properties"
 Cohesion: 0.40
@@ -298,7 +308,11 @@ Nodes (4): Answer, Outcome, Q: npm run dev fails with canonical site origin requ
 
 ### Community 61 - "$defs"
 Cohesion: 0.17
-Nodes (12): additionalProperties, type, $defs, contact, id, profileTranslations, project, pattern (+4 more)
+Nodes (12): additionalProperties, type, $defs, category, id, profileTranslations, project, pattern (+4 more)
+
+### Community 62 - "Q: Make localhost and custom domains work without SITE_URL"
+Cohesion: 0.40
+Nodes (4): Answer, Outcome, Q: Make localhost and custom domains work without SITE_URL, Source Nodes
 
 ### Community 63 - "status"
 Cohesion: 0.29
@@ -312,35 +326,74 @@ Nodes (4): Answer, Outcome, Q: Why must localhost be removed from the SEO site o
 Cohesion: 0.40
 Nodes (4): Answer, Outcome, Q: What causes Cloudflare Turnstile client error 110200 in the contact form?, Source Nodes
 
+### Community 66 - "Q: Production /admin returns Vercel INTERNAL_FUNCTION_NOT_FOUND after GitHub OAuth (credentials redacted)"
+Cohesion: 0.40
+Nodes (4): Answer, Outcome, Q: Production /admin returns Vercel INTERNAL_FUNCTION_NOT_FOUND after GitHub OAuth (credentials redacted), Source Nodes
+
+### Community 67 - "Q: Какой Custom Environment Variable Prefix был установлен для Neon?"
+Cohesion: 0.40
+Nodes (4): Answer, Outcome, Q: Какой Custom Environment Variable Prefix был установлен для Neon?, Source Nodes
+
+### Community 68 - "skill"
+Cohesion: 0.18
+Nodes (11): skill, maximum, minimum, type, minLength, type, level, name (+3 more)
+
+### Community 69 - "localizedText"
+Cohesion: 0.25
+Nodes (8): localizedText, type, additionalProperties, properties, required, type, description, name
+
+### Community 70 - "required"
+Cohesion: 0.33
+Nodes (6): required, label, type, url, value, visible
+
+### Community 71 - "Q: React #418 и CSP блокировка vercel.live на /admin"
+Cohesion: 0.40
+Nodes (4): Answer, Outcome, Q: React #418 и CSP блокировка vercel.live на /admin, Source Nodes
+
+### Community 72 - "Q: React #418 и CSP появляются при logout из admin"
+Cohesion: 0.40
+Nodes (4): Answer, Outcome, Q: React #418 и CSP появляются при logout из admin, Source Nodes
+
+### Community 73 - "Q: Почему dev Preview всё ещё отдаёт старый CSP после push 6fcbff0?"
+Cohesion: 0.40
+Nodes (4): Answer, Outcome, Q: Почему dev Preview всё ещё отдаёт старый CSP после push 6fcbff0?, Source Nodes
+
+### Community 74 - "value"
+Cohesion: 0.67
+Nodes (3): value, minLength, type
+
 ## Knowledge Gaps
-- **300 isolated node(s):** `LocalePageProps`, `metadata`, `ValidatedImport`, `ContactPayload`, `TurnstileResult` (+295 more)
+- **318 isolated node(s):** `LocalePageProps`, `metadata`, `ValidatedImport`, `ContactPayload`, `TurnstileResult` (+313 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **12 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Work-memory lessons
 
 **Preferred sources** — corroborated by past sessions; start here.
-- `layout.tsx` (2× useful, score=1.997515225) _(code changed — re-verify)_
-- `generateMetadata()` (2× useful, score=1.995107688) _(code changed — re-verify)_
-- `WebGL HUD` (2× useful, score=1.990110188) _(code changed — re-verify)_
-- `publishContent()` (2× useful, score=1.989711878)
-- `repository.ts` (2× useful, score=1.788560448)
-- `admin-publish-route.test.ts` (2× useful, score=1.664748999)
-- `validatePortfolioContentForPublish()` (2× useful, score=1.663724604)
+- `layout.tsx` (3× useful, score=2.990708148)
+- `repository.ts` (3× useful, score=2.784040663)
+- `site.ts` (2× useful, score=1.995452733)
+- `createPortfolioJsonLd()` (2× useful, score=1.994057773)
+- `database-migrate.ts` (2× useful, score=1.99136592)
+- `metadata` (2× useful, score=1.990455954)
+- `WebGL HUD` (2× useful, score=1.985470106)
+- `publishContent()` (2× useful, score=1.985072724)
+- `workbench.tsx` (2× useful, score=1.829389874)
+- `next.config.ts` (2× useful, score=1.792943667)
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `$defs` connect `$defs` to `properties`, `status`, `Required Schema Fields`, `sortOrder`?**
-  _High betweenness centrality (0.139) - this node is a cross-community bridge._
+- **Why does `$defs` connect `$defs` to `skill`, `localizedText`, `Required Schema Fields`, `$defs`, `properties`?**
+  _High betweenness centrality (0.129) - this node is a cross-community bridge._
 - **Why does `properties` connect `Schema Collection Rules` to `Content Version Database`, `Required Schema Fields`?**
-  _High betweenness centrality (0.057) - this node is a cross-community bridge._
+  _High betweenness centrality (0.053) - this node is a cross-community bridge._
 - **Why does `text()` connect `Admin API Publishing` to `Skill Category Schema`?**
-  _High betweenness centrality (0.047) - this node is a cross-community bridge._
+  _High betweenness centrality (0.043) - this node is a cross-community bridge._
 - **What connects `LocalePageProps`, `metadata`, `ValidatedImport` to the rest of the system?**
-  _300 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _318 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Admin API Publishing` be split into smaller, more focused modules?**
-  _Cohesion score 0.08055152394775036 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected._
 - **Should `Schema Collection Rules` be split into smaller, more focused modules?**
   _Cohesion score 0.07007575757575757 - nodes in this community are weakly interconnected._
 - **Should `Runtime Dependencies` be split into smaller, more focused modules?**

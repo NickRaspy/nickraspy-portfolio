@@ -169,41 +169,41 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_admin_workbench",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "workbench.tsx"
     },
     {
       "label": "ValidatedImport",
       "file_type": "code",
       "source_file": "app/admin/workbench.tsx",
-      "source_location": "L7",
+      "source_location": "L8",
       "_origin": "ast",
       "id": "app_admin_workbench_validatedimport",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "validatedimport"
     },
     {
       "label": "Icon()",
       "file_type": "code",
       "source_file": "app/admin/workbench.tsx",
-      "source_location": "L10",
+      "source_location": "L11",
       "_origin": "ast",
       "id": "app_admin_workbench_icon",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "icon()"
     },
     {
       "label": "AdminWorkbench()",
       "file_type": "code",
       "source_file": "app/admin/workbench.tsx",
-      "source_location": "L22",
+      "source_location": "L23",
       "_origin": "ast",
       "id": "app_admin_workbench_adminworkbench",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "adminworkbench()"
     },
     {
@@ -235,8 +235,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_api_admin_publish_route",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "publish/route.ts"
     },
     {
@@ -246,8 +246,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "app_api_admin_publish_route_post",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "post()"
     },
     {
@@ -257,8 +257,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_api_admin_rollback_route",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "rollback/route.ts"
     },
     {
@@ -268,8 +268,8 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "app_api_admin_rollback_route_post",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "post()"
     },
     {
@@ -1500,8 +1500,8 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_defs_localizedtext",
-      "community": 35,
-      "community_name": "status",
+      "community": 69,
+      "community_name": "localizedText",
       "norm_label": "localizedtext"
     },
     {
@@ -1511,8 +1511,8 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_localizedtext_type",
-      "community": 35,
-      "community_name": "status",
+      "community": 69,
+      "community_name": "localizedText",
       "norm_label": "type"
     },
     {
@@ -1522,8 +1522,8 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_localizedtext_additionalproperties",
-      "community": 35,
-      "community_name": "status",
+      "community": 69,
+      "community_name": "localizedText",
       "norm_label": "additionalproperties"
     },
     {
@@ -1533,8 +1533,8 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_localizedtext_required",
-      "community": 35,
-      "community_name": "status",
+      "community": 69,
+      "community_name": "localizedText",
       "norm_label": "required"
     },
     {
@@ -1544,8 +1544,8 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "ref_name",
-      "community": 35,
-      "community_name": "status",
+      "community": 69,
+      "community_name": "localizedText",
       "norm_label": "name"
     },
     {
@@ -1555,8 +1555,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_localizedtext_properties",
-      "community": 35,
-      "community_name": "status",
+      "community": 69,
+      "community_name": "localizedText",
       "norm_label": "properties"
     },
     {
@@ -1566,8 +1566,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_properties_name",
-      "community": 35,
-      "community_name": "status",
+      "community": 68,
+      "community_name": "skill",
       "norm_label": "name"
     },
     {
@@ -1577,8 +1577,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_name_type",
-      "community": 35,
-      "community_name": "status",
+      "community": 68,
+      "community_name": "skill",
       "norm_label": "type"
     },
     {
@@ -1588,8 +1588,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_name_minlength",
-      "community": 35,
-      "community_name": "status",
+      "community": 68,
+      "community_name": "skill",
       "norm_label": "minlength"
     },
     {
@@ -1599,8 +1599,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_properties_description",
-      "community": 35,
-      "community_name": "status",
+      "community": 69,
+      "community_name": "localizedText",
       "norm_label": "description"
     },
     {
@@ -1610,8 +1610,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_description_type",
-      "community": 35,
-      "community_name": "status",
+      "community": 69,
+      "community_name": "localizedText",
       "norm_label": "type"
     },
     {
@@ -1786,8 +1786,8 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_defs_skill",
-      "community": 35,
-      "community_name": "status",
+      "community": 68,
+      "community_name": "skill",
       "norm_label": "skill"
     },
     {
@@ -1797,8 +1797,8 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_skill_type",
-      "community": 35,
-      "community_name": "status",
+      "community": 68,
+      "community_name": "skill",
       "norm_label": "type"
     },
     {
@@ -1808,8 +1808,8 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_skill_additionalproperties",
-      "community": 35,
-      "community_name": "status",
+      "community": 68,
+      "community_name": "skill",
       "norm_label": "additionalproperties"
     },
     {
@@ -1852,8 +1852,8 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_skill_properties",
-      "community": 35,
-      "community_name": "status",
+      "community": 68,
+      "community_name": "skill",
       "norm_label": "properties"
     },
     {
@@ -1863,8 +1863,8 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_properties_level",
-      "community": 35,
-      "community_name": "status",
+      "community": 68,
+      "community_name": "skill",
       "norm_label": "level"
     },
     {
@@ -1874,8 +1874,8 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_level_type",
-      "community": 35,
-      "community_name": "status",
+      "community": 68,
+      "community_name": "skill",
       "norm_label": "type"
     },
     {
@@ -1885,8 +1885,8 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_level_minimum",
-      "community": 35,
-      "community_name": "status",
+      "community": 68,
+      "community_name": "skill",
       "norm_label": "minimum"
     },
     {
@@ -1896,8 +1896,8 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_level_maximum",
-      "community": 35,
-      "community_name": "status",
+      "community": 68,
+      "community_name": "skill",
       "norm_label": "maximum"
     },
     {
@@ -1907,8 +1907,8 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_properties_sortorder",
-      "community": 26,
-      "community_name": "properties",
+      "community": 22,
+      "community_name": "sortOrder",
       "norm_label": "sortorder"
     },
     {
@@ -1918,8 +1918,8 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_sortorder_type",
-      "community": 26,
-      "community_name": "properties",
+      "community": 22,
+      "community_name": "sortOrder",
       "norm_label": "type"
     },
     {
@@ -1929,8 +1929,8 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_sortorder_minimum",
-      "community": 26,
-      "community_name": "properties",
+      "community": 22,
+      "community_name": "sortOrder",
       "norm_label": "minimum"
     },
     {
@@ -2116,8 +2116,8 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_defs_category",
-      "community": 22,
-      "community_name": "sortOrder",
+      "community": 61,
+      "community_name": "$defs",
       "norm_label": "category"
     },
     {
@@ -2127,8 +2127,8 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_category_type",
-      "community": 22,
-      "community_name": "sortOrder",
+      "community": 61,
+      "community_name": "$defs",
       "norm_label": "type"
     },
     {
@@ -2138,8 +2138,8 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_category_additionalproperties",
-      "community": 22,
-      "community_name": "sortOrder",
+      "community": 61,
+      "community_name": "$defs",
       "norm_label": "additionalproperties"
     },
     {
@@ -2512,7 +2512,7 @@
       "source_location": "L70",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_defs_contact",
-      "community": 61,
+      "community": 49,
       "community_name": "$defs",
       "norm_label": "contact"
     },
@@ -2523,7 +2523,7 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_contact_type",
-      "community": 61,
+      "community": 49,
       "community_name": "$defs",
       "norm_label": "type"
     },
@@ -2534,7 +2534,7 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_contact_additionalproperties",
-      "community": 61,
+      "community": 49,
       "community_name": "$defs",
       "norm_label": "additionalproperties"
     },
@@ -2545,8 +2545,8 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_contact_required",
-      "community": 35,
-      "community_name": "status",
+      "community": 70,
+      "community_name": "required",
       "norm_label": "required"
     },
     {
@@ -2556,8 +2556,8 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "ref_type",
-      "community": 35,
-      "community_name": "status",
+      "community": 70,
+      "community_name": "required",
       "norm_label": "type"
     },
     {
@@ -2567,8 +2567,8 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "ref_label",
-      "community": 35,
-      "community_name": "status",
+      "community": 70,
+      "community_name": "required",
       "norm_label": "label"
     },
     {
@@ -2578,8 +2578,8 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "ref_value",
-      "community": 35,
-      "community_name": "status",
+      "community": 70,
+      "community_name": "required",
       "norm_label": "value"
     },
     {
@@ -2589,8 +2589,8 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "ref_url",
-      "community": 35,
-      "community_name": "status",
+      "community": 70,
+      "community_name": "required",
       "norm_label": "url"
     },
     {
@@ -2600,8 +2600,8 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "ref_visible",
-      "community": 35,
-      "community_name": "status",
+      "community": 70,
+      "community_name": "required",
       "norm_label": "visible"
     },
     {
@@ -2688,8 +2688,8 @@
       "source_location": "L72",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_properties_value",
-      "community": 49,
-      "community_name": "$defs",
+      "community": 74,
+      "community_name": "value",
       "norm_label": "value"
     },
     {
@@ -2699,8 +2699,8 @@
       "source_location": "L72",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_value_type",
-      "community": 49,
-      "community_name": "$defs",
+      "community": 74,
+      "community_name": "value",
       "norm_label": "type"
     },
     {
@@ -2710,8 +2710,8 @@
       "source_location": "L72",
       "_origin": "ast",
       "id": "content_schema_portfolio_schema_value_minlength",
-      "community": 49,
-      "community_name": "$defs",
+      "community": 74,
+      "community_name": "value",
       "norm_label": "minlength"
     },
     {
@@ -2872,7 +2872,7 @@
       "label": "contentSecurityPolicy",
       "file_type": "code",
       "source_file": "next.config.ts",
-      "source_location": "L3",
+      "source_location": "L9",
       "_origin": "ast",
       "id": "next_config_contentsecuritypolicy",
       "community": 23,
@@ -2883,7 +2883,7 @@
       "label": "securityHeaders",
       "file_type": "code",
       "source_file": "next.config.ts",
-      "source_location": "L17",
+      "source_location": "L23",
       "_origin": "ast",
       "id": "next_config_securityheaders",
       "community": 23,
@@ -2894,7 +2894,7 @@
       "label": "nextConfig",
       "file_type": "code",
       "source_file": "next.config.ts",
-      "source_location": "L28",
+      "source_location": "L34",
       "_origin": "ast",
       "id": "next_config_nextconfig",
       "community": 23,
@@ -3909,8 +3909,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "scripts_content",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "content.ts"
     },
     {
@@ -3920,8 +3920,8 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "scripts_content_workbookpath",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "workbookpath"
     },
     {
@@ -3931,8 +3931,8 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "scripts_content_loadworkbook",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "loadworkbook()"
     },
     {
@@ -3942,8 +3942,8 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "scripts_content_revalidatesite",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "revalidatesite()"
     },
     {
@@ -3953,8 +3953,8 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "scripts_content_main",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "main()"
     },
     {
@@ -4068,10 +4068,21 @@
       "norm_label": "oauthcookiename()"
     },
     {
-      "label": "secret()",
+      "label": "adminCookieDeletionOptions()",
       "file_type": "code",
       "source_file": "src/auth/admin.ts",
       "source_location": "L38",
+      "_origin": "ast",
+      "id": "src_auth_admin_admincookiedeletionoptions",
+      "community": 8,
+      "community_name": "GitHub OAuth Security",
+      "norm_label": "admincookiedeletionoptions()"
+    },
+    {
+      "label": "secret()",
+      "file_type": "code",
+      "source_file": "src/auth/admin.ts",
+      "source_location": "L50",
       "_origin": "ast",
       "id": "src_auth_admin_secret",
       "community": 8,
@@ -4082,7 +4093,7 @@
       "label": "signature()",
       "file_type": "code",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L44",
+      "source_location": "L56",
       "_origin": "ast",
       "id": "src_auth_admin_signature",
       "community": 8,
@@ -4093,7 +4104,7 @@
       "label": "safelyEqual()",
       "file_type": "code",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L48",
+      "source_location": "L60",
       "_origin": "ast",
       "id": "src_auth_admin_safelyequal",
       "community": 8,
@@ -4104,7 +4115,7 @@
       "label": "getAuthOrigin()",
       "file_type": "code",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L54",
+      "source_location": "L66",
       "_origin": "ast",
       "id": "src_auth_admin_getauthorigin",
       "community": 8,
@@ -4115,7 +4126,7 @@
       "label": "isAllowedGitHubId()",
       "file_type": "code",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L68",
+      "source_location": "L80",
       "_origin": "ast",
       "id": "src_auth_admin_isallowedgithubid",
       "community": 8,
@@ -4126,7 +4137,7 @@
       "label": "getAdminSession()",
       "file_type": "code",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L78",
+      "source_location": "L90",
       "_origin": "ast",
       "id": "src_auth_admin_getadminsession",
       "community": 8,
@@ -4137,7 +4148,7 @@
       "label": "setAdminSession()",
       "file_type": "code",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L101",
+      "source_location": "L113",
       "_origin": "ast",
       "id": "src_auth_admin_setadminsession",
       "community": 8,
@@ -4148,7 +4159,7 @@
       "label": "clearAdminSession()",
       "file_type": "code",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L117",
+      "source_location": "L129",
       "_origin": "ast",
       "id": "src_auth_admin_clearadminsession",
       "community": 8,
@@ -4159,7 +4170,7 @@
       "label": "createOAuthAttempt()",
       "file_type": "code",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L123",
+      "source_location": "L136",
       "_origin": "ast",
       "id": "src_auth_admin_createoauthattempt",
       "community": 8,
@@ -4170,7 +4181,7 @@
       "label": "consumeOAuthAttempt()",
       "file_type": "code",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L138",
+      "source_location": "L151",
       "_origin": "ast",
       "id": "src_auth_admin_consumeoauthattempt",
       "community": 8,
@@ -4181,7 +4192,7 @@
       "label": "isGitHubAuthConfigured()",
       "file_type": "code",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L148",
+      "source_location": "L162",
       "_origin": "ast",
       "id": "src_auth_admin_isgithubauthconfigured",
       "community": 8,
@@ -4239,8 +4250,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_hudportfolio",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "hudportfolio.tsx"
     },
     {
@@ -4250,8 +4261,8 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "src_components_hudportfolio_hudportfolio",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "hudportfolio()"
     },
     {
@@ -4283,8 +4294,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_components_hud_background_hudbackground",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "hudbackground()"
     },
     {
@@ -4294,8 +4305,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_hud_contact",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "contact.tsx"
     },
     {
@@ -4305,8 +4316,8 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "src_components_hud_contact_hudmessages",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "hudmessages"
     },
     {
@@ -4316,8 +4327,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_components_hud_contact_usecontactform",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "usecontactform()"
     },
     {
@@ -4327,8 +4338,8 @@
       "source_location": "L84",
       "_origin": "ast",
       "id": "src_components_hud_contact_contact",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "contact()"
     },
     {
@@ -4338,8 +4349,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_hud_dock",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "dock.tsx"
     },
     {
@@ -4349,8 +4360,8 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "src_components_hud_dock_tabs",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "tabs"
     },
     {
@@ -4360,8 +4371,8 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_components_hud_dock_huddock",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "huddock()"
     },
     {
@@ -4371,8 +4382,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_hud_panels",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "panels.tsx"
     },
     {
@@ -4382,8 +4393,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_components_hud_panels_tab",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "tab"
     },
     {
@@ -4393,8 +4404,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "src_components_hud_panels_project",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "project"
     },
     {
@@ -4404,8 +4415,8 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_components_hud_panels_windowkey",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "windowkey"
     },
     {
@@ -4415,8 +4426,8 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "src_components_hud_panels_point",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "point"
     },
     {
@@ -4426,8 +4437,8 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "src_components_hud_panels_draghandler",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "draghandler"
     },
     {
@@ -4437,8 +4448,8 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "src_components_hud_panels_hudmessages",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "hudmessages"
     },
     {
@@ -4448,8 +4459,8 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "src_components_hud_panels_origin",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "origin"
     },
     {
@@ -4459,8 +4470,8 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "src_components_hud_panels_glyph",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "glyph()"
     },
     {
@@ -4470,8 +4481,8 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "src_components_hud_panels_panel",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "panel()"
     },
     {
@@ -4481,8 +4492,8 @@
       "source_location": "L92",
       "_origin": "ast",
       "id": "src_components_hud_panels_usehudpanels",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "usehudpanels()"
     },
     {
@@ -4492,8 +4503,8 @@
       "source_location": "L177",
       "_origin": "ast",
       "id": "src_components_hud_panels_profilepanel",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "profilepanel()"
     },
     {
@@ -4503,8 +4514,8 @@
       "source_location": "L214",
       "_origin": "ast",
       "id": "src_components_hud_panels_experiencepanel",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "experiencepanel()"
     },
     {
@@ -4514,8 +4525,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_hud_projects",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "projects.tsx"
     },
     {
@@ -4525,8 +4536,8 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_components_hud_projects_hudmessages",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "hudmessages"
     },
     {
@@ -4536,8 +4547,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_components_hud_projects_useprojectbrowser",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "useprojectbrowser()"
     },
     {
@@ -4547,8 +4558,8 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "src_components_hud_projects_projects",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "projects()"
     },
     {
@@ -4624,8 +4635,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_turnstilewidget",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "turnstilewidget.tsx"
     },
     {
@@ -4635,8 +4646,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_components_turnstilewidget_turnstileapi",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "turnstileapi"
     },
     {
@@ -4646,8 +4657,8 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "src_components_turnstilewidget_window",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "window"
     },
     {
@@ -4657,8 +4668,8 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "src_components_turnstilewidget_turnstilewidget",
-      "community": 9,
-      "community_name": "Excel Import Validation",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "turnstilewidget()"
     },
     {
@@ -4943,8 +4954,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_content_admin_publish",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "admin-publish.ts"
     },
     {
@@ -4954,8 +4965,8 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "src_content_admin_publish_adminpublishdependencies",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "adminpublishdependencies"
     },
     {
@@ -4965,8 +4976,8 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "src_content_admin_publish_handleadminpublish",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "handleadminpublish()"
     },
     {
@@ -4976,8 +4987,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_content_admin_rollback",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "admin-rollback.ts"
     },
     {
@@ -4987,8 +4998,8 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "src_content_admin_rollback_adminrollbackdependencies",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "adminrollbackdependencies"
     },
     {
@@ -4998,8 +5009,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_content_admin_rollback_handleadminrollback",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "handleadminrollback()"
     },
     {
@@ -5009,8 +5020,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_content_data",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "data.ts"
     },
     {
@@ -5020,8 +5031,8 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_content_data_getcachedcontent",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "getcachedcontent"
     },
     {
@@ -5031,9 +5042,53 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_content_data_getportfolioview",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "getportfolioview()"
+    },
+    {
+      "label": "formatVersionTimestamp.test.ts",
+      "file_type": "code",
+      "source_file": "src/content/formatVersionTimestamp.test.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_content_formatversiontimestamp_test",
+      "community": 9,
+      "community_name": "Excel Import Validation",
+      "norm_label": "formatversiontimestamp.test.ts"
+    },
+    {
+      "label": "formatVersionTimestamp.ts",
+      "file_type": "code",
+      "source_file": "src/content/formatVersionTimestamp.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_content_formatversiontimestamp",
+      "community": 9,
+      "community_name": "Excel Import Validation",
+      "norm_label": "formatversiontimestamp.ts"
+    },
+    {
+      "label": "pad()",
+      "file_type": "code",
+      "source_file": "src/content/formatVersionTimestamp.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_content_formatversiontimestamp_pad",
+      "community": 9,
+      "community_name": "Excel Import Validation",
+      "norm_label": "pad()"
+    },
+    {
+      "label": "formatVersionTimestamp()",
+      "file_type": "code",
+      "source_file": "src/content/formatVersionTimestamp.ts",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "src_content_formatversiontimestamp_formatversiontimestamp",
+      "community": 9,
+      "community_name": "Excel Import Validation",
+      "norm_label": "formatversiontimestamp()"
     },
     {
       "label": "importer.ts",
@@ -5273,8 +5328,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_content_repository",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "repository.ts"
     },
     {
@@ -5284,8 +5339,8 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_content_repository_contentversion",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "contentversion"
     },
     {
@@ -5295,8 +5350,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_content_repository_contentactor",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "contentactor"
     },
     {
@@ -5306,8 +5361,8 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "src_content_repository_contentauditevent",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "contentauditevent"
     },
     {
@@ -5317,8 +5372,8 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "src_content_repository_hasdatabase",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "hasdatabase()"
     },
     {
@@ -5328,8 +5383,8 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "src_content_repository_sql",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "sql()"
     },
     {
@@ -5339,8 +5394,8 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "src_content_repository_getpublishedcontent",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "getpublishedcontent()"
     },
     {
@@ -5350,8 +5405,8 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "src_content_repository_normalizeactor",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "normalizeactor()"
     },
     {
@@ -5361,8 +5416,8 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "src_content_repository_publishcontent",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "publishcontent()"
     },
     {
@@ -5372,8 +5427,8 @@
       "source_location": "L104",
       "_origin": "ast",
       "id": "src_content_repository_listcontentversions",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "listcontentversions()"
     },
     {
@@ -5383,8 +5438,8 @@
       "source_location": "L133",
       "_origin": "ast",
       "id": "src_content_repository_listcontentauditevents",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "listcontentauditevents()"
     },
     {
@@ -5394,8 +5449,8 @@
       "source_location": "L165",
       "_origin": "ast",
       "id": "src_content_repository_rollbackcontent",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "rollbackcontent()"
     },
     {
@@ -5405,8 +5460,8 @@
       "source_location": "L197",
       "_origin": "ast",
       "id": "src_content_repository_closecontentdatabase",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "closecontentdatabase()"
     },
     {
@@ -5416,8 +5471,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_content_types",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "types.ts"
     },
     {
@@ -5427,8 +5482,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_content_types_locale",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "locale"
     },
     {
@@ -5438,8 +5493,8 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "src_content_types_translationmap",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "translationmap"
     },
     {
@@ -5449,8 +5504,8 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "src_content_types_portfoliocontent",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "portfoliocontent"
     },
     {
@@ -5460,8 +5515,8 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "src_content_types_portfolioview",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "portfolioview"
     },
     {
@@ -5471,8 +5526,8 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "src_content_types_importissue",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "importissue"
     },
     {
@@ -5482,8 +5537,8 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "src_content_types_importresult",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "importresult"
     },
     {
@@ -5493,8 +5548,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_content_view",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "view.ts"
     },
     {
@@ -5504,8 +5559,8 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "src_content_view_localized",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "localized()"
     },
     {
@@ -5515,8 +5570,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_content_view_createportfolioview",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "createportfolioview()"
     },
     {
@@ -6065,8 +6120,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_unit_admin_rollback_route_test",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "admin-rollback-route.test.ts"
     },
     {
@@ -6076,8 +6131,8 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "tests_unit_admin_rollback_route_test_actor",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "actor"
     },
     {
@@ -6087,8 +6142,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "tests_unit_admin_rollback_route_test_rollbackrequest",
-      "community": 8,
-      "community_name": "GitHub OAuth Security",
+      "community": 9,
+      "community_name": "Excel Import Validation",
       "norm_label": "rollbackrequest()"
     },
     {
@@ -6106,7 +6161,7 @@
       "label": "authenticatedSession",
       "file_type": "code",
       "source_file": "tests/unit/admin.test.ts",
-      "source_location": "L11",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "tests_unit_admin_test_authenticatedsession",
       "community": 8,
@@ -6117,7 +6172,7 @@
       "label": "readAuthenticatedSession()",
       "file_type": "code",
       "source_file": "tests/unit/admin.test.ts",
-      "source_location": "L16",
+      "source_location": "L20",
       "_origin": "ast",
       "id": "tests_unit_admin_test_readauthenticatedsession",
       "community": 8,
@@ -6128,7 +6183,7 @@
       "label": "adminRequest()",
       "file_type": "code",
       "source_file": "tests/unit/admin.test.ts",
-      "source_location": "L23",
+      "source_location": "L27",
       "_origin": "ast",
       "id": "tests_unit_admin_test_adminrequest",
       "community": 8,
@@ -6263,8 +6318,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_unit_view_test",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "view.test.ts"
     },
     {
@@ -6274,8 +6329,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "tests_unit_view_test_contentfixture",
-      "community": 1,
-      "community_name": "Admin API Publishing",
+      "community": 20,
+      "community_name": "Root Layout Typography",
       "norm_label": "contentfixture()"
     },
     {
@@ -7676,6 +7731,336 @@
       "norm_label": "source nodes"
     },
     {
+      "label": "query_20260802_210628_make_localhost_and_custom_domains_work_without_sit.md",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_210628_make_localhost_and_custom_domains_work_without_sit.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_210628_make_localhost_and_custom_domains_work_without_sit",
+      "community": 62,
+      "community_name": "Q: Make localhost and custom domains work without SITE_URL",
+      "norm_label": "query_20260802_210628_make_localhost_and_custom_domains_work_without_sit.md"
+    },
+    {
+      "label": "Q: Make localhost and custom domains work without SITE_URL",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_210628_make_localhost_and_custom_domains_work_without_sit.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_210628_make_localhost_and_custom_domains_work_without_sit_q_make_localhost_and_custom_domains_work_without_site_url",
+      "community": 62,
+      "community_name": "Q: Make localhost and custom domains work without SITE_URL",
+      "norm_label": "q: make localhost and custom domains work without site_url"
+    },
+    {
+      "label": "Answer",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_210628_make_localhost_and_custom_domains_work_without_sit.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_210628_make_localhost_and_custom_domains_work_without_sit_answer",
+      "community": 62,
+      "community_name": "Q: Make localhost and custom domains work without SITE_URL",
+      "norm_label": "answer"
+    },
+    {
+      "label": "Outcome",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_210628_make_localhost_and_custom_domains_work_without_sit.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_210628_make_localhost_and_custom_domains_work_without_sit_outcome",
+      "community": 62,
+      "community_name": "Q: Make localhost and custom domains work without SITE_URL",
+      "norm_label": "outcome"
+    },
+    {
+      "label": "Source Nodes",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_210628_make_localhost_and_custom_domains_work_without_sit.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_210628_make_localhost_and_custom_domains_work_without_sit_source_nodes",
+      "community": 62,
+      "community_name": "Q: Make localhost and custom domains work without SITE_URL",
+      "norm_label": "source nodes"
+    },
+    {
+      "label": "query_20260802_222233_production__admin_returns_vercel_internal_function.md",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_222233_production__admin_returns_vercel_internal_function.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_222233_production_admin_returns_vercel_internal_function",
+      "community": 66,
+      "community_name": "Q: Production /admin returns Vercel INTERNAL_FUNCTION_NOT_FOUND after GitHub OAuth (credentials redacted)",
+      "norm_label": "query_20260802_222233_production__admin_returns_vercel_internal_function.md"
+    },
+    {
+      "label": "Q: Production /admin returns Vercel INTERNAL_FUNCTION_NOT_FOUND after GitHub OAuth (credentials redacted)",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_222233_production__admin_returns_vercel_internal_function.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_222233_production_admin_returns_vercel_internal_function_q_production_admin_returns_vercel_internal_function_not_found_after_github_oauth_credentials_redacted",
+      "community": 66,
+      "community_name": "Q: Production /admin returns Vercel INTERNAL_FUNCTION_NOT_FOUND after GitHub OAuth (credentials redacted)",
+      "norm_label": "q: production /admin returns vercel internal_function_not_found after github oauth (credentials redacted)"
+    },
+    {
+      "label": "Answer",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_222233_production__admin_returns_vercel_internal_function.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_222233_production_admin_returns_vercel_internal_function_answer",
+      "community": 66,
+      "community_name": "Q: Production /admin returns Vercel INTERNAL_FUNCTION_NOT_FOUND after GitHub OAuth (credentials redacted)",
+      "norm_label": "answer"
+    },
+    {
+      "label": "Outcome",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_222233_production__admin_returns_vercel_internal_function.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_222233_production_admin_returns_vercel_internal_function_outcome",
+      "community": 66,
+      "community_name": "Q: Production /admin returns Vercel INTERNAL_FUNCTION_NOT_FOUND after GitHub OAuth (credentials redacted)",
+      "norm_label": "outcome"
+    },
+    {
+      "label": "Source Nodes",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_222233_production__admin_returns_vercel_internal_function.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_222233_production_admin_returns_vercel_internal_function_source_nodes",
+      "community": 66,
+      "community_name": "Q: Production /admin returns Vercel INTERNAL_FUNCTION_NOT_FOUND after GitHub OAuth (credentials redacted)",
+      "norm_label": "source nodes"
+    },
+    {
+      "label": "query_20260802_225848_\u043a\u0430\u043a\u043e\u0439_custom_environment_variable_prefix_\u0431\u044b\u043b_\u0443\u0441\u0442\u0430\u043d.md",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_225848_\u043a\u0430\u043a\u043e\u0439_custom_environment_variable_prefix_\u0431\u044b\u043b_\u0443\u0441\u0442\u0430\u043d.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_225848_\u043a\u0430\u043a\u043e\u0439_custom_environment_variable_prefix_\u0431\u044b\u043b_\u0443\u0441\u0442\u0430\u043d",
+      "community": 67,
+      "community_name": "Q: \u041a\u0430\u043a\u043e\u0439 Custom Environment Variable Prefix \u0431\u044b\u043b \u0443\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d \u0434\u043b\u044f Neon?",
+      "norm_label": "query_20260802_225848_\u043a\u0430\u043a\u043e\u0438_custom_environment_variable_prefix_\u0431\u044b\u043b_\u0443\u0441\u0442\u0430\u043d.md"
+    },
+    {
+      "label": "Q: \u041a\u0430\u043a\u043e\u0439 Custom Environment Variable Prefix \u0431\u044b\u043b \u0443\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d \u0434\u043b\u044f Neon?",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_225848_\u043a\u0430\u043a\u043e\u0439_custom_environment_variable_prefix_\u0431\u044b\u043b_\u0443\u0441\u0442\u0430\u043d.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_225848_\u043a\u0430\u043a\u043e\u0439_custom_environment_variable_prefix_\u0431\u044b\u043b_\u0443\u0441\u0442\u0430\u043d_q_\u043a\u0430\u043a\u043e\u0439_custom_environment_variable_prefix_\u0431\u044b\u043b_\u0443\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d_\u0434\u043b\u044f_neon",
+      "community": 67,
+      "community_name": "Q: \u041a\u0430\u043a\u043e\u0439 Custom Environment Variable Prefix \u0431\u044b\u043b \u0443\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d \u0434\u043b\u044f Neon?",
+      "norm_label": "q: \u043a\u0430\u043a\u043e\u0438 custom environment variable prefix \u0431\u044b\u043b \u0443\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d \u0434\u043b\u044f neon?"
+    },
+    {
+      "label": "Answer",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_225848_\u043a\u0430\u043a\u043e\u0439_custom_environment_variable_prefix_\u0431\u044b\u043b_\u0443\u0441\u0442\u0430\u043d.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_225848_\u043a\u0430\u043a\u043e\u0439_custom_environment_variable_prefix_\u0431\u044b\u043b_\u0443\u0441\u0442\u0430\u043d_answer",
+      "community": 67,
+      "community_name": "Q: \u041a\u0430\u043a\u043e\u0439 Custom Environment Variable Prefix \u0431\u044b\u043b \u0443\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d \u0434\u043b\u044f Neon?",
+      "norm_label": "answer"
+    },
+    {
+      "label": "Outcome",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_225848_\u043a\u0430\u043a\u043e\u0439_custom_environment_variable_prefix_\u0431\u044b\u043b_\u0443\u0441\u0442\u0430\u043d.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_225848_\u043a\u0430\u043a\u043e\u0439_custom_environment_variable_prefix_\u0431\u044b\u043b_\u0443\u0441\u0442\u0430\u043d_outcome",
+      "community": 67,
+      "community_name": "Q: \u041a\u0430\u043a\u043e\u0439 Custom Environment Variable Prefix \u0431\u044b\u043b \u0443\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d \u0434\u043b\u044f Neon?",
+      "norm_label": "outcome"
+    },
+    {
+      "label": "Source Nodes",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_225848_\u043a\u0430\u043a\u043e\u0439_custom_environment_variable_prefix_\u0431\u044b\u043b_\u0443\u0441\u0442\u0430\u043d.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_225848_\u043a\u0430\u043a\u043e\u0439_custom_environment_variable_prefix_\u0431\u044b\u043b_\u0443\u0441\u0442\u0430\u043d_source_nodes",
+      "community": 67,
+      "community_name": "Q: \u041a\u0430\u043a\u043e\u0439 Custom Environment Variable Prefix \u0431\u044b\u043b \u0443\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d \u0434\u043b\u044f Neon?",
+      "norm_label": "source nodes"
+    },
+    {
+      "label": "query_20260802_231100_react__418_\u0438_csp_\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430_vercel_live_\u043d\u0430__admin.md",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_231100_react__418_\u0438_csp_\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430_vercel_live_\u043d\u0430__admin.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_231100_react_418_\u0438_csp_\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430_vercel_live_\u043d\u0430_admin",
+      "community": 71,
+      "community_name": "Q: React #418 \u0438 CSP \u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430 vercel.live \u043d\u0430 /admin",
+      "norm_label": "query_20260802_231100_react__418_\u0438_csp_\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430_vercel_live_\u043d\u0430__admin.md"
+    },
+    {
+      "label": "Q: React #418 \u0438 CSP \u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430 vercel.live \u043d\u0430 /admin",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_231100_react__418_\u0438_csp_\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430_vercel_live_\u043d\u0430__admin.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_231100_react_418_\u0438_csp_\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430_vercel_live_\u043d\u0430_admin_q_react_418_\u0438_csp_\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430_vercel_live_\u043d\u0430_admin",
+      "community": 71,
+      "community_name": "Q: React #418 \u0438 CSP \u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430 vercel.live \u043d\u0430 /admin",
+      "norm_label": "q: react #418 \u0438 csp \u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430 vercel.live \u043d\u0430 /admin"
+    },
+    {
+      "label": "Answer",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_231100_react__418_\u0438_csp_\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430_vercel_live_\u043d\u0430__admin.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_231100_react_418_\u0438_csp_\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430_vercel_live_\u043d\u0430_admin_answer",
+      "community": 71,
+      "community_name": "Q: React #418 \u0438 CSP \u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430 vercel.live \u043d\u0430 /admin",
+      "norm_label": "answer"
+    },
+    {
+      "label": "Outcome",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_231100_react__418_\u0438_csp_\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430_vercel_live_\u043d\u0430__admin.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_231100_react_418_\u0438_csp_\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430_vercel_live_\u043d\u0430_admin_outcome",
+      "community": 71,
+      "community_name": "Q: React #418 \u0438 CSP \u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430 vercel.live \u043d\u0430 /admin",
+      "norm_label": "outcome"
+    },
+    {
+      "label": "Source Nodes",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_231100_react__418_\u0438_csp_\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430_vercel_live_\u043d\u0430__admin.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_231100_react_418_\u0438_csp_\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430_vercel_live_\u043d\u0430_admin_source_nodes",
+      "community": 71,
+      "community_name": "Q: React #418 \u0438 CSP \u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430 vercel.live \u043d\u0430 /admin",
+      "norm_label": "source nodes"
+    },
+    {
+      "label": "query_20260802_232131_react__418_\u0438_csp_\u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f_\u043f\u0440\u0438_logout_\u0438\u0437_admin.md",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_232131_react__418_\u0438_csp_\u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f_\u043f\u0440\u0438_logout_\u0438\u0437_admin.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_232131_react_418_\u0438_csp_\u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f_\u043f\u0440\u0438_logout_\u0438\u0437_admin",
+      "community": 72,
+      "community_name": "Q: React #418 \u0438 CSP \u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f \u043f\u0440\u0438 logout \u0438\u0437 admin",
+      "norm_label": "query_20260802_232131_react__418_\u0438_csp_\u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f_\u043f\u0440\u0438_logout_\u0438\u0437_admin.md"
+    },
+    {
+      "label": "Q: React #418 \u0438 CSP \u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f \u043f\u0440\u0438 logout \u0438\u0437 admin",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_232131_react__418_\u0438_csp_\u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f_\u043f\u0440\u0438_logout_\u0438\u0437_admin.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_232131_react_418_\u0438_csp_\u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f_\u043f\u0440\u0438_logout_\u0438\u0437_admin_q_react_418_\u0438_csp_\u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f_\u043f\u0440\u0438_logout_\u0438\u0437_admin",
+      "community": 72,
+      "community_name": "Q: React #418 \u0438 CSP \u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f \u043f\u0440\u0438 logout \u0438\u0437 admin",
+      "norm_label": "q: react #418 \u0438 csp \u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f \u043f\u0440\u0438 logout \u0438\u0437 admin"
+    },
+    {
+      "label": "Answer",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_232131_react__418_\u0438_csp_\u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f_\u043f\u0440\u0438_logout_\u0438\u0437_admin.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_232131_react_418_\u0438_csp_\u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f_\u043f\u0440\u0438_logout_\u0438\u0437_admin_answer",
+      "community": 72,
+      "community_name": "Q: React #418 \u0438 CSP \u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f \u043f\u0440\u0438 logout \u0438\u0437 admin",
+      "norm_label": "answer"
+    },
+    {
+      "label": "Outcome",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_232131_react__418_\u0438_csp_\u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f_\u043f\u0440\u0438_logout_\u0438\u0437_admin.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_232131_react_418_\u0438_csp_\u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f_\u043f\u0440\u0438_logout_\u0438\u0437_admin_outcome",
+      "community": 72,
+      "community_name": "Q: React #418 \u0438 CSP \u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f \u043f\u0440\u0438 logout \u0438\u0437 admin",
+      "norm_label": "outcome"
+    },
+    {
+      "label": "Source Nodes",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_232131_react__418_\u0438_csp_\u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f_\u043f\u0440\u0438_logout_\u0438\u0437_admin.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_232131_react_418_\u0438_csp_\u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f_\u043f\u0440\u0438_logout_\u0438\u0437_admin_source_nodes",
+      "community": 72,
+      "community_name": "Q: React #418 \u0438 CSP \u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f \u043f\u0440\u0438 logout \u0438\u0437 admin",
+      "norm_label": "source nodes"
+    },
+    {
+      "label": "query_20260802_232618_\u043f\u043e\u0447\u0435\u043c\u0443_dev_preview_\u0432\u0441\u0451_\u0435\u0449\u0451_\u043e\u0442\u0434\u0430\u0451\u0442_\u0441\u0442\u0430\u0440\u044b\u0439_csp_\u043f\u043e\u0441\u043b\u0435.md",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_232618_\u043f\u043e\u0447\u0435\u043c\u0443_dev_preview_\u0432\u0441\u0451_\u0435\u0449\u0451_\u043e\u0442\u0434\u0430\u0451\u0442_\u0441\u0442\u0430\u0440\u044b\u0439_csp_\u043f\u043e\u0441\u043b\u0435.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_232618_\u043f\u043e\u0447\u0435\u043c\u0443_dev_preview_\u0432\u0441\u0451_\u0435\u0449\u0451_\u043e\u0442\u0434\u0430\u0451\u0442_\u0441\u0442\u0430\u0440\u044b\u0439_csp_\u043f\u043e\u0441\u043b\u0435",
+      "community": 73,
+      "community_name": "Q: \u041f\u043e\u0447\u0435\u043c\u0443 dev Preview \u0432\u0441\u0451 \u0435\u0449\u0451 \u043e\u0442\u0434\u0430\u0451\u0442 \u0441\u0442\u0430\u0440\u044b\u0439 CSP \u043f\u043e\u0441\u043b\u0435 push 6fcbff0?",
+      "norm_label": "query_20260802_232618_\u043f\u043e\u0447\u0435\u043c\u0443_dev_preview_\u0432\u0441\u0435_\u0435\u0449\u0435_\u043e\u0442\u0434\u0430\u0435\u0442_\u0441\u0442\u0430\u0440\u044b\u0438_csp_\u043f\u043e\u0441\u043b\u0435.md"
+    },
+    {
+      "label": "Q: \u041f\u043e\u0447\u0435\u043c\u0443 dev Preview \u0432\u0441\u0451 \u0435\u0449\u0451 \u043e\u0442\u0434\u0430\u0451\u0442 \u0441\u0442\u0430\u0440\u044b\u0439 CSP \u043f\u043e\u0441\u043b\u0435 push 6fcbff0?",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_232618_\u043f\u043e\u0447\u0435\u043c\u0443_dev_preview_\u0432\u0441\u0451_\u0435\u0449\u0451_\u043e\u0442\u0434\u0430\u0451\u0442_\u0441\u0442\u0430\u0440\u044b\u0439_csp_\u043f\u043e\u0441\u043b\u0435.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_232618_\u043f\u043e\u0447\u0435\u043c\u0443_dev_preview_\u0432\u0441\u0451_\u0435\u0449\u0451_\u043e\u0442\u0434\u0430\u0451\u0442_\u0441\u0442\u0430\u0440\u044b\u0439_csp_\u043f\u043e\u0441\u043b\u0435_q_\u043f\u043e\u0447\u0435\u043c\u0443_dev_preview_\u0432\u0441\u0451_\u0435\u0449\u0451_\u043e\u0442\u0434\u0430\u0451\u0442_\u0441\u0442\u0430\u0440\u044b\u0439_csp_\u043f\u043e\u0441\u043b\u0435_push_6fcbff0",
+      "community": 73,
+      "community_name": "Q: \u041f\u043e\u0447\u0435\u043c\u0443 dev Preview \u0432\u0441\u0451 \u0435\u0449\u0451 \u043e\u0442\u0434\u0430\u0451\u0442 \u0441\u0442\u0430\u0440\u044b\u0439 CSP \u043f\u043e\u0441\u043b\u0435 push 6fcbff0?",
+      "norm_label": "q: \u043f\u043e\u0447\u0435\u043c\u0443 dev preview \u0432\u0441\u0435 \u0435\u0449\u0435 \u043e\u0442\u0434\u0430\u0435\u0442 \u0441\u0442\u0430\u0440\u044b\u0438 csp \u043f\u043e\u0441\u043b\u0435 push 6fcbff0?"
+    },
+    {
+      "label": "Answer",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_232618_\u043f\u043e\u0447\u0435\u043c\u0443_dev_preview_\u0432\u0441\u0451_\u0435\u0449\u0451_\u043e\u0442\u0434\u0430\u0451\u0442_\u0441\u0442\u0430\u0440\u044b\u0439_csp_\u043f\u043e\u0441\u043b\u0435.md",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_232618_\u043f\u043e\u0447\u0435\u043c\u0443_dev_preview_\u0432\u0441\u0451_\u0435\u0449\u0451_\u043e\u0442\u0434\u0430\u0451\u0442_\u0441\u0442\u0430\u0440\u044b\u0439_csp_\u043f\u043e\u0441\u043b\u0435_answer",
+      "community": 73,
+      "community_name": "Q: \u041f\u043e\u0447\u0435\u043c\u0443 dev Preview \u0432\u0441\u0451 \u0435\u0449\u0451 \u043e\u0442\u0434\u0430\u0451\u0442 \u0441\u0442\u0430\u0440\u044b\u0439 CSP \u043f\u043e\u0441\u043b\u0435 push 6fcbff0?",
+      "norm_label": "answer"
+    },
+    {
+      "label": "Outcome",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_232618_\u043f\u043e\u0447\u0435\u043c\u0443_dev_preview_\u0432\u0441\u0451_\u0435\u0449\u0451_\u043e\u0442\u0434\u0430\u0451\u0442_\u0441\u0442\u0430\u0440\u044b\u0439_csp_\u043f\u043e\u0441\u043b\u0435.md",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_232618_\u043f\u043e\u0447\u0435\u043c\u0443_dev_preview_\u0432\u0441\u0451_\u0435\u0449\u0451_\u043e\u0442\u0434\u0430\u0451\u0442_\u0441\u0442\u0430\u0440\u044b\u0439_csp_\u043f\u043e\u0441\u043b\u0435_outcome",
+      "community": 73,
+      "community_name": "Q: \u041f\u043e\u0447\u0435\u043c\u0443 dev Preview \u0432\u0441\u0451 \u0435\u0449\u0451 \u043e\u0442\u0434\u0430\u0451\u0442 \u0441\u0442\u0430\u0440\u044b\u0439 CSP \u043f\u043e\u0441\u043b\u0435 push 6fcbff0?",
+      "norm_label": "outcome"
+    },
+    {
+      "label": "Source Nodes",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260802_232618_\u043f\u043e\u0447\u0435\u043c\u0443_dev_preview_\u0432\u0441\u0451_\u0435\u0449\u0451_\u043e\u0442\u0434\u0430\u0451\u0442_\u0441\u0442\u0430\u0440\u044b\u0439_csp_\u043f\u043e\u0441\u043b\u0435.md",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260802_232618_\u043f\u043e\u0447\u0435\u043c\u0443_dev_preview_\u0432\u0441\u0451_\u0435\u0449\u0451_\u043e\u0442\u0434\u0430\u0451\u0442_\u0441\u0442\u0430\u0440\u044b\u0439_csp_\u043f\u043e\u0441\u043b\u0435_source_nodes",
+      "community": 73,
+      "community_name": "Q: \u041f\u043e\u0447\u0435\u043c\u0443 dev Preview \u0432\u0441\u0451 \u0435\u0449\u0451 \u043e\u0442\u0434\u0430\u0451\u0442 \u0441\u0442\u0430\u0440\u044b\u0439 CSP \u043f\u043e\u0441\u043b\u0435 push 6fcbff0?",
+      "norm_label": "source nodes"
+    },
+    {
       "label": "size",
       "file_type": "code",
       "source_file": "app/opengraph-image.tsx",
@@ -8895,7 +9280,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/admin/workbench.tsx",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_admin_workbench",
@@ -8906,7 +9291,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/admin/workbench.tsx",
-      "source_location": "L10",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_admin_workbench",
@@ -8917,11 +9302,35 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/admin/workbench.tsx",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_admin_workbench",
       "target": "app_admin_workbench_validatedimport",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/admin/workbench.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_admin_workbench",
+      "target": "src_content_formatversiontimestamp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/admin/workbench.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_admin_workbench",
+      "target": "src_content_formatversiontimestamp_formatversiontimestamp",
       "confidence_score": 1.0
     },
     {
@@ -8983,6 +9392,18 @@
       "source": "app_admin_workbench",
       "target": "src_content_types_portfoliocontent",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/admin/workbench.tsx",
+      "source_location": "L160",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_admin_workbench_adminworkbench",
+      "target": "src_content_formatversiontimestamp_formatversiontimestamp"
     },
     {
       "relation": "contains",
@@ -13309,7 +13730,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "next.config.ts",
-      "source_location": "L3",
+      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
       "source": "next_config",
@@ -13320,7 +13741,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "next.config.ts",
-      "source_location": "L28",
+      "source_location": "L34",
       "weight": 1.0,
       "_origin": "ast",
       "source": "next_config",
@@ -13331,7 +13752,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "next.config.ts",
-      "source_location": "L17",
+      "source_location": "L23",
       "weight": 1.0,
       "_origin": "ast",
       "source": "next_config",
@@ -14808,6 +15229,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/auth/admin.ts",
+      "source_location": "L38",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_auth_admin",
+      "target": "src_auth_admin_admincookiedeletionoptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/auth/admin.ts",
       "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
@@ -14819,7 +15251,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L117",
+      "source_location": "L129",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_auth_admin",
@@ -14830,7 +15262,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L138",
+      "source_location": "L151",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_auth_admin",
@@ -14841,7 +15273,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L123",
+      "source_location": "L136",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_auth_admin",
@@ -14852,7 +15284,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L78",
+      "source_location": "L90",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_auth_admin",
@@ -14863,7 +15295,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L54",
+      "source_location": "L66",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_auth_admin",
@@ -14885,7 +15317,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L68",
+      "source_location": "L80",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_auth_admin",
@@ -14896,7 +15328,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L148",
+      "source_location": "L162",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_auth_admin",
@@ -14940,7 +15372,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L48",
+      "source_location": "L60",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_auth_admin",
@@ -14951,7 +15383,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L38",
+      "source_location": "L50",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_auth_admin",
@@ -14973,7 +15405,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L101",
+      "source_location": "L113",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_auth_admin",
@@ -14984,7 +15416,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L44",
+      "source_location": "L56",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_auth_admin",
@@ -15044,7 +15476,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L79",
+      "source_location": "L91",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_auth_admin_getadminsession",
@@ -15056,10 +15488,10 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L120",
+      "source_location": "L41",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_auth_admin_clearadminsession",
+      "source": "src_auth_admin_admincookiedeletionoptions",
       "target": "src_auth_admin_isproduction",
       "confidence_score": 1.0
     },
@@ -15068,7 +15500,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L129",
+      "source_location": "L142",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_auth_admin_createoauthattempt",
@@ -15080,7 +15512,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L60",
+      "source_location": "L72",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_auth_admin_getauthorigin",
@@ -15116,7 +15548,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L109",
+      "source_location": "L121",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_auth_admin_setadminsession",
@@ -15128,19 +15560,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L119",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_auth_admin_clearadminsession",
-      "target": "src_auth_admin_sessioncookiename",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/auth/admin.ts",
-      "source_location": "L82",
+      "source_location": "L94",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_auth_admin_getadminsession",
@@ -15152,7 +15572,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L107",
+      "source_location": "L119",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_auth_admin_setadminsession",
@@ -15164,7 +15584,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L140",
+      "source_location": "L153",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_auth_admin_consumeoauthattempt",
@@ -15176,7 +15596,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L127",
+      "source_location": "L140",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_auth_admin_createoauthattempt",
@@ -15188,7 +15608,43 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L45",
+      "source_location": "L132",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_auth_admin_clearadminsession",
+      "target": "src_auth_admin_admincookiedeletionoptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/auth/admin.ts",
+      "source_location": "L155",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_auth_admin_consumeoauthattempt",
+      "target": "src_auth_admin_admincookiedeletionoptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/admin.test.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_unit_admin_test",
+      "target": "src_auth_admin_admincookiedeletionoptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/auth/admin.ts",
+      "source_location": "L57",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_auth_admin_signature",
@@ -15200,7 +15656,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L86",
+      "source_location": "L98",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_auth_admin_getadminsession",
@@ -15212,7 +15668,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L107",
+      "source_location": "L119",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_auth_admin_setadminsession",
@@ -15224,7 +15680,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L144",
+      "source_location": "L158",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_auth_admin_consumeoauthattempt",
@@ -15236,7 +15692,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L86",
+      "source_location": "L98",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_auth_admin_getadminsession",
@@ -15248,7 +15704,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L155",
+      "source_location": "L169",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_auth_admin_isgithubauthconfigured",
@@ -15260,7 +15716,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/auth/admin.ts",
-      "source_location": "L93",
+      "source_location": "L105",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_auth_admin_getadminsession",
@@ -15329,7 +15785,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/unit/admin.test.ts",
-      "source_location": "L7",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_unit_admin_test",
@@ -15353,7 +15809,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/unit/admin.test.ts",
-      "source_location": "L7",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_unit_admin_test",
@@ -15370,18 +15826,6 @@
       "_origin": "ast",
       "source": "src_components_hudportfolio",
       "target": "src_components_hud_background",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/hudPortfolio.tsx",
-      "source_location": "L7",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_hudportfolio",
-      "target": "src_components_hud_background_hudbackground",
       "confidence_score": 1.0
     },
     {
@@ -16910,7 +17354,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/unit/admin.test.ts",
-      "source_location": "L8",
+      "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_unit_admin_test",
@@ -16934,7 +17378,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/unit/admin.test.ts",
-      "source_location": "L8",
+      "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_unit_admin_test",
@@ -17306,6 +17750,64 @@
       "_origin": "ast",
       "source": "src_content_data_getportfolioview",
       "target": "src_content_view_createportfolioview"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/formatVersionTimestamp.test.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_content_formatversiontimestamp_test",
+      "target": "src_content_formatversiontimestamp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/formatVersionTimestamp.test.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_content_formatversiontimestamp_test",
+      "target": "src_content_formatversiontimestamp_formatversiontimestamp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/formatVersionTimestamp.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_content_formatversiontimestamp",
+      "target": "src_content_formatversiontimestamp_formatversiontimestamp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/formatVersionTimestamp.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_content_formatversiontimestamp",
+      "target": "src_content_formatversiontimestamp_pad",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/formatVersionTimestamp.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_content_formatversiontimestamp_formatversiontimestamp",
+      "target": "src_content_formatversiontimestamp_pad",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -19645,7 +20147,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/unit/admin.test.ts",
-      "source_location": "L23",
+      "source_location": "L27",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_unit_admin_test",
@@ -19656,7 +20158,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/unit/admin.test.ts",
-      "source_location": "L11",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_unit_admin_test",
@@ -19667,7 +20169,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/unit/admin.test.ts",
-      "source_location": "L16",
+      "source_location": "L20",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_unit_admin_test",
@@ -20950,6 +21452,270 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_210628_make_localhost_and_custom_domains_work_without_sit.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_210628_make_localhost_and_custom_domains_work_without_sit",
+      "target": "graphify_out_memory_query_20260802_210628_make_localhost_and_custom_domains_work_without_sit_q_make_localhost_and_custom_domains_work_without_site_url",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_210628_make_localhost_and_custom_domains_work_without_sit.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_210628_make_localhost_and_custom_domains_work_without_sit_q_make_localhost_and_custom_domains_work_without_site_url",
+      "target": "graphify_out_memory_query_20260802_210628_make_localhost_and_custom_domains_work_without_sit_answer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_210628_make_localhost_and_custom_domains_work_without_sit.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_210628_make_localhost_and_custom_domains_work_without_sit_q_make_localhost_and_custom_domains_work_without_site_url",
+      "target": "graphify_out_memory_query_20260802_210628_make_localhost_and_custom_domains_work_without_sit_outcome",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_210628_make_localhost_and_custom_domains_work_without_sit.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_210628_make_localhost_and_custom_domains_work_without_sit_q_make_localhost_and_custom_domains_work_without_site_url",
+      "target": "graphify_out_memory_query_20260802_210628_make_localhost_and_custom_domains_work_without_sit_source_nodes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_222233_production__admin_returns_vercel_internal_function.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_222233_production_admin_returns_vercel_internal_function",
+      "target": "graphify_out_memory_query_20260802_222233_production_admin_returns_vercel_internal_function_q_production_admin_returns_vercel_internal_function_not_found_after_github_oauth_credentials_redacted",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_222233_production__admin_returns_vercel_internal_function.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_222233_production_admin_returns_vercel_internal_function_q_production_admin_returns_vercel_internal_function_not_found_after_github_oauth_credentials_redacted",
+      "target": "graphify_out_memory_query_20260802_222233_production_admin_returns_vercel_internal_function_answer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_222233_production__admin_returns_vercel_internal_function.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_222233_production_admin_returns_vercel_internal_function_q_production_admin_returns_vercel_internal_function_not_found_after_github_oauth_credentials_redacted",
+      "target": "graphify_out_memory_query_20260802_222233_production_admin_returns_vercel_internal_function_outcome",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_222233_production__admin_returns_vercel_internal_function.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_222233_production_admin_returns_vercel_internal_function_q_production_admin_returns_vercel_internal_function_not_found_after_github_oauth_credentials_redacted",
+      "target": "graphify_out_memory_query_20260802_222233_production_admin_returns_vercel_internal_function_source_nodes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_225848_\u043a\u0430\u043a\u043e\u0439_custom_environment_variable_prefix_\u0431\u044b\u043b_\u0443\u0441\u0442\u0430\u043d.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_225848_\u043a\u0430\u043a\u043e\u0439_custom_environment_variable_prefix_\u0431\u044b\u043b_\u0443\u0441\u0442\u0430\u043d",
+      "target": "graphify_out_memory_query_20260802_225848_\u043a\u0430\u043a\u043e\u0439_custom_environment_variable_prefix_\u0431\u044b\u043b_\u0443\u0441\u0442\u0430\u043d_q_\u043a\u0430\u043a\u043e\u0439_custom_environment_variable_prefix_\u0431\u044b\u043b_\u0443\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d_\u0434\u043b\u044f_neon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_225848_\u043a\u0430\u043a\u043e\u0439_custom_environment_variable_prefix_\u0431\u044b\u043b_\u0443\u0441\u0442\u0430\u043d.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_225848_\u043a\u0430\u043a\u043e\u0439_custom_environment_variable_prefix_\u0431\u044b\u043b_\u0443\u0441\u0442\u0430\u043d_q_\u043a\u0430\u043a\u043e\u0439_custom_environment_variable_prefix_\u0431\u044b\u043b_\u0443\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d_\u0434\u043b\u044f_neon",
+      "target": "graphify_out_memory_query_20260802_225848_\u043a\u0430\u043a\u043e\u0439_custom_environment_variable_prefix_\u0431\u044b\u043b_\u0443\u0441\u0442\u0430\u043d_answer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_225848_\u043a\u0430\u043a\u043e\u0439_custom_environment_variable_prefix_\u0431\u044b\u043b_\u0443\u0441\u0442\u0430\u043d.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_225848_\u043a\u0430\u043a\u043e\u0439_custom_environment_variable_prefix_\u0431\u044b\u043b_\u0443\u0441\u0442\u0430\u043d_q_\u043a\u0430\u043a\u043e\u0439_custom_environment_variable_prefix_\u0431\u044b\u043b_\u0443\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d_\u0434\u043b\u044f_neon",
+      "target": "graphify_out_memory_query_20260802_225848_\u043a\u0430\u043a\u043e\u0439_custom_environment_variable_prefix_\u0431\u044b\u043b_\u0443\u0441\u0442\u0430\u043d_outcome",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_225848_\u043a\u0430\u043a\u043e\u0439_custom_environment_variable_prefix_\u0431\u044b\u043b_\u0443\u0441\u0442\u0430\u043d.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_225848_\u043a\u0430\u043a\u043e\u0439_custom_environment_variable_prefix_\u0431\u044b\u043b_\u0443\u0441\u0442\u0430\u043d_q_\u043a\u0430\u043a\u043e\u0439_custom_environment_variable_prefix_\u0431\u044b\u043b_\u0443\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d_\u0434\u043b\u044f_neon",
+      "target": "graphify_out_memory_query_20260802_225848_\u043a\u0430\u043a\u043e\u0439_custom_environment_variable_prefix_\u0431\u044b\u043b_\u0443\u0441\u0442\u0430\u043d_source_nodes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_231100_react__418_\u0438_csp_\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430_vercel_live_\u043d\u0430__admin.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_231100_react_418_\u0438_csp_\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430_vercel_live_\u043d\u0430_admin",
+      "target": "graphify_out_memory_query_20260802_231100_react_418_\u0438_csp_\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430_vercel_live_\u043d\u0430_admin_q_react_418_\u0438_csp_\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430_vercel_live_\u043d\u0430_admin",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_231100_react__418_\u0438_csp_\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430_vercel_live_\u043d\u0430__admin.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_231100_react_418_\u0438_csp_\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430_vercel_live_\u043d\u0430_admin_q_react_418_\u0438_csp_\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430_vercel_live_\u043d\u0430_admin",
+      "target": "graphify_out_memory_query_20260802_231100_react_418_\u0438_csp_\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430_vercel_live_\u043d\u0430_admin_answer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_231100_react__418_\u0438_csp_\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430_vercel_live_\u043d\u0430__admin.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_231100_react_418_\u0438_csp_\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430_vercel_live_\u043d\u0430_admin_q_react_418_\u0438_csp_\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430_vercel_live_\u043d\u0430_admin",
+      "target": "graphify_out_memory_query_20260802_231100_react_418_\u0438_csp_\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430_vercel_live_\u043d\u0430_admin_outcome",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_231100_react__418_\u0438_csp_\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430_vercel_live_\u043d\u0430__admin.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_231100_react_418_\u0438_csp_\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430_vercel_live_\u043d\u0430_admin_q_react_418_\u0438_csp_\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430_vercel_live_\u043d\u0430_admin",
+      "target": "graphify_out_memory_query_20260802_231100_react_418_\u0438_csp_\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430_vercel_live_\u043d\u0430_admin_source_nodes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_232131_react__418_\u0438_csp_\u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f_\u043f\u0440\u0438_logout_\u0438\u0437_admin.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_232131_react_418_\u0438_csp_\u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f_\u043f\u0440\u0438_logout_\u0438\u0437_admin",
+      "target": "graphify_out_memory_query_20260802_232131_react_418_\u0438_csp_\u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f_\u043f\u0440\u0438_logout_\u0438\u0437_admin_q_react_418_\u0438_csp_\u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f_\u043f\u0440\u0438_logout_\u0438\u0437_admin",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_232131_react__418_\u0438_csp_\u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f_\u043f\u0440\u0438_logout_\u0438\u0437_admin.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_232131_react_418_\u0438_csp_\u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f_\u043f\u0440\u0438_logout_\u0438\u0437_admin_q_react_418_\u0438_csp_\u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f_\u043f\u0440\u0438_logout_\u0438\u0437_admin",
+      "target": "graphify_out_memory_query_20260802_232131_react_418_\u0438_csp_\u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f_\u043f\u0440\u0438_logout_\u0438\u0437_admin_answer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_232131_react__418_\u0438_csp_\u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f_\u043f\u0440\u0438_logout_\u0438\u0437_admin.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_232131_react_418_\u0438_csp_\u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f_\u043f\u0440\u0438_logout_\u0438\u0437_admin_q_react_418_\u0438_csp_\u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f_\u043f\u0440\u0438_logout_\u0438\u0437_admin",
+      "target": "graphify_out_memory_query_20260802_232131_react_418_\u0438_csp_\u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f_\u043f\u0440\u0438_logout_\u0438\u0437_admin_outcome",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_232131_react__418_\u0438_csp_\u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f_\u043f\u0440\u0438_logout_\u0438\u0437_admin.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_232131_react_418_\u0438_csp_\u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f_\u043f\u0440\u0438_logout_\u0438\u0437_admin_q_react_418_\u0438_csp_\u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f_\u043f\u0440\u0438_logout_\u0438\u0437_admin",
+      "target": "graphify_out_memory_query_20260802_232131_react_418_\u0438_csp_\u043f\u043e\u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f_\u043f\u0440\u0438_logout_\u0438\u0437_admin_source_nodes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_232618_\u043f\u043e\u0447\u0435\u043c\u0443_dev_preview_\u0432\u0441\u0451_\u0435\u0449\u0451_\u043e\u0442\u0434\u0430\u0451\u0442_\u0441\u0442\u0430\u0440\u044b\u0439_csp_\u043f\u043e\u0441\u043b\u0435.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_232618_\u043f\u043e\u0447\u0435\u043c\u0443_dev_preview_\u0432\u0441\u0451_\u0435\u0449\u0451_\u043e\u0442\u0434\u0430\u0451\u0442_\u0441\u0442\u0430\u0440\u044b\u0439_csp_\u043f\u043e\u0441\u043b\u0435",
+      "target": "graphify_out_memory_query_20260802_232618_\u043f\u043e\u0447\u0435\u043c\u0443_dev_preview_\u0432\u0441\u0451_\u0435\u0449\u0451_\u043e\u0442\u0434\u0430\u0451\u0442_\u0441\u0442\u0430\u0440\u044b\u0439_csp_\u043f\u043e\u0441\u043b\u0435_q_\u043f\u043e\u0447\u0435\u043c\u0443_dev_preview_\u0432\u0441\u0451_\u0435\u0449\u0451_\u043e\u0442\u0434\u0430\u0451\u0442_\u0441\u0442\u0430\u0440\u044b\u0439_csp_\u043f\u043e\u0441\u043b\u0435_push_6fcbff0",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_232618_\u043f\u043e\u0447\u0435\u043c\u0443_dev_preview_\u0432\u0441\u0451_\u0435\u0449\u0451_\u043e\u0442\u0434\u0430\u0451\u0442_\u0441\u0442\u0430\u0440\u044b\u0439_csp_\u043f\u043e\u0441\u043b\u0435.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_232618_\u043f\u043e\u0447\u0435\u043c\u0443_dev_preview_\u0432\u0441\u0451_\u0435\u0449\u0451_\u043e\u0442\u0434\u0430\u0451\u0442_\u0441\u0442\u0430\u0440\u044b\u0439_csp_\u043f\u043e\u0441\u043b\u0435_q_\u043f\u043e\u0447\u0435\u043c\u0443_dev_preview_\u0432\u0441\u0451_\u0435\u0449\u0451_\u043e\u0442\u0434\u0430\u0451\u0442_\u0441\u0442\u0430\u0440\u044b\u0439_csp_\u043f\u043e\u0441\u043b\u0435_push_6fcbff0",
+      "target": "graphify_out_memory_query_20260802_232618_\u043f\u043e\u0447\u0435\u043c\u0443_dev_preview_\u0432\u0441\u0451_\u0435\u0449\u0451_\u043e\u0442\u0434\u0430\u0451\u0442_\u0441\u0442\u0430\u0440\u044b\u0439_csp_\u043f\u043e\u0441\u043b\u0435_answer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_232618_\u043f\u043e\u0447\u0435\u043c\u0443_dev_preview_\u0432\u0441\u0451_\u0435\u0449\u0451_\u043e\u0442\u0434\u0430\u0451\u0442_\u0441\u0442\u0430\u0440\u044b\u0439_csp_\u043f\u043e\u0441\u043b\u0435.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_232618_\u043f\u043e\u0447\u0435\u043c\u0443_dev_preview_\u0432\u0441\u0451_\u0435\u0449\u0451_\u043e\u0442\u0434\u0430\u0451\u0442_\u0441\u0442\u0430\u0440\u044b\u0439_csp_\u043f\u043e\u0441\u043b\u0435_q_\u043f\u043e\u0447\u0435\u043c\u0443_dev_preview_\u0432\u0441\u0451_\u0435\u0449\u0451_\u043e\u0442\u0434\u0430\u0451\u0442_\u0441\u0442\u0430\u0440\u044b\u0439_csp_\u043f\u043e\u0441\u043b\u0435_push_6fcbff0",
+      "target": "graphify_out_memory_query_20260802_232618_\u043f\u043e\u0447\u0435\u043c\u0443_dev_preview_\u0432\u0441\u0451_\u0435\u0449\u0451_\u043e\u0442\u0434\u0430\u0451\u0442_\u0441\u0442\u0430\u0440\u044b\u0439_csp_\u043f\u043e\u0441\u043b\u0435_outcome",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260802_232618_\u043f\u043e\u0447\u0435\u043c\u0443_dev_preview_\u0432\u0441\u0451_\u0435\u0449\u0451_\u043e\u0442\u0434\u0430\u0451\u0442_\u0441\u0442\u0430\u0440\u044b\u0439_csp_\u043f\u043e\u0441\u043b\u0435.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260802_232618_\u043f\u043e\u0447\u0435\u043c\u0443_dev_preview_\u0432\u0441\u0451_\u0435\u0449\u0451_\u043e\u0442\u0434\u0430\u0451\u0442_\u0441\u0442\u0430\u0440\u044b\u0439_csp_\u043f\u043e\u0441\u043b\u0435_q_\u043f\u043e\u0447\u0435\u043c\u0443_dev_preview_\u0432\u0441\u0451_\u0435\u0449\u0451_\u043e\u0442\u0434\u0430\u0451\u0442_\u0441\u0442\u0430\u0440\u044b\u0439_csp_\u043f\u043e\u0441\u043b\u0435_push_6fcbff0",
+      "target": "graphify_out_memory_query_20260802_232618_\u043f\u043e\u0447\u0435\u043c\u0443_dev_preview_\u0432\u0441\u0451_\u0435\u0449\u0451_\u043e\u0442\u0434\u0430\u0451\u0442_\u0441\u0442\u0430\u0440\u044b\u0439_csp_\u043f\u043e\u0441\u043b\u0435_source_nodes",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -21478,5 +22244,5 @@
       "source_file": "README.md"
     }
   ],
-  "built_at_commit": "c6d96827ea05d7c9b8331cc2e71ba18bf7af796a"
+  "built_at_commit": "6fcbff0922d2f9c6b77d21d262d465f4e8822715"
 }

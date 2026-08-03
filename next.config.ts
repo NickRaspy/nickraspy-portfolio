@@ -1,17 +1,23 @@
 import type { NextConfig } from "next";
 
+const isVercelPreview = process.env.VERCEL_ENV === "preview";
+const vercelToolbar = isVercelPreview ? " https://vercel.live" : "";
+const vercelToolbarConnections = isVercelPreview
+  ? " https://vercel.live wss://ws-us3.pusher.com"
+  : "";
+
 const contentSecurityPolicy = [
   "default-src 'self'",
   "base-uri 'self'",
   "form-action 'self'",
   "frame-ancestors 'none'",
   "object-src 'none'",
-  "img-src 'self' data: blob:",
-  "font-src 'self' data:",
-  "style-src 'self' 'unsafe-inline'",
-  `script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com${process.env.NODE_ENV === "development" ? " 'unsafe-eval'" : ""}`,
-  "frame-src https://challenges.cloudflare.com",
-  `connect-src 'self'${process.env.NODE_ENV === "development" ? " ws: wss:" : ""}`,
+  `img-src 'self' data: blob:${isVercelPreview ? " https://vercel.live https://vercel.com" : ""}`,
+  `font-src 'self' data:${isVercelPreview ? " https://vercel.live https://assets.vercel.com" : ""}`,
+  `style-src 'self' 'unsafe-inline'${vercelToolbar}`,
+  `script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com${vercelToolbar}${process.env.NODE_ENV === "development" ? " 'unsafe-eval'" : ""}`,
+  `frame-src https://challenges.cloudflare.com${vercelToolbar}`,
+  `connect-src 'self'${vercelToolbarConnections}${process.env.NODE_ENV === "development" ? " ws: wss:" : ""}`,
 ].join("; ");
 
 const securityHeaders = [

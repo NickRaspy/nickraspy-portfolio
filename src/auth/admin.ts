@@ -35,6 +35,18 @@ function oauthCookieName(): string {
   return isProduction() ? productionOAuthCookie : developmentOAuthCookie;
 }
 
+export function adminCookieDeletionOptions(name: string) {
+  return {
+    httpOnly: true,
+    secure: isProduction() || name.startsWith("__Host-"),
+    sameSite: "lax" as const,
+    path: "/",
+    maxAge: 0,
+    expires: new Date(0),
+    priority: "high" as const,
+  };
+}
+
 function secret(): string {
   const value = process.env.AUTH_SECRET;
   if (!value || value.length < 32) throw new Error("AUTH_SECRET must contain at least 32 characters.");
@@ -116,8 +128,9 @@ export async function setAdminSession(identity: GitHubIdentity): Promise<void> {
 
 export async function clearAdminSession(): Promise<void> {
   const store = await cookies();
-  store.delete(sessionCookieName());
-  store.delete(isProduction() ? developmentSessionCookie : productionSessionCookie);
+  for (const name of [productionSessionCookie, developmentSessionCookie]) {
+    store.set(name, "", adminCookieDeletionOptions(name));
+  }
 }
 
 export async function createOAuthAttempt(): Promise<{ state: string; codeChallenge: string }> {
@@ -137,8 +150,9 @@ export async function createOAuthAttempt(): Promise<{ state: string; codeChallen
 
 export async function consumeOAuthAttempt(providedState: string | null): Promise<string | null> {
   const store = await cookies();
-  const attempt = store.get(oauthCookieName())?.value;
-  store.delete(oauthCookieName());
+  const name = oauthCookieName();
+  const attempt = store.get(name)?.value;
+  store.set(name, "", adminCookieDeletionOptions(name));
   if (!attempt || !providedState) return null;
   const [expectedState, codeVerifier] = attempt.split(".");
   if (!expectedState || !codeVerifier || !safelyEqual(expectedState, providedState)) return null;
